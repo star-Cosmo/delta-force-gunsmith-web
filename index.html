@@ -2,59 +2,85 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>三角洲行动 - 改枪工坊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>三角洲行动 · 改枪工坊</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <h1 class="logo">三角洲行动 · 改枪工坊</h1>
-            <span class="version">v0.1.0 Alpha</span>
+    <header class="app-header">
+        <div class="header-left">
+            <i class="fas fa-crosshairs logo-icon"></i>
+            <h1>改枪工坊</h1>
+        </div>
+        <div class="header-right">
+            <span class="badge">AI 智能选配</span>
+            <span class="version">v1.0</span>
         </div>
     </header>
 
-    <main class="main">
-        <aside class="sidebar">
-            <h2 class="sidebar-title">选择枪械</h2>
-            <div class="weapon-list" id="weaponList"></div>
-        </aside>
+    <main class="app-main">
+        <section class="weapon-carousel-section">
+            <h2 class="section-label"><i class="fas fa-gun"></i> 选择枪械</h2>
+            <div class="weapon-carousel" id="weaponCarousel"></div>
+        </section>
 
-        <section class="content">
-            <div class="weapon-info" id="weaponInfo">
-                <h2 class="weapon-name">请选择一把枪械</h2>
-                <p class="weapon-type">—</p>
-            </div>
-
-            <div class="stats-section">
-                <h3 class="section-title">属性调整（拖动滑块设定目标值）</h3>
-                <div class="stats-grid" id="statsGrid"></div>
-            </div>
-
-            <div class="actions">
-                <button class="btn btn-primary" id="btnAutoBuild" disabled>自动选配配件</button>
-                <button class="btn btn-secondary" id="btnReset" disabled>重置属性</button>
+        <section class="weapon-info-card" id="weaponInfoCard" style="display:none;">
+            <div class="weapon-icon-large" id="weaponIcon">🔫</div>
+            <div class="weapon-meta">
+                <h3 id="weaponName">—</h3>
+                <p id="weaponType">—</p>
+                <div class="weapon-tags" id="weaponTags"></div>
             </div>
         </section>
 
-        <aside class="result">
-            <h2 class="result-title">改装方案</h2>
-            <div class="attachments-list" id="attachmentsList">
-                <p class="placeholder">选择枪械并调整属性后，点击"自动选配配件"</p>
+        <section class="stats-panel" id="statsPanel" style="display:none;">
+            <h2 class="section-label"><i class="fas fa-sliders"></i> 目标属性 <span class="hint">拖动调节</span></h2>
+            <div class="stats-list" id="statsList"></div>
+        </section>
+
+        <section class="tuning-panel" id="tuningPanel" style="display:none;">
+            <h2 class="section-label"><i class="fas fa-wrench"></i> 精校微调</h2>
+            <div class="tuning-list" id="tuningList"></div>
+        </section>
+
+        <section class="action-panel" id="actionPanel" style="display:none;">
+            <button class="btn-ai" id="btnAnalyze">
+                <i class="fas fa-robot"></i>
+                <span>AI 智能分析并选配</span>
+            </button>
+            <button class="btn-reset" id="btnReset">
+                <i class="fas fa-rotate-left"></i>
+                <span>重置</span>
+            </button>
+        </section>
+
+        <section class="result-panel" id="resultPanel" style="display:none;">
+            <div class="result-header">
+                <h2><i class="fas fa-check-circle"></i> 推荐方案</h2>
+                <span class="match-score" id="matchScore">匹配度 98%</span>
             </div>
-            <div class="code-section">
-                <h3 class="section-title">改枪码</h3>
-                <div class="code-output" id="codeOutput">
-                    <span class="code-placeholder">—</span>
+            <div class="attachments-grid" id="attachmentsGrid"></div>
+            <div class="final-stats" id="finalStats">
+                <h3>最终属性</h3>
+                <div class="final-stats-list" id="finalStatsList"></div>
+            </div>
+            <div class="code-area">
+                <div class="code-box" id="codeBox">
+                    <span class="code-text" id="codeText">—</span>
+                    <button class="btn-copy" id="btnCopy"><i class="fas fa-copy"></i></button>
                 </div>
-                <button class="btn btn-copy" id="btnCopyCode" disabled>复制改枪码</button>
+                <p class="code-tip">游戏内输入改枪码快速装配</p>
             </div>
-        </aside>
+        </section>
     </main>
 
-    <footer class="footer">
-        <p>三角洲行动改枪工坊 · 仅供学习研究使用 · 数据基于游戏公开信息</p>
-    </footer>
+    <div class="loading-mask" id="loadingMask" style="display:none;">
+        <div class="loading-spinner"></div>
+        <p>AI 分析中...</p>
+    </div>
+
+    <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
 </body>
