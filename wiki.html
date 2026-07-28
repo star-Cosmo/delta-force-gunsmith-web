@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>三角洲行动 · 配件百科</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 百科页面专用样式 */
+        .wiki-header {
+            position: sticky; top:0; z-index:100;
+            background: linear-gradient(180deg, rgba(11,15,23,0.98) 0%, rgba(19,26,38,0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 16px;
+        }
+        .wiki-header-top {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .wiki-header-top h1 {
+            font-size: 18px; font-weight: 700; letter-spacing: 1px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .wiki-header-top .back-btn {
+            color: var(--text-dim); text-decoration: none; font-size: 14px;
+            display: flex; align-items: center; gap: 6px;
+            transition: color 0.2s;
+        }
+        .wiki-header-top .back-btn:hover { color: var(--accent); }
+
+        .search-box {
+            position: relative;
+        }
+        .search-box input {
+            width: 100%; padding: 10px 14px 10px 38px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; color: var(--text); font-size: 14px;
+            outline: none; transition: border-color 0.2s;
+        }
+        .search-box input:focus { border-color: var(--accent); }
+        .search-box i {
+            position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+            color: var(--text-dim); font-size: 14px;
+        }
+        .search-box .clear-btn {
+            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+            background: none; border: none; color: var(--text-dim);
+            cursor: pointer; font-size: 12px; display: none;
+        }
+        .search-box .clear-btn.show { display: block; }
+
+        .category-tabs {
+            display: flex; gap: 8px; overflow-x: auto;
+            padding: 12px 16px; scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+        .category-tabs::-webkit-scrollbar { display: none; }
+        .category-tab {
+            flex-shrink: 0; padding: 8px 16px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 20px; color: var(--text-dim); font-size: 13px;
+            cursor: pointer; transition: all 0.2s; white-space: nowrap;
+        }
+        .category-tab:hover { border-color: var(--border-light); color: var(--text); }
+        .category-tab.active {
+            background: rgba(245,158,11,0.12); border-color: var(--accent);
+            color: var(--accent); box-shadow: 0 0 12px var(--accent-glow);
+        }
+
+        .wiki-content { padding: 0 16px 24px; max-width: 800px; margin: 0 auto; }
+
+        .attachment-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 14px; padding: 14px;
+            margin-bottom: 10px; transition: all 0.2s;
+            animation: fadeIn 0.3s ease;
+        }
+        .attachment-card:hover { border-color: var(--border-light); }
+
+        .att-card-header {
+            display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+        }
+        .att-card-icon { font-size: 28px; }
+        .att-card-title { flex: 1; }
+        .att-card-name { font-size: 15px; font-weight: 600; }
+        .att-card-type {
+            font-size: 11px; color: var(--text-dim); margin-top: 2px;
+            display: inline-block; padding: 2px 8px;
+            background: rgba(255,255,255,0.04); border-radius: 10px;
+        }
+
+        .att-card-stats {
+            display: flex; flex-wrap: wrap; gap: 8px;
+        }
+        .att-stat-tag {
+            font-size: 12px; padding: 5px 10px; border-radius: 8px;
+            background: var(--bg); border: 1px solid var(--border);
+            display: flex; align-items: center; gap: 4px;
+        }
+        .att-stat-tag.positive { color: var(--success); border-color: rgba(34,197,94,0.2); }
+        .att-stat-tag.negative { color: var(--danger); border-color: rgba(239,68,68,0.2); }
+        .att-stat-tag .stat-icon { font-size: 10px; opacity: 0.7; }
+
+        .att-card-tuning {
+            margin-top: 10px; padding-top: 10px;
+            border-top: 1px solid var(--border);
+        }
+        .att-card-tuning-label {
+            font-size: 11px; color: var(--text-dim); margin-bottom: 6px;
+        }
+        .att-card-tuning-list {
+            display: flex; flex-wrap: wrap; gap: 6px;
+        }
+        .tuning-tag {
+            font-size: 11px; padding: 4px 10px;
+            background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.15);
+            border-radius: 8px; color: var(--accent);
+        }
+
+        .empty-state {
+            text-align: center; padding: 60px 20px; color: var(--text-dim);
+        }
+        .empty-state i { font-size: 48px; margin-bottom: 16px; opacity: 0.3; }
+        .empty-state p { font-size: 14px; }
+
+        .result-count {
+            font-size: 12px; color: var(--text-dim);
+            padding: 0 16px 8px; max-width: 800px; margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="wiki-header">
+        <div class="wiki-header-top">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> 返回改枪</a>
+            <h1><i class="fas fa-book" style="color:var(--accent)"></i> 配件百科</h1>
+            <span style="width:60px"></span>
+        </div>
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="搜索配件名称...">
+            <button class="clear-btn" id="clearSearch"><i class="fas fa-times"></i></button>
+        </div>
+    </header>
+
+    <div class="category-tabs" id="categoryTabs"></div>
+
+    <div class="result-count" id="resultCount"></div>
+    <main class="wiki-content" id="wikiContent"></main>
+
+    <script src="script.js"></script>
+    <script>
+    (function() {
+        const categories = [
+            { key: 'all', name: '全部' },
+            { key: 'muzzle', name: '枪口' },
+            { key: 'barrel', name: '枪管' },
+            { key: 'optic', name: '瞄具' },
+            { key: 'grip', name: '握把' },
+            { key: 'magazine', name: '弹匣' },
+            { key: 'stock', name: '枪托' }
+        ];
+
+        let currentCategory = 'all';
+        let searchQuery = '';
+
+        const statKeyMap = {
+            recoil: { name: '后坐力', icon: 'fa-arrows-alt-v', color: '#ef4444' },
+            stability: { name: '稳定性', icon: 'fa-bullseye', color: '#3b82f6' },
+            control: { name: '操控', icon: 'fa-running', color: '#22c55e' },
+            range: { name: '射程', icon: 'fa-ruler-horizontal', color: '#f59e0b' },
+            hipfire: { name: '腰射', icon: 'fa-crosshairs', color: '#a855f7' },
+            armor: { name: '穿甲', icon: 'fa-shield-alt', color: '#e67e22' }
+        };
+
+        function initWiki() {
+            renderTabs();
+            renderAttachments();
+            bindEvents();
+        }
+
+        function renderTabs() {
+            const tabs = document.getElementById('categoryTabs');
+            tabs.innerHTML = categories.map(c => `
+                <button class="category-tab ${c.key === currentCategory ? 'active' : ''}" data-key="${c.key}">
+                    ${c.name}
+                </button>
+            `).join('');
+
+            tabs.querySelectorAll('.category-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    currentCategory = tab.dataset.key;
+                    renderTabs();
+                    renderAttachments();
+                });
+            });
+        }
+
+        function renderAttachments() {
+            const container = document.getElementById('wikiContent');
+            const countEl = document.getElementById('resultCount');
+
+            let items = ALL_ATTACHMENTS_FLAT;
+
+            if (currentCategory !== 'all') {
+                items = items.filter(a => a.slot === currentCategory);
+            }
+
+            if (searchQuery.trim()) {
+                const q = searchQuery.toLowerCase();
+                items = items.filter(a => a.name.toLowerCase().includes(q));
+            }
+
+            countEl.textContent = `共 ${items.length} 个配件`;
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-search"></i>
+                        <p>未找到匹配的配件</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = items.map(att => {
+                const statsHtml = Object.entries(att.stats || {})
+                    .filter(([k, v]) => v !== 0)
+                    .map(([k, v]) => {
+                        const info = statKeyMap[k] || { name: k, icon: '', color: '#fff' };
+                        const cls = v > 0 ? 'positive' : 'negative';
+                        const sign = v > 0 ? '+' : '';
+                        return `<div class="att-stat-tag ${cls}">
+                            <i class="fas ${info.icon} stat-icon"></i>
+                            <span>${info.name} ${sign}${v}</span>
+                        </div>`;
+                    }).join('');
+
+                const tuningHtml = (att.tuning && att.tuning.length > 0)
+                    ? `<div class="att-card-tuning">
+                        <div class="att-card-tuning-label">精校选项</div>
+                        <div class="att-card-tuning-list">
+                            ${att.tuning.map(t => `<span class="tuning-tag">${t.name}</span>`).join('')}
+                        </div>
+                    </div>`
+                    : '';
+
+                return `
+                <div class="attachment-card">
+                    <div class="att-card-header">
+                        <span class="att-card-icon">${att.emoji}</span>
+                        <div class="att-card-title">
+                            <div class="att-card-name">${att.name}</div>
+                            <span class="att-card-type">${att.slotName}</span>
+                        </div>
+                    </div>
+                    <div class="att-card-stats">
+                        ${statsHtml || '<span style="color:var(--text-dim);font-size:12px;">无属性变化</span>'}
+                    </div>
+                    ${tuningHtml}
+                </div>
+                `;
+            }).join('');
+        }
+
+        function bindEvents() {
+            const input = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('clearSearch');
+
+            input.addEventListener('input', () => {
+                searchQuery = input.value;
+                clearBtn.classList.toggle('show', searchQuery.length > 0);
+                renderAttachments();
+            });
+
+            clearBtn.addEventListener('click', () => {
+                input.value = '';
+                searchQuery = '';
+                clearBtn.classList.remove('show');
+                renderAttachments();
+            });
+        }
+
+        // 等待 script.js 加载完成
+        if (typeof ALL_ATTACHMENTS_FLAT !== 'undefined') {
+            initWiki();
+        } else {
+            window.addEventListener('load', initWiki);
+        }
+    })();
+    </script>
+</body>
+</html>
