@@ -69,33 +69,76 @@ body {
 }
 .section-label .hint { font-size:12px; font-weight:400; color:var(--text-dim); margin-left:auto; }
 
-/* ===== 枪械横向滑动 ===== */
-.weapon-carousel-section { margin-bottom:20px; }
+/* 武器选择区域 */
+.weapon-select-section { margin-bottom: 20px; }
 
-.weapon-carousel {
-    display:flex; gap:10px; overflow-x:auto;
-    padding-bottom:8px; scrollbar-width:none;
-    -webkit-overflow-scrolling:touch;
+/* 武器数量 */
+.weapon-count { font-size: 12px; font-weight: 400; color: var(--text-dim); margin-left: 4px; }
+
+/* 搜索框 */
+.weapon-search-box {
+    position: relative; margin-bottom: 12px;
 }
-.weapon-carousel::-webkit-scrollbar { display:none; }
+.weapon-search-box i {
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    color: var(--text-dim); font-size: 14px;
+}
+.weapon-search-box input {
+    width: 100%; padding: 10px 14px 10px 38px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; color: var(--text); font-size: 14px;
+    outline: none; transition: border-color 0.2s;
+}
+.weapon-search-box input:focus { border-color: var(--accent); }
 
+/* 筛选标签 */
+.weapon-filter-tabs {
+    display: flex; gap: 6px; overflow-x: auto;
+    padding-bottom: 8px; margin-bottom: 12px;
+    scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.weapon-filter-tabs::-webkit-scrollbar { display: none; }
+
+.filter-tab {
+    flex-shrink: 0; padding: 6px 14px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 20px; color: var(--text-dim); font-size: 12px;
+    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.filter-tab:hover { border-color: var(--border-light); color: var(--text); }
+.filter-tab.active {
+    background: rgba(245,158,11,0.12); border-color: var(--accent);
+    color: var(--accent); box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* 武器网格 */
+.weapon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    max-height: 500px; overflow-y: auto;
+    padding-right: 4px;
+}
+/* 滚动条样式 */
+.weapon-grid::-webkit-scrollbar { width: 4px; }
+.weapon-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* 武器卡片 */
 .weapon-card {
-    flex-shrink:0; width:110px;
     background: var(--bg-card);
     border: 1.5px solid var(--border);
     border-radius: 14px;
-    padding: 14px 10px;
-    text-align:center; cursor:pointer;
+    padding: 12px 10px;
+    text-align: center; cursor: pointer;
     transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
-    position:relative; overflow:hidden;
+    position: relative; overflow: hidden;
 }
 .weapon-card::before {
-    content:''; position:absolute; inset:0;
+    content: ''; position: absolute; inset: 0;
     background: radial-gradient(circle at 50% 0%, rgba(245,158,11,0.08), transparent 70%);
-    opacity:0; transition:opacity 0.3s;
+    opacity: 0; transition: opacity 0.3s;
 }
-.weapon-card:hover::before, .weapon-card.active::before { opacity:1; }
-
+.weapon-card:hover::before, .weapon-card.active::before { opacity: 1; }
 .weapon-card:hover {
     border-color: var(--border-light);
     transform: translateY(-2px);
@@ -106,9 +149,16 @@ body {
     box-shadow: 0 0 20px var(--accent-glow);
 }
 
-.weapon-card .icon { font-size:32px; margin-bottom:6px; display:block; }
-.weapon-card .name { font-size:13px; font-weight:600; }
-.weapon-card .type { font-size:11px; color:var(--text-dim); margin-top:2px; }
+.weapon-card .icon { font-size: 28px; margin-bottom: 4px; display: block; }
+.weapon-card .name { font-size: 12px; font-weight: 600; }
+.weapon-card .type { font-size: 10px; color: var(--text-dim); margin-top: 2px; }
+.weapon-card .caliber { font-size: 10px; color: var(--accent); margin-top: 2px; opacity: 0.7; }
+.weapon-card .tags { display: flex; gap: 3px; flex-wrap: wrap; justify-content: center; margin-top: 4px; }
+.mini-tag {
+    font-size: 9px; padding: 1px 6px;
+    background: rgba(255,255,255,0.05); border-radius: 8px;
+    color: var(--text-dim);
+}
 
 /* ===== 枪械信息卡 ===== */
 .weapon-info-card {
@@ -271,6 +321,7 @@ body {
     padding: 12px;
     text-align:center;
     transition: all 0.2s;
+    animation: slotAppear 0.3s ease;
 }
 .attachment-item:hover { border-color: var(--border-light); }
 
@@ -345,11 +396,17 @@ body {
 @keyframes spin {
     to { transform:rotate(360deg); }
 }
+@keyframes slotAppear {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 
 /* ===== 响应式 ===== */
 @media (min-width: 768px) {
     .app-main { padding:24px; }
-    .weapon-card { width:130px; padding:18px 14px; }
+    .weapon-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); max-height: 600px; }
+    .weapon-card .icon { font-size: 32px; }
+    .weapon-card .name { font-size: 13px; }
     .attachments-grid { grid-template-columns: repeat(4, 1fr); }
     .final-stats-list { grid-template-columns: repeat(6, 1fr); }
 }

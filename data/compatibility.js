@@ -1,0 +1,1735 @@
+// ===== 三角洲行动 · 武器-配件兼容性矩阵 =====
+// 数据来源: hpromax.top 爬取数据 (hpromax_slots.csv)
+// 最后更新: 2026-07-29
+
+// ===== 通用配件ID列表 =====
+// 所有拥有该槽位的武器使用相同的ID列表（从 ATTACHMENTS 获取所有非 _none 的 ID）
+
+const ALL_OPTIC_IDS = [
+    'op_red','op_panorama','op_holo','op_holo_ii','op_sniper','op_scout',
+    'op_pso_25','op_xcog','op_pso_8x','op_viewpoint_3x','op_acog_6x',
+    'op_hamr','op_lpvo','op_spirit_37','op_spirit_612','op_marksman_612',
+    'op_m3_sniper','op_optical_8x','op_iron','op_riser','op_riser2',
+    'op_side','op_osight','op_ru_2x','op_xro_side','op_okp7','op_ap5000',
+    'op_osight_side','op_combat_rd','op_cobra','op_mini_rd','op_xro',
+    'op_side_pano','op_side_combat','op_none'
+];
+
+const ALL_MUZZLE_IDS = [
+    'mu_flare_bell','mu_resonance','mu_shotgun_choke','mu_pbs','mu_advanced',
+    'mu_bird','mu_titanium','mu_fortress','mu_swirl','mu_practical','mu_dtk',
+    'mu_dead','mu_flame','mu_elite_pistol','mu_shotgun_cannon','mu_inferno','mu_none'
+];
+
+const ALL_FOREGRIP_IDS = [
+    'fg_comp','fg_resonance','fg_phase','fg_vertical','fg_tactical','fg_angled',
+    'fg_fold','fg_vfg','fg_cr_prism','fg_k1_elite','fg_x25u','fg_zfsg',
+    'fg_dawn_tri','fg_angled_stop','fg_mini_stop','fg_dawn_vert','fg_none'
+];
+
+const ALL_REAR_GRIP_IDS = [
+    'rg_phantom','rg_hurricane','rg_stable','rg_xk','rg_shooter','rg_deagle',
+    'rg_ak_tower','rg_ar_tower','rg_m9_flesh','rg_rk3','rg_m7_stable',
+    'rg_m9_black','rg_ak_stable','rg_xk_grip','rg_mp7_stable','rg_resonance_g2','rg_none'
+];
+
+const ALL_FUNCTIONAL_IDS = [
+    'fn_combined','fn_ranger','fn_kc_hound','fn_kuangfeng','fn_laser','fn_peq2',
+    'fn_la3c','fn_dbal_x2','fn_olight_baldr','fn_olight_odin','fn_flare',
+    'fn_car15_light','fn_under_light','fn_prac_light','fn_honey_bk','fn_honey_sd',
+    'fn_honey_gn','fn_wasp_sd','fn_wasp_bk','fn_wasp_gn','fn_grizzly_bk',
+    'fn_grizzly_sd','fn_grizzly_gn','fn_coyote_bk','fn_coyote_sd','fn_coyote_gn',
+    'fn_awm_bipod','fn_aug_bipod','fn_pkm_bipod','fn_sv98_bipod','fn_gen_bipod',
+    'fn_ak12_bipod','fn_psg_trigger','fn_m1911_hammer','fn_m1911_trigger',
+    'fn_r93_net','fn_honeycomb','fn_none'
+];
+
+// 通用枪管列表（非专属武器使用）
+const GENERIC_BARREL_IDS = ['br_beaver','br_short','br_std','br_none'];
+// AR平台枪管列表
+const AR_BARREL_IDS = [
+    'br_ar_trench','br_ar_assault','br_ar_gabriel','br_ar_integrated',
+    'br_ar_carbon','br_ar_standard','br_beaver','br_short','br_std','br_none'
+];
+
+// 通用枪托列表
+const GENERIC_STOCK_IDS = [
+    'st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light',
+    'st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'
+];
+
+// 扩展槽位空列表（这些槽位的配件选择逻辑在 script.js 中处理）
+const EXT = [];
+
+// ===== 武器-配件兼容性矩阵 =====
+const WEAPON_ATTACHMENT_COMPATIBILITY = {
+
+    // ==================== 突击步枪 ====================
+
+    m4a1: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        upper_patch: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rail_bipod: EXT,
+        stock_kit: EXT,
+        mag_seat: EXT,
+        cheek_pad: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    akm: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: ['br_akm_perf','br_akm_beaver_l','br_akm_beaver_s','br_akm_prac_l','br_akm_prac_std','br_akm_trans','br_beaver','br_short','br_std','br_none'],
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_akm_30','ma_akm_40','ma_akm_70','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_pt1_special','st_pt3_death','st_invasion','st_ak','st_ak_polymer','st_ak_folding','st_ak_bumper','st_ak_endcap','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        stock_pad: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        rail_bipod: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    k416: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: ['br_k416_short','br_k416_elite','br_k416a8','br_k416a8_long','br_none'],
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        upper_patch: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rail_bipod: EXT,
+        stock_kit: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    'scar-h': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: ['br_scar_beaver','br_scar_zero','br_scar_std','br_beaver','br_short','br_std','br_none'],
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_scar_30','ma_scar_50','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_scar_end','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    'ak-12': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_pt1_special','st_pt3_death','st_invasion','st_ak','st_ak_polymer','st_ak_folding','st_ak_bumper','st_ak_endcap','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_patch: EXT,
+        upper_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    'aks-74u': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_pt1_special','st_pt3_death','st_invasion','st_ak','st_ak_polymer','st_ak_folding','st_ak_bumper','st_ak_endcap','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_aks74u_up','hg_aks74u_low','hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        stock_pad: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        grip_seat: EXT,
+        upper_handguard: EXT,
+        upper_rail: EXT,
+        slotVisibilityRules: []
+    },
+
+    ar57: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        right_patch: EXT,
+        left_patch: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rail_bipod: EXT,
+        stock_kit: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    'ash-12': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_pt1_special','st_pt3_death','st_invasion','st_ak','st_ak_polymer','st_ak_folding','st_ak_bumper','st_ak_endcap','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    asval: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_pt1_special','st_pt3_death','st_invasion','st_ak','st_ak_polymer','st_ak_folding','st_ak_bumper','st_ak_endcap','st_asval_end','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        rail_bipod: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    aug: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        cheek_pad: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        right_patch: EXT,
+        slotVisibilityRules: []
+    },
+
+    'car-15': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        right_rail: EXT,
+        left_rail: EXT,
+        under_rail: EXT,
+        stock_kit: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        rail_bipod: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    g3: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_scar_30','ma_scar_50','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rail_bipod: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        slotVisibilityRules: []
+    },
+
+    k437: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    kc17: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    m16a4: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        under_rail: EXT,
+        stock_kit: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rail_bipod: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    m7: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        upper_patch: EXT,
+        rail_bipod: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    mcxlt: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        upper_patch: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        heat_shield: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    mk47: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_akm_30','ma_akm_40','ma_akm_70','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        upper_patch: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    'ptr-32': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_akm_30','ma_akm_40','ma_akm_70','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_pt1_special','st_pt3_death','st_invasion','st_ak','st_ak_polymer','st_ak_folding','st_ak_bumper','st_ak_endcap','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        rail_bipod: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        slotVisibilityRules: []
+    },
+
+    'qbz95-1': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_qbz_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_qbz95_kit','hg_none'],
+        handguard_kit: EXT,
+        cheek_pad: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    rm277: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        cheek_pad: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        stock_pad: EXT,
+        mag_seat: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    sg552: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: AR_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_556_alu','ma_556_poly','ma_m4_45','ma_m4_60','ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        rail_bipod: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    tenglong: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        side_optic: EXT,
+        gas_block: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        slotVisibilityRules: []
+    },
+
+    // ==================== 冲锋枪 ====================
+
+    mp5: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: ['br_mp5_perf','br_mp5_tactical','br_mp5_scout','br_mp5_covert','br_none'],
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_mp5_50','ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_mp5','st_mp5_telescope','st_mp5k_fold','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        slotVisibilityRules: []
+    },
+
+    vector: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: ['br_vec_fortress','br_vec_rail','br_vec_longsword','br_none'],
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_vec_30','ma_vec_40','ma_vec_70','ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_vector_res','st_vector_end','st_sr3m','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        rail_bipod: EXT,
+        left_patch: EXT,
+        upper_patch: EXT,
+        right_patch: EXT,
+        slotVisibilityRules: []
+    },
+
+    mk4: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        upper_patch: EXT,
+        cheek_pad: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    mp7: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_mp7_end','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        slotVisibilityRules: []
+    },
+
+    p90: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        cheek_pad: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    'smg-45': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    'sr-3m': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_sr3m','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        upper_rail: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    uzi: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_uzi_perf','hg_uzi_rail','hg_none'],
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    qcq171: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt_carrier: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_patch: EXT,
+        upper_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        slotVisibilityRules: []
+    },
+
+    bizon: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_bizon_carbon','hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        stock_pad: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    warrior: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_stable','st_elite_light','st_elite_light2','st_core_rail','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        stock_pad: EXT,
+        mag_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    // ==================== 狙击步枪 ====================
+
+    awm: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: ['br_awm_skyline','br_none'],
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_awm_dome','hg_none'],
+        unique: EXT,
+        side_optic: EXT,
+        mag_seat: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        rail_bipod: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    m700: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m700_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_m700_black','hg_m700_stable','hg_m700_adv','hg_m700_mil','hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        cheek_pad: EXT,
+        rail_bipod: EXT,
+        left_patch: EXT,
+        upper_patch: EXT,
+        right_patch: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    m82: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        upper_patch: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    r93: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        heat_shield: EXT,
+        rail_bipod: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        upper_patch: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    'sv-98': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    // ==================== 射手步枪 ====================
+
+    m14: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: ['br_m14_wander','br_m14_insight','br_m14_light','br_none'],
+        mag: ['ma_m14_20','ma_m14_30','ma_m14_50','ma_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard_kit: ['hg_m14_adv','hg_none'],
+        handguard: ['hg_m14_poly','hg_m14_rail','hg_none'],
+        foregrip: ALL_FOREGRIP_IDS,
+        stock: ['st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m14_ebr','st_none'],
+        side_optic: EXT,
+        cheek_pad: EXT,
+        mag_seat: EXT,
+        rail_bipod: EXT,
+        upper_rail: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        upper_patch: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        defaultHidden: ['foregrip', 'stock', 'rail_bipod', 'upper_rail', 'left_rail', 'right_rail', 'upper_patch', 'right_patch', 'left_patch'],
+        slotVisibilityRules: [
+            {
+                // M14先进枪身系统（护木套件）→ 解锁 foregrip, stock, rail_bipod, upper_rail, left_rail, right_rail, upper_patch；禁用 cheek_pad, handguard
+                when: { slot: 'handguard_kit', value: 'hg_m14_adv' },
+                show: ['foregrip', 'stock', 'rail_bipod', 'upper_rail', 'left_rail', 'right_rail', 'upper_patch'],
+                hide: ['cheek_pad', 'handguard']
+            },
+            {
+                // M14导轨一体枪托（护木）→ 解锁 foregrip, upper_rail, rail_bipod, upper_patch, left_rail, right_rail, right_patch, left_patch；禁用 handguard_kit
+                when: { slot: 'handguard', value: 'hg_m14_rail' },
+                show: ['foregrip', 'upper_rail', 'rail_bipod', 'upper_patch', 'left_rail', 'right_rail', 'right_patch', 'left_patch'],
+                hide: ['handguard_kit']
+            },
+            {
+                // M14聚合物一体枪托（护木）→ 禁用 handguard_kit
+                when: { slot: 'handguard', value: 'hg_m14_poly' },
+                show: [],
+                hide: ['handguard_kit']
+            }
+        ]
+    },
+
+    'mini-14': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_mini14_poly','hg_mini14_int','hg_mini14_adv','hg_none'],
+        side_optic: EXT,
+        mag_seat: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    'psg-1': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        rail_bipod: EXT,
+        mag_seat: EXT,
+        trigger: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        slotVisibilityRules: []
+    },
+
+    sks: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_sks_adv','hg_none'],
+        handguard_kit: EXT,
+        upper_rail: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    'sr-25': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_m4_buffer','st_416_sturdy','st_416c_telescope','st_416_light','st_shadow_rail','st_shadow_buffer','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_sr25_elite','hg_none'],
+        upper_patch: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    sr9: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        mag_seat: EXT,
+        trigger: EXT,
+        rail_bipod: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    svch: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        upper_patch: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        side_optic: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        mag_seat: EXT,
+        bolt_carrier: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    svd: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_svd_rail','hg_svd_poly','hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        mag_seat: EXT,
+        rail_bipod: EXT,
+        upper_rail: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        upper_patch: EXT,
+        rear_grip_2: EXT,
+        grip_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    vss: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_pt1_special','st_pt3_death','st_invasion','st_ak','st_ak_polymer','st_ak_folding','st_ak_bumper','st_ak_endcap','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        mag_seat: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    // ==================== 霰弹枪 ====================
+
+    lever: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        lever: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        upper_rail: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        cheek_pad: EXT,
+        slotVisibilityRules: []
+    },
+
+    '725': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        slotVisibilityRules: []
+    },
+
+    'fs-12': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        side_optic: EXT,
+        lens_shade: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        grip_seat: EXT,
+        slotVisibilityRules: []
+    },
+
+    m1014: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_1014','st_1014_fixed','st_1014_extend','st_pivot_adv','st_pivot_sturdy','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_m1014_rail','hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        cheek_pad: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    m870: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_m870_rail','hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    s12k: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        bolt: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        stock_pad: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        grip_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    // ==================== 机枪 ====================
+
+    m249: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_m249_rail','hg_m249_bipod','hg_m249_mil','hg_none'],
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        rail_bipod: EXT,
+        upper_patch: EXT,
+        left_patch: EXT,
+        right_patch: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    m250: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        upper_rail: EXT,
+        side_optic: EXT,
+        right_rail: EXT,
+        left_rail: EXT,
+        rear_grip_patch: EXT,
+        grip_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    pkm: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        rail_bipod: EXT,
+        upper_rail: EXT,
+        left_rail: EXT,
+        right_rail: EXT,
+        grip_seat: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    qjb201: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: ['st_lightning','st_skeleton','st_stable','st_tactical','st_elite_light','st_elite_light2','st_ur_tactical','st_core_rail','st_universal_pad','st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        right_rail: EXT,
+        left_rail: EXT,
+        upper_rail: EXT,
+        gas_block: EXT,
+        left_patch: EXT,
+        upper_patch: EXT,
+        right_patch: EXT,
+        rail_bipod: EXT,
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        tactical_device: EXT,
+        riser_optic: EXT,
+        slotVisibilityRules: []
+    },
+
+    // ==================== 手枪 ====================
+
+    '357': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        foregrip: ALL_FOREGRIP_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        stock: ['st_none'],
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        lens_shade: EXT,
+        upper_side_optic: EXT,
+        rail_bipod: EXT,
+        upper_rail: EXT,
+        right_rail: EXT,
+        upper_patch: EXT,
+        left_rail: EXT,
+        right_patch: EXT,
+        left_patch: EXT,
+        slotVisibilityRules: []
+    },
+
+    '93r': {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        under_rail: EXT,
+        slotVisibilityRules: []
+    },
+
+    deagle: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        under_rail: EXT,
+        slotVisibilityRules: []
+    },
+
+    g17: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        under_rail: EXT,
+        slotVisibilityRules: []
+    },
+
+    g18: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        under_rail: EXT,
+        slotVisibilityRules: []
+    },
+
+    m1911: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        rear_grip: ALL_REAR_GRIP_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        under_rail: EXT,
+        trigger: EXT,
+        hammer: EXT,
+        slotVisibilityRules: []
+    },
+
+    qsz92g: {
+        optic: ALL_OPTIC_IDS,
+        muzzle: ALL_MUZZLE_IDS,
+        barrel: GENERIC_BARREL_IDS,
+        mag: ['ma_none'],
+        stock: GENERIC_STOCK_IDS,
+        functional: ALL_FUNCTIONAL_IDS,
+        handguard: ['hg_none'],
+        under_rail: EXT,
+        slotVisibilityRules: []
+    },
+
+    // ==================== 特殊武器 ====================
+
+    bow: {
+        bow_sight: EXT,
+        bow_limb: EXT,
+        mag: ['ma_none'],
+        bow_string: EXT,
+        stabilizer: EXT,
+        arrow_rest: EXT,
+        grip_plate: EXT,
+        slotVisibilityRules: []
+    }
+};
+
+// ===== 获取兼容配件 =====
+function getCompatibleAttachments(weaponId, slot, selectedAttachments) {
+    const weaponCompat = WEAPON_ATTACHMENT_COMPATIBILITY[weaponId];
+    if (!weaponCompat) {
+        return ATTACHMENTS[slot] || [];
+    }
+
+    const compatIds = weaponCompat[slot];
+
+    // 扩展槽位：如果武器有该槽位，返回空数组（或 ATTACHMENTS 中的对应列表）
+    if (compatIds === undefined) {
+        return ATTACHMENTS[slot] || [];
+    }
+
+    // 扩展槽位（EXT = []）：如果武器有该槽位但配件列表为空，返回 [_none] 选项
+    if (compatIds === EXT) {
+        // 检查 ATTACHMENTS 中是否有对应的 _none 选项
+        if (ATTACHMENTS[slot]) {
+            return ATTACHMENTS[slot].filter(att => att.id.endsWith('_none'));
+        }
+        return [];
+    }
+
+    // 核心槽位：从 ATTACHMENTS 中过滤出兼容的配件
+    if (!ATTACHMENTS[slot]) {
+        return [];
+    }
+
+    return ATTACHMENTS[slot].filter(att => compatIds.includes(att.id));
+}
+
+// ===== 获取当前可见槽位 =====
+function getVisibleSlots(weaponId, selectedAttachments) {
+    const weaponCompat = WEAPON_ATTACHMENT_COMPATIBILITY[weaponId];
+    if (!weaponCompat) {
+        return [];
+    }
+
+    const rules = weaponCompat.slotVisibilityRules || [];
+    const defaultHidden = weaponCompat.defaultHidden || [];
+
+    // 获取武器原始拥有的所有槽位（排除元数据字段）
+    const allSlots = Object.keys(weaponCompat).filter(k => !['slotVisibilityRules', 'defaultHidden'].includes(k));
+
+    // 如果没有规则，返回所有槽位（排除默认隐藏的）
+    if (rules.length === 0) {
+        return allSlots.filter(s => !defaultHidden.includes(s));
+    }
+
+    // 收集所有额外显示和隐藏的槽位
+    let extraShow = [];
+    let extraHide = [];
+
+    for (const rule of rules) {
+        const { when, show, hide } = rule;
+        const selectedAtt = selectedAttachments ? selectedAttachments[when.slot] : null;
+        const selectedId = selectedAtt ? selectedAtt.id : null;
+
+        if (selectedId === when.value) {
+            extraShow = extraShow.concat(show || []);
+            extraHide = extraHide.concat(hide || []);
+        }
+    }
+
+    // 基础槽位 = 所有槽位 - 默认隐藏 - 被规则隐藏 + 被规则显示
+    let visibleSlots = allSlots.filter(s => !defaultHidden.includes(s) && !extraHide.includes(s));
+    for (const s of extraShow) {
+        if (!visibleSlots.includes(s)) {
+            visibleSlots.push(s);
+        }
+    }
+
+    return visibleSlots;
+}

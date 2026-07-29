@@ -134,13 +134,103 @@
             from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* ========== 武器百科样式 ========== */
+        .mode-tabs {
+            display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto;
+            scrollbar-width: none; -webkit-overflow-scrolling: touch;
+        }
+        .mode-tabs::-webkit-scrollbar { display: none; }
+        .mode-tab {
+            flex-shrink: 0; padding: 10px 22px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 24px; color: var(--text-dim); font-size: 14px;
+            cursor: pointer; transition: all 0.2s; white-space: nowrap;
+            font-weight: 500;
+        }
+        .mode-tab:hover { border-color: var(--border-light); color: var(--text); }
+        .mode-tab.active {
+            background: rgba(245,158,11,0.12); border-color: var(--accent);
+            color: var(--accent); box-shadow: 0 0 12px var(--accent-glow);
+            font-weight: 600;
+        }
+
+        .weapon-wiki-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .weapon-wiki-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 14px; padding: 14px;
+            transition: all 0.2s; animation: fadeIn 0.3s ease;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .weapon-wiki-card:hover {
+            border-color: var(--border-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .ww-header {
+            display: flex; align-items: center; gap: 10px;
+        }
+        .ww-icon {
+            font-size: 32px; line-height: 1;
+        }
+        .ww-title {
+            flex: 1; min-width: 0;
+        }
+        .ww-name {
+            font-size: 16px; font-weight: 700; color: var(--text);
+        }
+        .ww-type {
+            font-size: 11px; color: var(--text-dim); margin-top: 2px;
+        }
+
+        .ww-tags {
+            display: flex; flex-wrap: wrap; gap: 6px;
+        }
+        .mini-tag {
+            font-size: 11px; padding: 2px 10px;
+            background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.15);
+            border-radius: 10px; color: var(--accent);
+            white-space: nowrap;
+        }
+
+        .ww-stats {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+        }
+        .ww-stat {
+            font-size: 12px; padding: 6px 8px;
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 8px; display: flex; justify-content: space-between;
+            align-items: center; gap: 4px;
+        }
+        .ww-stat span:first-child {
+            font-weight: 500; white-space: nowrap;
+        }
+        .ww-stat span:last-child {
+            font-weight: 600; color: var(--text);
+        }
+
+        .ww-extra {
+            display: flex; flex-wrap: wrap; gap: 8px;
+            padding-top: 8px; border-top: 1px solid var(--border);
+        }
+        .ww-extra span {
+            font-size: 12px; color: var(--text-dim);
+            padding: 3px 10px; background: rgba(255,255,255,0.03);
+            border-radius: 6px; white-space: nowrap;
+        }
     </style>
 </head>
 <body>
     <header class="wiki-header">
         <div class="wiki-header-top">
             <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> 返回改枪</a>
-            <h1><i class="fas fa-book" style="color:var(--accent)"></i> 配件百科</h1>
+            <h1 id="wikiTitle"><i class="fas fa-book" style="color:var(--accent)"></i> 配件百科</h1>
             <span style="width:60px"></span>
         </div>
         <div class="search-box">
@@ -150,22 +240,51 @@
         </div>
     </header>
 
+    <div class="mode-tabs" id="modeTabs">
+        <button class="mode-tab active" data-mode="attachment">配件百科</button>
+        <button class="mode-tab" data-mode="weapon">武器百科</button>
+    </div>
+
     <div class="category-tabs" id="categoryTabs"></div>
 
     <div class="result-count" id="resultCount"></div>
     <main class="wiki-content" id="wikiContent"></main>
 
+    <script src="data/weapons.js"></script>
+    <script src="data/attachments.js"></script>
+    <script src="data/compatibility.js"></script>
     <script src="script.js"></script>
     <script>
     (function() {
+        // ========== 当前模式 ==========
+        let currentMode = 'attachment'; // 'attachment' | 'weapon'
+
+        // ========== 配件百科数据 ==========
+        const slotNameMap = {
+            muzzle: '枪口', barrel: '枪管', optic: '瞄具',
+            foregrip: '前握把', rear_grip: '后握把', mag: '弹匣',
+            stock: '枪托', functional: '功能配件', handguard: '护木'
+        };
+
+        const ALL_ATTACHMENTS_FLAT = [];
+        Object.entries(ATTACHMENTS).forEach(([slot, list]) => {
+            list.forEach(att => {
+                if (att.id.endsWith('_none')) return;
+                ALL_ATTACHMENTS_FLAT.push({ ...att, slot, slotName: slotNameMap[slot] || slot });
+            });
+        });
+
         const categories = [
             { key: 'all', name: '全部' },
             { key: 'muzzle', name: '枪口' },
             { key: 'barrel', name: '枪管' },
             { key: 'optic', name: '瞄具' },
-            { key: 'grip', name: '握把' },
-            { key: 'magazine', name: '弹匣' },
-            { key: 'stock', name: '枪托' }
+            { key: 'foregrip', name: '前握把' },
+            { key: 'rear_grip', name: '后握把' },
+            { key: 'mag', name: '弹匣' },
+            { key: 'stock', name: '枪托' },
+            { key: 'functional', name: '功能配件' },
+            { key: 'handguard', name: '护木' }
         ];
 
         let currentCategory = 'all';
@@ -180,29 +299,112 @@
             armor: { name: '穿甲', icon: 'fa-shield-alt', color: '#e67e22' }
         };
 
+        // ========== 武器百科数据 ==========
+        const weaponTypes = [
+            { key: 'all', name: '全部' },
+            { key: '步枪', name: '步枪' },
+            { key: '冲锋枪', name: '冲锋枪' },
+            { key: '狙击步枪', name: '狙击步枪' },
+            { key: '精确射手步枪', name: '精确射手步枪' },
+            { key: '霰弹枪', name: '霰弹枪' },
+            { key: '轻机枪', name: '轻机枪' },
+            { key: '手枪', name: '手枪' },
+            { key: '特殊武器', name: '特殊武器' }
+        ];
+
+        let currentWeaponType = 'all';
+        let weaponSearchQuery = '';
+
+        // 构建 STAT_CONFIG 的快速查询 map
+        const statConfigMap = {};
+        if (typeof STAT_CONFIG !== 'undefined') {
+            STAT_CONFIG.forEach(s => { statConfigMap[s.key] = s; });
+        }
+
         function initWiki() {
+            renderModeTabs();
             renderTabs();
-            renderAttachments();
+            renderContent();
             bindEvents();
         }
 
+        // ========== 模式切换 ==========
+        function renderModeTabs() {
+            const tabs = document.getElementById('modeTabs');
+            tabs.querySelectorAll('.mode-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.mode === currentMode);
+            });
+        }
+
+        function switchMode(mode) {
+            if (currentMode === mode) return;
+            currentMode = mode;
+            renderModeTabs();
+            renderTabs();
+            updateSearchPlaceholder();
+            renderContent();
+            updateTitle();
+        }
+
+        function updateSearchPlaceholder() {
+            const input = document.getElementById('searchInput');
+            if (currentMode === 'weapon') {
+                input.placeholder = '搜索武器名称...';
+            } else {
+                input.placeholder = '搜索配件名称...';
+            }
+        }
+
+        function updateTitle() {
+            const title = document.getElementById('wikiTitle');
+            if (currentMode === 'weapon') {
+                title.innerHTML = '<i class="fas fa-crosshairs" style="color:var(--accent)"></i> 武器百科';
+            } else {
+                title.innerHTML = '<i class="fas fa-book" style="color:var(--accent)"></i> 配件百科';
+            }
+        }
+
+        // ========== 分类标签 ==========
         function renderTabs() {
             const tabs = document.getElementById('categoryTabs');
-            tabs.innerHTML = categories.map(c => `
-                <button class="category-tab ${c.key === currentCategory ? 'active' : ''}" data-key="${c.key}">
-                    ${c.name}
-                </button>
-            `).join('');
+
+            if (currentMode === 'weapon') {
+                tabs.innerHTML = weaponTypes.map(c => `
+                    <button class="category-tab ${c.key === currentWeaponType ? 'active' : ''}" data-key="${c.key}">
+                        ${c.name}
+                    </button>
+                `).join('');
+            } else {
+                tabs.innerHTML = categories.map(c => `
+                    <button class="category-tab ${c.key === currentCategory ? 'active' : ''}" data-key="${c.key}">
+                        ${c.name}
+                    </button>
+                `).join('');
+            }
 
             tabs.querySelectorAll('.category-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
-                    currentCategory = tab.dataset.key;
+                    if (currentMode === 'weapon') {
+                        currentWeaponType = tab.dataset.key;
+                    } else {
+                        currentCategory = tab.dataset.key;
+                    }
                     renderTabs();
-                    renderAttachments();
+                    renderContent();
                 });
             });
         }
 
+        // ========== 渲染内容 ==========
+        function renderContent() {
+            if (currentMode === 'weapon') {
+                renderWeaponWiki();
+            } else {
+                renderAttachments();
+            }
+        }
+
+        // ========== 配件百科渲染 ==========
         function renderAttachments() {
             const container = document.getElementById('wikiContent');
             const countEl = document.getElementById('resultCount');
@@ -243,6 +445,10 @@
                         </div>`;
                     }).join('');
 
+                const iconHtml = att.img
+                    ? `<img src="${att.img}" alt="${att.name}" style="width:36px;height:36px;border-radius:6px;object-fit:contain;background:rgba(255,255,255,0.05);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" loading="lazy"><span class="att-card-icon" style="display:none">${att.emoji}</span>`
+                    : `<span class="att-card-icon">${att.emoji}</span>`;
+
                 const tuningHtml = (att.tuning && att.tuning.length > 0)
                     ? `<div class="att-card-tuning">
                         <div class="att-card-tuning-label">精校选项</div>
@@ -255,7 +461,7 @@
                 return `
                 <div class="attachment-card">
                     <div class="att-card-header">
-                        <span class="att-card-icon">${att.emoji}</span>
+                        ${iconHtml}
                         <div class="att-card-title">
                             <div class="att-card-name">${att.name}</div>
                             <span class="att-card-type">${att.slotName}</span>
@@ -270,30 +476,116 @@
             }).join('');
         }
 
+        // ========== 武器百科渲染 ==========
+        function renderWeaponWiki() {
+            const container = document.getElementById('wikiContent');
+            const countEl = document.getElementById('resultCount');
+
+            let items = (typeof WEAPONS !== 'undefined') ? WEAPONS : [];
+
+            if (currentWeaponType !== 'all') {
+                items = items.filter(w => w.type === currentWeaponType);
+            }
+
+            if (weaponSearchQuery.trim()) {
+                const q = weaponSearchQuery.toLowerCase();
+                items = items.filter(w => w.name.toLowerCase().includes(q));
+            }
+
+            countEl.textContent = `共 ${items.length} 把武器`;
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-search"></i>
+                        <p>未找到匹配的武器</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="weapon-wiki-grid">
+                    ${items.map(w => renderWeaponCard(w)).join('')}
+                </div>
+            `;
+        }
+
+        const statShortNameMap = {
+            recoil: '后坐力', stability: '稳定', control: '操控',
+            range: '射程', hipfire: '腰射', armor: '穿甲'
+        };
+
+        function renderWeaponCard(w) {
+            const statsHtml = Object.entries(w.baseStats || {}).map(([key, val]) => {
+                const cfg = statConfigMap[key];
+                const shortName = statShortNameMap[key] || (cfg ? cfg.name : key);
+                const color = cfg ? cfg.color : '#fff';
+                return `<div class="ww-stat"><span style="color:${color}">${shortName}</span><span>${val}</span></div>`;
+            }).join('');
+
+            const tagsHtml = (w.tags || []).map(t => `<span class="mini-tag">${t}</span>`).join('');
+
+            const caliberStr = w.caliber ? ` · ${w.caliber}` : '';
+
+            return `
+            <div class="weapon-wiki-card">
+                <div class="ww-header">
+                    <span class="ww-icon">${w.emoji || '🔫'}</span>
+                    <div class="ww-title">
+                        <div class="ww-name">${w.name}</div>
+                        <div class="ww-type">${w.type}${caliberStr}</div>
+                    </div>
+                </div>
+                <div class="ww-tags">${tagsHtml}</div>
+                <div class="ww-stats">${statsHtml}</div>
+                <div class="ww-extra">
+                    <span>伤害: ${w.baseDamage}</span>
+                    <span>射速: ${w.rpm} RPM</span>
+                    <span>弹容: ${w.magCapacity}发</span>
+                </div>
+            </div>`;
+        }
+
+        // ========== 事件绑定 ==========
         function bindEvents() {
             const input = document.getElementById('searchInput');
             const clearBtn = document.getElementById('clearSearch');
 
             input.addEventListener('input', () => {
-                searchQuery = input.value;
-                clearBtn.classList.toggle('show', searchQuery.length > 0);
-                renderAttachments();
+                const val = input.value;
+                if (currentMode === 'weapon') {
+                    weaponSearchQuery = val;
+                } else {
+                    searchQuery = val;
+                }
+                clearBtn.classList.toggle('show', val.length > 0);
+                renderContent();
             });
 
             clearBtn.addEventListener('click', () => {
                 input.value = '';
-                searchQuery = '';
+                if (currentMode === 'weapon') {
+                    weaponSearchQuery = '';
+                } else {
+                    searchQuery = '';
+                }
                 clearBtn.classList.remove('show');
-                renderAttachments();
+                renderContent();
+            });
+
+            // 模式切换
+            document.getElementById('modeTabs').addEventListener('click', (e) => {
+                const tab = e.target.closest('.mode-tab');
+                if (!tab) return;
+                const mode = tab.dataset.mode;
+                if (mode) {
+                    switchMode(mode);
+                }
             });
         }
 
-        // 等待 script.js 加载完成
-        if (typeof ALL_ATTACHMENTS_FLAT !== 'undefined') {
-            initWiki();
-        } else {
-            window.addEventListener('load', initWiki);
-        }
+        initWiki();
     })();
     </script>
 </body>

@@ -21,9 +21,24 @@
     </header>
 
     <main class="app-main">
-        <section class="weapon-carousel-section">
-            <h2 class="section-label"><i class="fas fa-gun"></i> 选择枪械</h2>
-            <div class="weapon-carousel" id="weaponCarousel"></div>
+        <section class="weapon-select-section">
+            <h2 class="section-label"><i class="fas fa-gun"></i> 选择枪械 <span class="weapon-count" id="weaponCount"></span></h2>
+            <div class="weapon-search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="weaponSearch" placeholder="搜索武器名称...">
+            </div>
+            <div class="weapon-filter-tabs" id="weaponFilterTabs">
+                <button class="filter-tab active" data-type="all">全部</button>
+                <button class="filter-tab" data-type="步枪">步枪</button>
+                <button class="filter-tab" data-type="冲锋枪">冲锋枪</button>
+                <button class="filter-tab" data-type="狙击步枪">狙击步枪</button>
+                <button class="filter-tab" data-type="精确射手步枪">精确射手步枪</button>
+                <button class="filter-tab" data-type="霰弹枪">霰弹枪</button>
+                <button class="filter-tab" data-type="轻机枪">轻机枪</button>
+                <button class="filter-tab" data-type="手枪">手枪</button>
+                <button class="filter-tab" data-type="特殊武器">特殊武器</button>
+            </div>
+            <div class="weapon-grid" id="weaponGrid"></div>
         </section>
 
         <section class="weapon-info-card" id="weaponInfoCard" style="display:none;">
@@ -66,13 +81,7 @@
                 <h3>最终属性</h3>
                 <div class="final-stats-list" id="finalStatsList"></div>
             </div>
-            <div class="code-area">
-                <div class="code-box" id="codeBox">
-                    <span class="code-text" id="codeText">—</span>
-                    <button class="btn-copy" id="btnCopy"><i class="fas fa-copy"></i></button>
-                </div>
-                <p class="code-tip">游戏内输入改枪码快速装配</p>
-            </div>
+            
         </section>
     </main>
 
@@ -83,6 +92,9 @@
 
     <div class="toast" id="toast"></div>
 
+    <script src="data/weapons.js"></script>
+    <script src="data/attachments.js"></script>
+    <script src="data/compatibility.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

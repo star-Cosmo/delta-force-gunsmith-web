@@ -1,106 +1,6 @@
 // ===== 三角洲行动 · 改枪工坊 v2.0 =====
 // 数据来源: deltaforcetools.gg (真实游戏配件属性)
-
-/* ===================== 数据库 ===================== */
-
-const STAT_CONFIG = [
-    { key: 'recoil',   name: '后坐力控制', icon: 'fa-arrows-alt-v',   color: '#ef4444', max: 100 },
-    { key: 'stability',name: '据枪稳定性', icon: 'fa-bullseye',       color: '#3b82f6', max: 100 },
-    { key: 'control',  name: '操控速度',   icon: 'fa-running',        color: '#22c55e', max: 100 },
-    { key: 'range',    name: '有效射程',   icon: 'fa-ruler-horizontal',color: '#f59e0b', max: 100 },
-    { key: 'hipfire',  name: '腰射精度',   icon: 'fa-crosshairs',     color: '#a855f7', max: 100 },
-    { key: 'armor',    name: '护甲伤害',   icon: 'fa-shield-alt',     color: '#e67e22', max: 100 }
-];
-
-const WEAPONS = [
-    { id: 'm4a1', name: 'M4A1', type: '突击步枪', emoji: '🔫', tags: ['均衡','易操控'], baseStats: { recoil: 45, stability: 40, control: 55, range: 50, hipfire: 35, armor: 60 } },
-    { id: 'akm',  name: 'AKM',  type: '突击步枪', emoji: '🔫', tags: ['高伤害','后坐大'], baseStats: { recoil: 30, stability: 28, control: 42, range: 58, hipfire: 28, armor: 75 } },
-    { id: 'k416', name: 'K416', type: '突击步枪', emoji: '🔫', tags: ['高射速','近战强'], baseStats: { recoil: 48, stability: 42, control: 52, range: 45, hipfire: 38, armor: 55 } },
-    { id: 'scarh',name: 'SCAR-H',type:'战斗步枪', emoji: '🔫', tags: ['高射程','单发稳'], baseStats: { recoil: 38, stability: 32, control: 38, range: 72, hipfire: 22, armor: 80 } },
-    { id: 'mp5',  name: 'MP5',  type: '冲锋枪',   emoji: '🔫', tags: ['高操控','腰射强'], baseStats: { recoil: 55, stability: 48, control: 68, range: 25, hipfire: 62, armor: 40 } },
-    { id: 'm14',  name: 'M14',  type: '射手步枪', emoji: '🔫', tags: ['超远距','高杀伤'], baseStats: { recoil: 28, stability: 30, control: 30, range: 88, hipfire: 18, armor: 85 } },
-    { id: 'awm',  name: 'AWM',  type: '栓动步枪', emoji: '🎯', tags: ['一击必杀','超远距'], baseStats: { recoil: 20, stability: 25, control: 22, range: 95, hipfire: 10, armor: 95 } },
-    { id: 'vector',name:'Vector',type:'冲锋枪',   emoji: '🔫', tags: ['极快射速','近战王'], baseStats: { recoil: 50, stability: 38, control: 60, range: 20, hipfire: 55, armor: 35 } }
-];
-
-const ATTACHMENTS = {
-    muzzle: [
-        { id:'mu_titanium', name:'钛金竞赛制退器',  emoji:'🔧', stats:{recoil:+12, control:-3}, tuning:[{name:'极限控后',stats:{recoil:+4,control:-3}},{name:'平衡后坐',stats:{recoil:+2,control:+1}}] },
-        { id:'mu_pbs',      name:'PBS俄式消音器',   emoji:'🤫', stats:{recoil:+10, control:-13}, tuning:[{name:'极限消音',stats:{recoil:+5,control:-5}},{name:'消音平衡',stats:{recoil:+3,control:-3}}] },
-        { id:'mu_dead',     name:'死寂消音器',      emoji:'🤫', stats:{range:+24, control:-13, stability:-5}, tuning:[{name:'极限远射',stats:{range:+6,control:-3}},{name:'射程平衡',stats:{range:+3,stability:+2}}] },
-        { id:'mu_swirl',    name:'漩涡消焰器',      emoji:'🔥', stats:{recoil:+2, stability:+5, control:-2}, tuning:[{name:'稳定优先',stats:{stability:+3,control:-2}},{name:'均衡调整',stats:{recoil:+1,stability:+2}}] },
-        { id:'mu_flame',    name:'实用消焰器',      emoji:'🔥', stats:{recoil:+2}, tuning:[{name:'后坐强化',stats:{recoil:+2}},{name:'稳定消焰',stats:{recoil:+1,stability:+1}}] },
-        { id:'mu_bird',     name:'鸟笼消焰器',      emoji:'🔥', stats:{recoil:+2, stability:+1}, tuning:[{name:'极限稳定',stats:{stability:+2}},{name:'均衡消焰',stats:{recoil:+1,control:+1}}] },
-        { id:'mu_inferno',  name:'炽火抑制器',      emoji:'⚡', stats:{recoil:+6, control:-1}, tuning:[{name:'极限压制',stats:{recoil:+3,control:-2}},{name:'压制平衡',stats:{recoil:+2,control:+1}}] },
-        { id:'mu_practical',name:'实用消音器',      emoji:'🤫', stats:{recoil:-2, stability:-3}, tuning:[{name:'隐蔽优先',stats:{control:+2,recoil:-1}},{name:'均衡隐蔽',stats:{stability:+1,recoil:-1}}] },
-        { id:'mu_none',     name:'无',              emoji:'❌', stats:{}, tuning:[] }
-    ],
-    barrel: [
-        { id:'br_beaver',  name:'海狸长枪管',      emoji:'📏', stats:{recoil:+8, stability:+6, range:+12, control:-8}, tuning:[{name:'极限射程',stats:{range:+5,control:-3}},{name:'射程稳定',stats:{range:+3,stability:+2}}] },
-        { id:'br_short',   name:'短枪管组合',      emoji:'📐', stats:{control:+10, range:-10, recoil:-3, hipfire:+5}, tuning:[{name:'极限操控',stats:{control:+5,range:-3}},{name:'腰射特化',stats:{hipfire:+5,recoil:-2}}] },
-        { id:'br_std',     name:'实用标准枪管',    emoji:'📍', stats:{range:+4, recoil:+2}, tuning:[{name:'标准强化',stats:{recoil:+2,range:+2}},{name:'均衡标准',stats:{recoil:+1,stability:+1,control:+1}}] },
-        { id:'br_heavy',   name:'精英脚架长枪管',  emoji:'🧱', stats:{recoil:+10, stability:+8, range:+15, control:-10}, tuning:[{name:'极限稳定',stats:{recoil:+4,stability:+3}},{name:'稳定操控',stats:{recoil:+2,stability:+2,control:-2}}] },
-        { id:'br_none',    name:'无',              emoji:'❌', stats:{}, tuning:[] }
-    ],
-    optic: [
-        { id:'op_red',     name:'反射式瞄准镜',    emoji:'🔴', stats:{control:-2}, tuning:[{name:'快速瞄准',stats:{control:+2,hipfire:+1}},{name:'稳定瞄准',stats:{stability:+2,control:+1}}] },
-        { id:'op_panorama',name:'全景红点瞄准镜',  emoji:'⭕', stats:{control:-2}, tuning:[{name:'视野强化',stats:{control:+1,hipfire:+2}},{name:'均衡红点',stats:{stability:+1,control:+1}}] },
-        { id:'op_holo',    name:'全息瞄准镜',      emoji:'🔵', stats:{stability:+5, control:-3}, tuning:[{name:'极限稳定',stats:{stability:+4,control:-2}},{name:'腰射补偿',stats:{stability:+2,hipfire:+2}}] },
-        { id:'op_sniper',  name:'3/7可调狙击镜',   emoji:'🎯', stats:{stability:+10, control:-10, range:+5}, tuning:[{name:'极限远距',stats:{range:+4,stability:+2}},{name:'狙击平衡',stats:{range:+2,stability:+3}}] },
-        { id:'op_scout',   name:'侦察1.5/5可调镜', emoji:'🔍', stats:{stability:+6, control:-5, range:+3}, tuning:[{name:'远射特化',stats:{range:+3,stability:+2}},{name:'中距平衡',stats:{range:+2,control:+1}}] },
-        { id:'op_iron',    name:'机械瞄具',        emoji:'👁️', stats:{control:+5, hipfire:+3, range:-3}, tuning:[{name:'极限操控',stats:{control:+4,range:-2}},{name:'腰射强化',stats:{hipfire:+4,control:+2}}] },
-        { id:'op_riser',   name:'微型瞄准器增高架',emoji:'📐', stats:{control:+2}, tuning:[{name:'快速开镜',stats:{control:+3,recoil:-1}},{name:'稳定增高',stats:{stability:+2,control:+1}}] },
-        { id:'op_riser2',  name:'多用途战术增高架',emoji:'📐', stats:{control:+2}, tuning:[{name:'战术增高',stats:{control:+3,stability:-1}},{name:'均衡增高',stats:{control:+2,hipfire:+1}}] },
-        { id:'op_none',    name:'无',              emoji:'❌', stats:{}, tuning:[] }
-    ],
-    foregrip: [
-        { id:'fg_resonance',name:'共振人体工学握把',emoji:'🔽', stats:{control:-1}, tuning:[{name:'人体工学',stats:{control:+1,recoil:-1}},{name:'稳定握持',stats:{stability:+2,control:-1}}] },
-        { id:'fg_phase',   name:'相位战斗前握把',  emoji:'⚔️', stats:{recoil:+4, control:+3, stability:+2, hipfire:+4}, tuning:[{name:'极限控后',stats:{recoil:+3,control:-1}},{name:'据枪稳定',stats:{stability:+3,recoil:+2}}] },
-        { id:'fg_vertical',name:'实用垂直握把',    emoji:'🔽', stats:{recoil:+2}, tuning:[{name:'极限控后',stats:{recoil:+3,control:-1}},{name:'均衡垂直',stats:{recoil:+1,stability:+1}}] },
-        { id:'fg_tactical',name:'战术三角握把',    emoji:'🔺', stats:{recoil:+4, control:+2}, tuning:[{name:'极限操控',stats:{control:+4,recoil:-1}},{name:'快速据枪',stats:{control:+3,hipfire:+2}}] },
-        { id:'fg_angled',  name:'密令斜角握把',    emoji:'📐', stats:{control:-1}, tuning:[{name:'斜角强化',stats:{control:+1,recoil:-1}},{name:'均衡斜角',stats:{recoil:+1,control:+1}}] },
-        { id:'fg_fold',    name:'折叠握把',        emoji:'📂', stats:{control:+8, hipfire:+5, recoil:-2}, tuning:[{name:'极限便携',stats:{control:+5,hipfire:+3}},{name:'腰射便携',stats:{hipfire:+5,control:+3}}] },
-        { id:'fg_vfg',     name:'VFG骑士前握把',   emoji:'🛡️', stats:{recoil:+3, stability:+2}, tuning:[{name:'极限稳定',stats:{recoil:+3,stability:+2}},{name:'稳定操控',stats:{recoil:+2,stability:+1,control:-1}}] },
-        { id:'fg_none',    name:'无',              emoji:'❌', stats:{}, tuning:[] }
-    ],
-    rear_grip: [
-        { id:'rg_phantom', name:'幻影后握把',      emoji:'👻', stats:{recoil:+3, control:+9, stability:-4}, tuning:[{name:'极限操控',stats:{control:+5,recoil:-2}},{name:'快速反应',stats:{control:+3,hipfire:+3}}] },
-        { id:'rg_hurricane',name:'飓风D-1后握把',  emoji:'🌪️', stats:{control:+4}, tuning:[{name:'速度强化',stats:{control:+5,recoil:-2}},{name:'均衡速度',stats:{control:+3,hipfire:+2}}] },
-        { id:'rg_stable',  name:'稳固握把底座',    emoji:'🧱', stats:{recoil:+2, stability:+7, control:-5}, tuning:[{name:'极限稳定',stats:{stability:+4,recoil:+2}},{name:'稳定操控',stats:{stability:+3,control:-2}}] },
-        { id:'rg_xk',      name:'XK竞技后握',      emoji:'🏆', stats:{recoil:+6, control:+2}, tuning:[{name:'极限控后',stats:{recoil:+4,control:-2}},{name:'竞技平衡',stats:{recoil:+2,control:+2}}] },
-        { id:'rg_shooter', name:'射手D-2后握把',   emoji:'🎯', stats:{stability:+4}, tuning:[{name:'极限据枪',stats:{stability:+5,control:-2}},{name:'射手平衡',stats:{stability:+3,range:+1}}] },
-        { id:'rg_none',    name:'无',              emoji:'❌', stats:{}, tuning:[] }
-    ],
-    mag: [
-        { id:'ma_std',     name:'标准弹匣',        emoji:'📍', stats:{}, tuning:[{name:'标准强化',stats:{control:+2}},{name:'稳定标准',stats:{stability:+2}}] },
-        { id:'ma_fast',    name:'快速弹匣',        emoji:'⚡', stats:{control:+5}, tuning:[{name:'极限换弹',stats:{control:+5,recoil:-2}},{name:'平衡换弹',stats:{control:+3,stability:+1}}] },
-        { id:'ma_ext',     name:'扩容弹匣',        emoji:'📦', stats:{control:-3}, tuning:[{name:'快速扩容',stats:{control:+1,recoil:-1}},{name:'极限扩容',stats:{control:-2,stability:+1}}] },
-        { id:'ma_drum',    name:'大弹鼓',          emoji:'🥁', stats:{control:-10, recoil:-3, hipfire:-5}, tuning:[{name:'稳定弹鼓',stats:{stability:+3,control:-3}},{name:'腰射弹鼓',stats:{hipfire:+4,stability:-2}}] },
-        { id:'ma_ap',      name:'穿甲弹',          emoji:'💥', stats:{armor:+15, control:-2}, tuning:[{name:'极限穿甲',stats:{armor:+6,control:-3}},{name:'穿甲平衡',stats:{armor:+3,recoil:+2}}] }
-    ],
-    stock: [
-        { id:'st_lightning',name:'闪电导轨枪托',   emoji:'⚡', stats:{control:+12, stability:-6}, tuning:[{name:'极限操控',stats:{control:+5,stability:-3}},{name:'快速反应',stats:{control:+3,hipfire:+3}}] },
-        { id:'st_skeleton',name:'骨架狙击枪托',    emoji:'🦴', stats:{control:+8, stability:+6, recoil:-4, hipfire:-16}, tuning:[{name:'极限稳定',stats:{stability:+5,recoil:-2}},{name:'狙击平衡',stats:{stability:+3,control:+2}}] },
-        { id:'st_stable',  name:'实用稳定枪托',    emoji:'📍', stats:{recoil:+2}, tuning:[{name:'均衡强化',stats:{recoil:+2,stability:+2}},{name:'操控强化',stats:{control:+3,recoil:+1}}] },
-        { id:'st_ak',      name:'AK骨架枪托',      emoji:'🔫', stats:{control:+8, recoil:-3, stability:-3}, tuning:[{name:'极限便携',stats:{control:+5,hipfire:+3}},{name:'腰射便携',stats:{hipfire:+5,control:+3}}] },
-        { id:'st_tactical',name:'实用战术枪托',    emoji:'🎖️', stats:{recoil:+4}, tuning:[{name:'极限控后',stats:{recoil:+4,control:-2}},{name:'战术平衡',stats:{recoil:+2,control:+2}}] },
-        { id:'st_heavy',   name:'重型枪托',        emoji:'🧱', stats:{recoil:+10, stability:+10, control:-8, hipfire:-5}, tuning:[{name:'极限稳定',stats:{recoil:+5,stability:+4}},{name:'据枪特化',stats:{stability:+6,recoil:+2}}] },
-        { id:'st_none',    name:'无枪托',          emoji:'❌', stats:{control:+15, recoil:-5, stability:-5, hipfire:+10, range:-5}, tuning:[{name:'极限速度',stats:{control:+8,hipfire:+3}},{name:'腰射极限',stats:{hipfire:+6,control:+4}}] }
-    ],
-    functional: [
-        { id:'fn_combined',name:'组合式护木片',    emoji:'🛡️', stats:{recoil:+1, stability:+1, control:-2}, tuning:[{name:'极限稳定',stats:{stability:+2,control:-2}},{name:'均衡护木',stats:{recoil:+1,control:-1}}] },
-        { id:'fn_ranger',  name:'游侠护木片',      emoji:'🛡️', stats:{recoil:+1}, tuning:[{name:'后坐强化',stats:{recoil:+2}},{name:'均衡游侠',stats:{recoil:+1,stability:+1}}] },
-        { id:'fn_laser',   name:'PERST-7蓝色激光镭指',emoji:'🔦', stats:{hipfire:+5, control:-2}, tuning:[{name:'极限腰射',stats:{hipfire:+5,control:-2}},{name:'激光平衡',stats:{hipfire:+3,control:+1}}] },
-        { id:'fn_bipod',   name:'两脚架',          emoji:'🦵', stats:{recoil:+8, stability:+12, control:-10, hipfire:-8}, tuning:[{name:'极限稳定',stats:{recoil:+5,stability:+4}},{name:'架点特化',stats:{stability:+6,control:-4}}] },
-        { id:'fn_none',    name:'无',              emoji:'❌', stats:{}, tuning:[] }
-    ]
-};
-
-const SLOT_NAMES = {
-    muzzle: '枪口', barrel: '枪管', optic: '瞄具',
-    foregrip: '前握把', rear_grip: '后握把', mag: '弹匣',
-    stock: '枪托', functional: '功能配件'
-};
+// 数据文件: data/weapons.js, data/attachments.js, data/compatibility.js
 
 /* ===================== 状态管理 ===================== */
 let currentWeapon = null;
@@ -110,8 +10,8 @@ let tuningChoices = {};
 
 /* ===================== 初始化 ===================== */
 function init() {
-    if (document.getElementById('weaponCarousel')) {
-        renderWeaponCarousel();
+    if (document.getElementById('weaponGrid')) {
+        renderWeaponGrid();
         bindGlobalEvents();
     }
     if (document.getElementById('attachmentWiki')) {
@@ -120,17 +20,34 @@ function init() {
 }
 
 /* ===================== 武器选择 ===================== */
-function renderWeaponCarousel() {
-    const carousel = document.getElementById('weaponCarousel');
-    if (!carousel) return;
-    carousel.innerHTML = WEAPONS.map(w => `
+function renderWeaponGrid() {
+    const grid = document.getElementById('weaponGrid');
+    if (!grid) return;
+    const filterType = document.querySelector('.filter-tab.active')?.dataset?.type || 'all';
+    const searchTerm = document.getElementById('weaponSearch')?.value?.toLowerCase() || '';
+    
+    let filtered = WEAPONS;
+    if (filterType !== 'all') {
+        filtered = filtered.filter(w => w.type === filterType);
+    }
+    if (searchTerm) {
+        filtered = filtered.filter(w => w.name.toLowerCase().includes(searchTerm));
+    }
+    
+    const wc = document.getElementById('weaponCount');
+    if (wc) wc.textContent = `(${filtered.length}把)`;
+    
+    grid.innerHTML = filtered.map(w => `
         <div class="weapon-card" data-id="${w.id}">
             <span class="icon">${w.emoji}</span>
             <div class="name">${w.name}</div>
             <div class="type">${w.type}</div>
+            <div class="caliber">${w.caliber}</div>
+            <div class="tags">${w.tags.map(t => `<span class="mini-tag">${t}</span>`).join('')}</div>
         </div>
     `).join('');
-    carousel.querySelectorAll('.weapon-card').forEach(card => {
+    
+    grid.querySelectorAll('.weapon-card').forEach(card => {
         card.addEventListener('click', () => selectWeapon(card.dataset.id));
     });
 }
@@ -148,7 +65,7 @@ function selectWeapon(id) {
     const wName = document.getElementById('weaponName');
     if (wName) wName.textContent = currentWeapon.name;
     const wType = document.getElementById('weaponType');
-    if (wType) wType.textContent = currentWeapon.type;
+    if (wType) wType.textContent = `${currentWeapon.type} | ${currentWeapon.caliber || ''}`;
     const wTags = document.getElementById('weaponTags');
     if (wTags) wTags.innerHTML = currentWeapon.tags.map(t =>
         `<span class="tag ${t.includes('高') || t.includes('极') ? 'accent' : ''}">${t}</span>`
@@ -283,38 +200,79 @@ function runAIAlgorithm() {
     if (coreKeys.length > 3) coreKeys = coreKeys.slice(0, 3);
     const diff = {};
     STAT_CONFIG.forEach(s => { diff[s.key] = adjustedTarget[s.key] - base[s.key]; });
-    const slots = ['muzzle','barrel','optic','foregrip','rear_grip','mag','stock','functional'];
+
+    // 获取初始可见槽位，优先处理核心槽位（可能影响 slotVisibilityRules）
+    let visibleSlots = getVisibleSlots(currentWeapon.id, {});
+    const coreSlots = ['muzzle','barrel','optic','handguard_kit','handguard','mag','stock'];
+    const depSlots = ['foregrip','rear_grip','functional','cheek_pad','upper_rail','left_rail','right_rail','upper_patch','left_patch','right_patch','rail_bipod','side_optic','upper_side_optic','tactical_device','riser_optic','lens_shade'];
+
     const selected = {};
     const order = [];
-    slots.forEach(slot => {
-        const options = ATTACHMENTS[slot];
-        let best = options[0];
+
+    // 处理核心槽位（优先处理会影响 slotVisibilityRules 的槽位）
+    coreSlots.forEach(slot => {
+        if (!visibleSlots.includes(slot)) return;
+        const options = getCompatibleAttachments(currentWeapon.id, slot, selected);
+        let best = options.find(o => o.id.endsWith('_none')) || options[0];
         let bestScore = -Infinity;
         options.forEach(opt => {
             let score = 0;
             coreKeys.forEach(k => {
-                const add = opt.stats[k] || 0;
+                const add = parseStatValue(opt.stats[k]);
                 if (diff[k] > 0 && add > 0) { score += add * 5; }
                 else if (diff[k] < 0 && add < 0) { score += Math.abs(add) * 5; }
                 else if (diff[k] > 0 && add < 0) { score -= Math.abs(add) * 3; }
             });
             STAT_CONFIG.filter(s => !coreKeys.includes(s.key)).forEach(s => {
                 const k = s.key;
-                const add = opt.stats[k] || 0;
+                const add = parseStatValue(opt.stats[k]);
                 if (diff[k] > 0 && add > 0) { score += add * 0.5; }
                 else if (diff[k] < 0 && add < 0) { score += Math.abs(add) * 0.5; }
             });
-            const positiveCount = STAT_CONFIG.filter(s => (opt.stats[s.key] || 0) > 0).length;
+            const positiveCount = STAT_CONFIG.filter(s => parseStatValue(opt.stats[s.key]) > 0).length;
             score += positiveCount * 0.5;
             if (score > bestScore) { bestScore = score; best = opt; }
         });
         selected[slot] = best;
         if (!best.id.endsWith('_none')) order.push(best);
-        STAT_CONFIG.forEach(s => { diff[s.key] -= (best.stats[s.key] || 0); });
+        STAT_CONFIG.forEach(s => { diff[s.key] -= parseStatValue(best.stats[s.key]); });
+        // 更新可见槽位（slotVisibilityRules 会动态增减槽位）
+        visibleSlots = getVisibleSlots(currentWeapon.id, selected);
     });
+
+    // 处理依赖槽位
+    depSlots.forEach(slot => {
+        if (!visibleSlots.includes(slot)) return;
+        const options = getCompatibleAttachments(currentWeapon.id, slot, selected);
+        let best = options.find(o => o.id.endsWith('_none')) || options[0];
+        let bestScore = -Infinity;
+        options.forEach(opt => {
+            let score = 0;
+            coreKeys.forEach(k => {
+                const add = parseStatValue(opt.stats[k]);
+                if (diff[k] > 0 && add > 0) { score += add * 5; }
+                else if (diff[k] < 0 && add < 0) { score += Math.abs(add) * 5; }
+                else if (diff[k] > 0 && add < 0) { score -= Math.abs(add) * 3; }
+            });
+            STAT_CONFIG.filter(s => !coreKeys.includes(s.key)).forEach(s => {
+                const k = s.key;
+                const add = parseStatValue(opt.stats[k]);
+                if (diff[k] > 0 && add > 0) { score += add * 0.5; }
+                else if (diff[k] < 0 && add < 0) { score += Math.abs(add) * 0.5; }
+            });
+            const positiveCount = STAT_CONFIG.filter(s => parseStatValue(opt.stats[s.key]) > 0).length;
+            score += positiveCount * 0.5;
+            if (score > bestScore) { bestScore = score; best = opt; }
+        });
+        selected[slot] = best;
+        if (!best.id.endsWith('_none')) order.push(best);
+        STAT_CONFIG.forEach(s => { diff[s.key] -= parseStatValue(best.stats[s.key]); });
+        visibleSlots = getVisibleSlots(currentWeapon.id, selected);
+    });
+
     const finalStats = { ...base };
     Object.values(selected).forEach(att => {
-        STAT_CONFIG.forEach(s => { finalStats[s.key] += (att.stats[s.key] || 0); });
+        STAT_CONFIG.forEach(s => { finalStats[s.key] += parseStatValue(att.stats[s.key]); });
     });
     let matchTotal = 0;
     STAT_CONFIG.forEach(s => {
@@ -331,11 +289,15 @@ function runAIAlgorithm() {
 function calcTheoreticalBounds(base) {
     const max = { ...base };
     const min = { ...base };
-    const slots = ['muzzle','barrel','optic','foregrip','rear_grip','mag','stock','functional'];
+    const slots = getVisibleSlots(currentWeapon.id, {});
+    const compatible = WEAPON_ATTACHMENT_COMPATIBILITY[currentWeapon.id] || {};
     slots.forEach(slot => {
+        const compatibleAttIds = compatible[slot] || [];
+        if (!ATTACHMENTS[slot]) return;
         ATTACHMENTS[slot].forEach(att => {
+            if (compatibleAttIds.length > 0 && !compatibleAttIds.includes(att.id)) return;
             STAT_CONFIG.forEach(s => {
-                const v = att.stats[s.key] || 0;
+                const v = parseStatValue(att.stats[s.key]);
                 if (v > 0) max[s.key] += v;
                 if (v < 0) min[s.key] += v;
             });
@@ -350,23 +312,35 @@ function calcTheoreticalBounds(base) {
     return { max, min };
 }
 
+function validateBuild(result) {
+    const compatible = WEAPON_ATTACHMENT_COMPATIBILITY[currentWeapon.id] || {};
+    for (const [slot, att] of Object.entries(result.attachments)) {
+        if (!att || att.id.endsWith('_none')) continue;
+        const compatibleIds = compatible[slot] || [];
+        if (compatibleIds.length > 0 && !compatibleIds.includes(att.id)) {
+            console.warn(`[验证失败] ${currentWeapon.name} 不支持 ${att.name}`);
+            return false;
+        }
+    }
+    return true;
+}
+
 function recalcFinalStats() {
     if (!analysisResult) return;
     const stats = { ...currentWeapon.baseStats };
     Object.values(analysisResult.attachments).forEach(att => {
         if (!att) return;
-        STAT_CONFIG.forEach(s => { stats[s.key] += (att.stats[s.key] || 0); });
+        STAT_CONFIG.forEach(s => { stats[s.key] += parseStatValue(att.stats[s.key]); });
     });
     Object.values(analysisResult.attachments).forEach(att => {
         if (!att || att.id.endsWith('_none')) return;
         const tIdx = tuningChoices[att.id] ?? 0;
         const tune = att.tuning[tIdx];
         if (tune && tune.stats) {
-            STAT_CONFIG.forEach(s => { stats[s.key] += (tune.stats[s.key] || 0); });
+            STAT_CONFIG.forEach(s => { stats[s.key] += parseStatValue(tune.stats[s.key]); });
         }
     });
     renderFinalStats(stats);
-    generateCode(stats);
 }
 
 /* ===================== 精校面板 ===================== */
@@ -421,12 +395,15 @@ function renderResult(result) {
     }
     const grid = document.getElementById('attachmentsGrid');
     if (!grid) return;
-    const slots = ['muzzle','barrel','optic','foregrip','rear_grip','mag','stock','functional'];
-    grid.innerHTML = slots.map(slot => {
+    const visibleSlots = getVisibleSlots(currentWeapon.id, result.attachments);
+    grid.innerHTML = visibleSlots.map(slot => {
         const att = result.attachments[slot];
         if (!att || att.id.endsWith('_none')) return '';
-        const bonuses = STAT_CONFIG.filter(s => (att.stats[s.key] || 0) !== 0).map(s => {
-            const v = att.stats[s.key];
+        const bonuses = STAT_CONFIG.filter(s => {
+            const v = parseStatValue(att.stats[s.key]);
+            return v !== 0;
+        }).map(s => {
+            const v = parseStatValue(att.stats[s.key]);
             const sign = v > 0 ? '+' : '';
             const shortName = s.name.replace('控制','').replace('稳定性','稳').replace('操控速度','操控').replace('有效射程','射程').replace('腰射精度','腰射').replace('护甲伤害','穿甲');
             return `<span class="${v < 0 ? 'negative' : ''}">${sign}${v} ${shortName}</span>`;
@@ -440,7 +417,6 @@ function renderResult(result) {
         </div>`;
     }).join('');
     renderFinalStats(result.finalStats);
-    generateCode(result.finalStats);
 }
 
 function renderFinalStats(stats) {
@@ -463,37 +439,7 @@ function renderFinalStats(stats) {
     }).join('');
 }
 
-/* ===================== 改枪码生成 ===================== */
-function generateCode(stats) {
-    if (!currentWeapon || !analysisResult) return;
-    const slots = ['muzzle','barrel','optic','foregrip','rear_grip','mag','stock','functional'];
-    const attIds = slots.map(s => { const att = analysisResult.attachments[s]; return att ? att.id : 'none'; }).join(',');
-    const tuneCodes = slots.map(s => {
-        const att = analysisResult.attachments[s];
-        if (!att || att.id.endsWith('_none')) return '-';
-        const idx = tuningChoices[att.id] ?? 0;
-        return idx;
-    }).join('');
-    const code = `${currentWeapon.id.toUpperCase()}-${btoa(attIds).replace(/=+$/,'').substring(0,12)}-${tuneCodes}`;
-    const ct = document.getElementById('codeText');
-    if (ct) ct.textContent = code;
-}
-
-/* ===================== 复制 & 重置 ===================== */
-function copyCode() {
-    const text = document.getElementById('codeText').textContent;
-    if (text === '—') return;
-    navigator.clipboard.writeText(text).then(() => {
-        const btn = document.getElementById('btnCopy');
-        if (btn) {
-            btn.classList.add('copied');
-            btn.innerHTML = '<i class="fas fa-check"></i>';
-            showToast('改枪码已复制到剪贴板');
-            setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = '<i class="fas fa-copy"></i>'; }, 2000);
-        }
-    });
-}
-
+/* ===================== 重置 ===================== */
 function resetAll() {
     if (!currentWeapon) return;
     STAT_CONFIG.forEach(s => { sliderValues[s.key] = currentWeapon.baseStats[s.key]; });
@@ -526,6 +472,8 @@ function renderWikiNav() {
         { key: 'muzzle', name: '枪口' },
         { key: 'barrel', name: '枪管' },
         { key: 'optic', name: '瞄具' },
+        { key: 'handguard_kit', name: '护木套件' },
+        { key: 'handguard', name: '护木' },
         { key: 'foregrip', name: '前握把' },
         { key: 'rear_grip', name: '后握把' },
         { key: 'mag', name: '弹匣' },
@@ -548,14 +496,17 @@ function renderWikiList(cat, keyword) {
     const list = document.getElementById('wikiList');
     if (!list) return;
     let items = [];
-    const slots = ['muzzle','barrel','optic','foregrip','rear_grip','mag','stock','functional'];
+    const slots = ['muzzle','barrel','optic','handguard_kit','handguard','foregrip','rear_grip','mag','stock','functional'];
     slots.forEach(slot => {
         if (cat !== 'all' && cat !== slot) return;
         ATTACHMENTS[slot].forEach(att => {
             if (att.id.endsWith('_none')) return;
             if (keyword && !att.name.toLowerCase().includes(keyword)) return;
-            const statsHtml = STAT_CONFIG.filter(s => (att.stats[s.key] || 0) !== 0).map(s => {
-                const v = att.stats[s.key];
+            const statsHtml = STAT_CONFIG.filter(s => {
+                const v = parseStatValue(att.stats[s.key]);
+                return v !== 0;
+            }).map(s => {
+                const v = parseStatValue(att.stats[s.key]);
                 const color = v > 0 ? 'var(--success)' : 'var(--danger)';
                 return `<span style="color:${color}">${v > 0 ? '+' : ''}${v} ${s.name}</span>`;
             }).join(' ') || '<span style="color:var(--text-dim)">无属性变化</span>';
@@ -577,6 +528,14 @@ function renderWikiList(cat, keyword) {
 
 /* ===================== 工具函数 ===================== */
 function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+function parseStatValue(val) {
+    if (typeof val === 'number') return val;
+    if (typeof val === 'string') {
+        const match = val.match(/^([+-]?\d+)%?$/);
+        if (match) return parseInt(match[1], 10);
+    }
+    return 0;
+}
 function showToast(msg) {
     const toast = document.getElementById('toast');
     if (!toast) return;
@@ -591,8 +550,18 @@ function bindGlobalEvents() {
     if (btnAnalyze) btnAnalyze.addEventListener('click', analyzeAndBuild);
     const btnReset = document.getElementById('btnReset');
     if (btnReset) btnReset.addEventListener('click', resetAll);
-    const btnCopy = document.getElementById('btnCopy');
-    if (btnCopy) btnCopy.addEventListener('click', copyCode);
+    const searchInput = document.getElementById('weaponSearch');
+    if (searchInput) searchInput.addEventListener('input', renderWeaponGrid);
+    const filterTabs = document.getElementById('weaponFilterTabs');
+    if (filterTabs) {
+        filterTabs.addEventListener('click', (e) => {
+            const tab = e.target.closest('.filter-tab');
+            if (!tab) return;
+            filterTabs.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            renderWeaponGrid();
+        });
+    }
 }
 
 /* ===================== 启动 ===================== */
