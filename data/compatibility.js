@@ -23,6 +23,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -49,6 +50,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_coyote_sd', 'fn_coyote_gn', 'fn_coyote_bk', 'mag_seat_none'],
         bolt: ['fn_zentinert', 'bolt_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'upper_rail', 'left_rail', 'rail_bipod', 'right_patch', 'right_rail', 'left_patch', 'foregrip', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -78,6 +80,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         bolt: ['fn_zentinert', 'bolt_none'],
         upper_handguard: ['upper_handguard_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -104,6 +107,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: ['lens_shade', 'riser_optic', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_scout' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_riser' }, show: ['optic', 'riser_optic'], hide: [] },
@@ -123,6 +127,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -146,6 +151,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -169,6 +175,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_honey_sd', 'fn_honey_gn', 'fn_honey_bk', 'mag_seat_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         right_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -191,6 +198,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         stock_kit: ['rg_resonance_g2', 'st_restricted', 'stock_kit_none'],
         lower_rail: ['fn_car15_light', 'lower_rail_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'foregrip', 'upper_rail', 'rail_bipod', 'upper_patch', 'left_patch', 'left_rail', 'right_patch', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -222,6 +230,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         rail_bipod: ['rb_util', 'rb_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'upper_rail', 'left_patch', 'left_rail', 'right_patch', 'muzzle'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -251,6 +260,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'up_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rail_bipod', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -278,6 +288,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -306,6 +317,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         right_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -330,6 +342,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         stock_kit: ['rg_resonance_g2', 'st_restricted', 'stock_kit_none'],
         lower_rail: ['fn_car15_light', 'lower_rail_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'foregrip', 'upper_rail', 'rail_bipod', 'right_rail', 'upper_patch', 'left_rail', 'left_patch', 'right_patch', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -367,6 +380,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'up_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -386,6 +400,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -403,6 +418,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lr_none'],
         right_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
         upper_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'up_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -432,6 +448,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'up_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -456,6 +473,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_coyote_sd', 'fn_coyote_gn', 'fn_coyote_bk', 'mag_seat_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'upper_rail', 'left_rail', 'rail_bipod', 'left_patch', 'right_patch', 'muzzle'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -477,6 +495,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         handguard_kit: ['hg_qbz95_kit', 'hg_none'],
         cheek_pad: ['st_qbz_pad', 'cheek_pad_none'],
         mag_seat: ['fn_honey_sd', 'fn_honey_gn', 'fn_honey_bk', 'mag_seat_none'],
+        defaultHidden: ['optic', 'upper_rail', 'left_rail', 'right_rail', 'side_optic', 'lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'hg_qbz95_kit' }, show: ['optic', 'upper_rail', 'left_rail', 'right_rail', 'side_optic'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -505,6 +524,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -531,6 +551,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -555,6 +576,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_honey_sd', 'fn_honey_gn', 'fn_honey_bk', 'mag_seat_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         right_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -582,6 +604,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -608,6 +631,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -633,6 +657,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_dbal_x2', 'fn_laser', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -655,6 +680,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         stock: ['st_anchor_rail', 'st_qr_perf', 'st_ct_enhanced', 'st_shadow_core', 'st_mrgs_hollow', 'st_ur_tactical2', 'st_shadow_rail', 'st_skeleton_sniper', 'st_pivot_adv', 'st_416_stable', 'st_416_light', 'st_elite_light', 'st_raid_core', 'st_pivot_stable', 'st_lightning_rail', 'st_mp5_telescope', 'st_g3_stable', 'st_mp5k_fold', 'st_g3_telescope', 'st_mp5', 'st_utility_light', 'st_tactical', 'st_stable', 'st_core_rail', 'st_none'],
         mag_seat: ['fn_wasp_sd', 'fn_wasp_bk', 'mag_seat_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'left_rail', 'right_rail', 'foregrip', 'muzzle', 'upper_rail'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -681,6 +707,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -703,6 +730,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         cheek_pad: ['st_universal_pad', 'cheek_pad_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -728,6 +756,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -752,6 +781,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -777,6 +807,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -791,6 +822,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_wasp_sd', 'fn_wasp_gn', 'fn_wasp_bk', 'mag_seat_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -812,6 +844,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_wasp_sd', 'fn_wasp_gn', 'fn_wasp_bk', 'mag_seat_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'ur_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'left_rail', 'rail_bipod', 'left_patch', 'upper_patch', 'right_rail', 'right_patch', 'muzzle'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -839,6 +872,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         bolt: ['fn_zentinert', 'bolt_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -860,6 +894,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_grizzly_sd', 'fn_grizzly_gn', 'fn_grizzly_bk', 'mag_seat_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         unique: ['hg_awm_dome', 'unique_none'],
+        defaultHidden: ['left_rail', 'right_rail', 'rail_bipod', 'left_patch', 'right_patch', 'lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'hg_awm_dome' }, show: ['left_rail', 'right_rail', 'rail_bipod', 'left_patch', 'right_patch'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
@@ -883,6 +918,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag: ['ma_none'],
         handguard: ['hg_m700_mil', 'hg_m700_adv', 'hg_m700_stable', 'hg_m700_black', 'hg_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'right_rail', 'left_rail', 'rail_bipod', 'cheek_pad', 'foregrip', 'rear_grip', 'upper_rail', 'left_patch', 'upper_patch', 'right_patch', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -916,6 +952,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         rail_bipod: ['rb_none'],
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         upper_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'up_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -939,6 +976,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         heat_shield: ['fn_r93_net', 'heat_shield_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         rail_bipod: ['rb_util', 'rb_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -963,6 +1001,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -986,6 +1025,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         barrel: ['br_lever_pioneer', 'br_lever_hunter', 'br_none'],
         stock: ['st_lever_skeleton', 'st_lever_hammer', 'st_lever_sport', 'st_lever_bullpup', 'st_lever_stable', 'st_none'],
         lever: ['lv_rhino', 'lv_hummingbird', 'lever_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -1011,6 +1051,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         cheek_pad: ['st_universal_pad', 'cheek_pad_none'],
         mag_seat: ['fn_grizzly_sd', 'fn_grizzly_gn', 'fn_grizzly_bk', 'mag_seat_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['foregrip', 'stock', 'rail_bipod', 'upper_rail', 'left_rail', 'right_rail', 'upper_patch', 'lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'right_patch', 'left_patch', 'muzzle'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'hg_m14_adv' }, show: ['foregrip', 'stock', 'rail_bipod', 'upper_rail', 'left_rail', 'right_rail', 'upper_patch'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
@@ -1038,6 +1079,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag: ['ma_none'],
         handguard: ['hg_mini14_adv', 'hg_mini14_int', 'hg_mini14_poly', 'hg_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1054,6 +1096,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         rail_bipod: ['rb_util', 'rb_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1062,6 +1105,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         muzzle: ['mu_ffc_dual', 'mu_xinhuo', 'mu_advanced', 'mu_dtk', 'mu_m7_silencer', 'mu_ak_brave', 'mu_pbs', 'mu_dead', 'mu_sandstorm', 'mu_fortress', 'mu_poseidon', 'mu_whisper', 'mu_titanium', 'mu_inferno', 'mu_ak_comp', 'mu_steel_brake', 'mu_practical', 'mu_flare_bell', 'mu_flame', 'mu_none'],
         barrel: ['br_none'],
         handguard_kit: ['hg_sks_adv', 'hg_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1082,6 +1126,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'up_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1095,6 +1140,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         trigger: ['fn_psg_trigger', 'trigger_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'upper_rail', 'left_rail', 'rail_bipod', 'left_patch', 'right_patch', 'muzzle'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -1128,6 +1174,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'up_none'],
         left_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'lp_none'],
         right_patch: ['fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'rp_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'tactical_device', 'riser_optic'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -1153,6 +1200,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag_seat: ['fn_grizzly_sd', 'fn_grizzly_gn', 'fn_grizzly_bk', 'mag_seat_none'],
         bolt: ['fn_zentinert', 'bolt_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1167,6 +1215,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_612' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
@@ -1189,6 +1238,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         muzzle: ['mu_725_cowboy', 'mu_none'],
         barrel: ['br_725_falcon', 'br_725_interceptor', 'br_none'],
         stock: ['st_725_watcher', 'st_725_short', 'st_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1209,6 +1259,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         stock: ['st_anchor_rail', 'st_qr_perf', 'st_ct_enhanced', 'st_shadow_core', 'st_mrgs_hollow', 'st_ur_tactical2', 'st_shadow_rail', 'st_skeleton_sniper', 'st_416_stable', 'st_416_light', 'st_elite_light', 'st_raid_core', 'st_lightning_rail', 'st_utility_light', 'st_tactical', 'st_stable', 'st_core_rail', 'st_none'],
         handguard: ['hg_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_scout' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_riser' }, show: ['optic', 'riser_optic'], hide: [] },
@@ -1226,6 +1277,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         stock: ['st_anchor_rail', 'st_qr_perf', 'st_ct_enhanced', 'st_shadow_core', 'st_ur_tactical2', 'st_skeleton_sniper', 'st_1014_fixed', 'st_1014_extend', 'st_416_stable', 'st_416_light', 'st_elite_light', 'st_raid_core', 'st_pivot_stable', 'st_utility_light', 'st_tactical', 'st_stable', 'st_none'],
         handguard: ['hg_m1014_rail', 'hg_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'right_rail', 'left_rail', 'cheek_pad'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1247,6 +1299,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         stock: ['st_qr_perf', 'st_ct_enhanced', 'st_shadow_core', 'st_ur_tactical2', 'st_skeleton_sniper', 'st_416_stable', 'st_416_light', 'st_elite_light', 'st_raid_core', 'st_pivot_stable', 'st_utility_light', 'st_tactical', 'st_stable', 'st_none'],
         handguard: ['hg_m870_rail', 'hg_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'foregrip', 'left_rail', 'right_rail'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1271,6 +1324,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         bolt: ['fn_zentinert', 'bolt_none'],
         side_optic: ['op_osight_side', 'op_side_combat', 'op_side', 'op_xro_side', 'op_side_pano', 'side_optic_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1298,6 +1352,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         rail_bipod: ['rb_util', 'rb_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'upper_patch', 'upper_rail', 'left_patch', 'right_patch'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1322,6 +1377,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         upper_rail: ['fn_warrior_light', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_combined', 'fn_kuangfeng', 'fn_combined', 'fn_kc_hound', 'fn_ranger', 'ur_none'],
         left_rail: ['fn_olight_odin', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'rear_grip_patch', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1343,6 +1399,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag: ['ma_none'],
         stock: ['st_anchor_rail', 'st_qr_perf', 'st_ct_enhanced', 'st_shadow_core', 'st_mrgs_hollow', 'st_ur_tactical2', 'st_shadow_rail', 'st_skeleton_sniper', 'st_416_stable', 'st_416_light', 'st_elite_light', 'st_raid_core', 'st_pivot_stable', 'st_lightning_rail', 'st_utility_light', 'st_tactical', 'st_stable', 'st_core_rail', 'st_none'],
         rail_bipod: ['fn_pkm_bipod', 'rb_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic', 'riser_optic', 'tactical_device', 'grip_seat'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1367,6 +1424,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         rail_bipod: ['fn_qjb201_bipod', 'rb_none'],
         left_rail: ['fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'lr_none'],
         right_rail: ['fn_warrior_light', 'fn_olight_odin', 'fn_olight_baldr', 'fn_dbal_x2', 'fn_laser', 'fn_flare', 'fn_la3c', 'fn_peq2', 'fn_prac_light', 'rr_none'],
+        defaultHidden: ['lens_shade', 'riser_optic'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_scout' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_riser' }, show: ['optic', 'riser_optic'], hide: [] }
@@ -1380,6 +1438,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         muzzle: ['mu_smg_echo', 'mu_pistol_pure', 'mu_elite_pistol', 'mu_pistol_flame', 'mu_none'],
         barrel: ['br_357_long', 'br_357_std', 'br_357_prac_long', 'br_357_prac_short', 'br_357_barrel', 'br_none'],
         rear_grip: ['rg_357_wind', 'rg_357_sniper', 'rg_none'],
+        defaultHidden: ['lens_shade', 'upper_side_optic'],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_spirit_37' }, show: ['lens_shade'], hide: [] },
             { when: { slot: 'slot', value: 'op_m157' }, show: ['lens_shade'], hide: [] },
@@ -1398,6 +1457,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         mag: ['ma_93r_24', 'ma_93r_18', 'ma_none'],
         under_rail: EXT,
         lower_rail: ['fn_jad_laser', 'fn_olight_baldr', 'fn_under_light', 'fn_prac_light', 'lower_rail_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1408,6 +1468,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         rear_grip: ['rg_deagle', 'rg_none'],
         mag: ['ma_deagle_13', 'ma_none'],
         lower_rail: ['fn_jad_laser', 'fn_olight_baldr', 'fn_prac_light', 'lower_rail_none'],
+        defaultHidden: [],
         slotVisibilityRules: [
             { when: { slot: 'slot', value: 'op_riser' }, show: ['optic'], hide: [] }
         ]
@@ -1420,6 +1481,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         rear_grip: ['rg_xk', 'rg_xk_rubber', 'rg_xk_grip', 'rg_none'],
         mag: ['ma_g_33', 'ma_g_25', 'ma_none'],
         lower_rail: ['fn_jad_laser', 'fn_olight_baldr', 'fn_prac_light', 'lower_rail_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1430,6 +1492,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         rear_grip: ['rg_xk', 'rg_xk_rubber', 'rg_xk_grip', 'rg_none'],
         mag: ['ma_g_33', 'ma_g_25', 'ma_none'],
         lower_rail: ['fn_jad_laser', 'fn_olight_baldr', 'fn_prac_light', 'lower_rail_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1442,6 +1505,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         lower_rail: ['fn_jad_laser', 'fn_olight_baldr', 'fn_under_light', 'fn_prac_light', 'lower_rail_none'],
         trigger: ['fn_m1911_trigger', 'trigger_none'],
         hammer: ['fn_m1911_hammer', 'hammer_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1450,6 +1514,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         muzzle: ['mu_smg_echo', 'mu_pistol_pure', 'mu_elite_pistol', 'mu_pistol_flame', 'mu_none'],
         barrel: ['br_qsz92g_tactical', 'br_none'],
         lower_rail: ['fn_jad_laser', 'fn_olight_baldr', 'fn_prac_light', 'lower_rail_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
@@ -1463,6 +1528,7 @@ const WEAPON_ATTACHMENT_COMPATIBILITY = {
         stabilizer: ['sb_stable', 'sb_comp', 'stabilizer_none'],
         arrow_rest: ['ar_comp', 'arrow_rest_none'],
         grip_plate: ['gp_enhanced', 'gp_balanced', 'grip_plate_none'],
+        defaultHidden: [],
         slotVisibilityRules: []
     },
 
