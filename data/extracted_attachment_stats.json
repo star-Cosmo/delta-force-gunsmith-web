@@ -1,0 +1,3155 @@
+{
+  "先进白热成像战斗瞄准镜": {
+    "control": -8,
+    "stability": -2,
+    "value": 138889
+  },
+  "先进热融合全息瞄准镜": {
+    "control": -2,
+    "stability": -2,
+    "value": 52292
+  },
+  "VMX无框瞄具": {
+    "control": -2,
+    "value": 64597
+  },
+  "1p33 2/4倍瞄准镜": {
+    "control": -6,
+    "stability": 4,
+    "value": 49850
+  },
+  "UHX全息瞄准镜": {
+    "control": -2,
+    "value": 12283
+  },
+  "棱镜通用二倍光学瞄具": {
+    "control": -4,
+    "stability": 3,
+    "value": 59612
+  },
+  "灵眼3/7弹道计算狙击镜": {
+    "control": -8,
+    "stability": 6,
+    "value": 73216
+  },
+  "M157火控光学系统": {
+    "control": -6,
+    "value": 55135
+  },
+  "视点3倍瞄准镜": {
+    "control": -4,
+    "value": 58175
+  },
+  "1p-29俄制3倍瞄准镜": {
+    "control": -4,
+    "value": 24512
+  },
+  "LPVO多倍率战斗瞄具": {
+    "control": -6,
+    "value": 37162
+  },
+  "3/7可调倍率狙击镜": {
+    "control": -8,
+    "stability": 6,
+    "value": 77309
+  },
+  "侦察1.5/5可调瞄准镜": {
+    "control": -8,
+    "stability": 6,
+    "value": 43212
+  },
+  "HAMR组合瞄准镜": {
+    "control": -6,
+    "value": 36810
+  },
+  "MEO微型瞄具增高架": {
+    "control": -1,
+    "stability": 2,
+    "value": 12317
+  },
+  "ACOG精准六倍镜": {
+    "control": -2,
+    "value": 27539
+  },
+  "Osight微型瞄准镜": {
+    "control": -2,
+    "value": 29286
+  },
+  "Cobra准直式瞄准镜": {
+    "control": -2,
+    "value": 20320
+  },
+  "战斗红点瞄准镜": {
+    "control": -2,
+    "value": 16040
+  },
+  "微型红点瞄准镜": {
+    "control": -2,
+    "value": 14541
+  },
+  "okp-7反射瞄准镜": {
+    "control": -2,
+    "value": 7332
+  },
+  "XCOG突击3.5倍瞄准镜": {
+    "control": -4,
+    "value": 50778
+  },
+  "XRO快速反应瞄准镜": {
+    "control": -2,
+    "value": 15150
+  },
+  "全景红点瞄准镜": {
+    "control": -2,
+    "value": 31854
+  },
+  "AP5000反射式瞄准镜": {
+    "control": -2,
+    "value": 5576
+  },
+  "全息二型瞄准镜": {
+    "control": -2,
+    "value": 5484
+  },
+  "反射式瞄准镜": {
+    "control": -2,
+    "value": 5528
+  },
+  "俄式准直二倍瞄准镜": {
+    "control": -2,
+    "value": 14276
+  },
+  "全息瞄准镜": {
+    "control": -2,
+    "value": 5488
+  },
+  ".357左轮逐风者长枪管": {
+    "range": 35,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 18233
+  },
+  ".357左轮逐风者枪管": {
+    "range": 13,
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 18167
+  },
+  "左轮实用长管": {
+    "range": 2,
+    "recoil": 3,
+    "value": 3491
+  },
+  "左轮实用短管": {
+    "recoil": 2,
+    "control": 6,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 3005
+  },
+  ".357口径左轮长枪管": {
+    "range": 6,
+    "recoil": 6,
+    "control": -5,
+    "stability": 3,
+    "hipfire": -12,
+    "value": 5215
+  },
+  "冲锋枪回声消音器": {
+    "range": 11,
+    "recoil": 5,
+    "control": -6,
+    "stability": 2,
+    "hipfire": -12,
+    "value": 49722
+  },
+  "净化手枪消音器": {
+    "control": -8,
+    "stability": -4,
+    "value": 12114
+  },
+  "精英手枪制退器": {
+    "recoil": 9,
+    "control": -3,
+    "value": 12435
+  },
+  "实用手枪消焰器": {
+    "recoil": 3,
+    "value": 4948
+  },
+  ".357左轮逐风者后握把": {
+    "control": 8,
+    "value": 15446
+  },
+  "左轮狙击后握": {
+    "stability": 4,
+    "value": 4576
+  },
+  "多用途战术增高架": {
+    "recoil": -1,
+    "control": 2,
+    "value": 22239
+  },
+  "微型瞄具增高架": {
+    "recoil": -1,
+    "control": 2,
+    "value": 22239
+  },
+  "725双管霰弹枪鹰隼长枪管": {
+    "range": 5,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 30743
+  },
+  "725双管霰弹枪拦截者截短枪管": {
+    "range": -3,
+    "recoil": -2,
+    "control": 10,
+    "stability": -2,
+    "hipfire": 12,
+    "value": 26180
+  },
+  "725双管霰弹枪牛仔消音器": {
+    "recoil": 14,
+    "control": -8,
+    "stability": -3,
+    "value": 29986
+  },
+  "725双管霰弹枪守望者枪托": {
+    "recoil": 16,
+    "control": -6,
+    "stability": 6,
+    "hipfire": -8,
+    "value": 16638
+  },
+  "725双管霰弹枪州长短枪托": {
+    "recoil": -4,
+    "control": 10,
+    "stability": -4,
+    "hipfire": 16,
+    "value": 17514
+  },
+  "93R战术枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 7957
+  },
+  "93R远射超长枪管": {
+    "range": 7,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 10343
+  },
+  "93R实用轻枪管": {
+    "recoil": 2,
+    "control": 6,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 3150
+  },
+  "93R实用重枪管": {
+    "range": 1,
+    "recoil": 3,
+    "value": 3782
+  },
+  "93R实用长枪管": {
+    "range": 4,
+    "recoil": 6,
+    "control": -5,
+    "stability": 3,
+    "hipfire": -12,
+    "value": 3146
+  },
+  "JAD下挂激光": {
+    "control": -4,
+    "value": 13260
+  },
+  "OLIGHTBaldr ProR多功能手电": {
+    "control": -5,
+    "hipfire": -8,
+    "value": 36590
+  },
+  "下挂手枪灯": {
+    "control": -1,
+    "value": 9837
+  },
+  "实用枪灯": {
+    "control": -1,
+    "value": 9383
+  },
+  "M9肉色操控后握": {
+    "recoil": 2,
+    "control": 4,
+    "value": 4999
+  },
+  "M9木色稳定后握": {
+    "recoil": 4,
+    "stability": 2,
+    "value": 5507
+  },
+  "M9黑色均衡后握": {
+    "recoil": 3,
+    "control": 3,
+    "value": 5018
+  },
+  "93R 24发弹匣": {
+    "control": -6,
+    "value": 6921
+  },
+  "93R 18发弹匣": {
+    "control": -4,
+    "value": 3714
+  },
+  "复合弓无框瞄具": {
+    "control": -2,
+    "value": 7276
+  },
+  "复合弓智能倍镜": {
+    "stability": 4,
+    "hipfire": -8,
+    "value": 25602
+  },
+  "复合弓重型弓臂": {
+    "stability": 10,
+    "value": 100300
+  },
+  "复合弓轻型弓臂": {
+    "control": 8,
+    "stability": -4,
+    "value": 86797
+  },
+  "HVK速射箭匣": {
+    "control": -4
+  },
+  "复合弓增强弓弦": {
+    "range": 20,
+    "value": 121016
+  },
+  "复合弓稳定平衡杆": {
+    "control": 4,
+    "stability": 6,
+    "hipfire": -16,
+    "value": 13167
+  },
+  "复合弓竞赛平衡杆": {
+    "control": 5,
+    "stability": -2,
+    "hipfire": 12,
+    "value": 13235
+  },
+  "复合弓竞赛箭台": {
+    "range": 20,
+    "value": 96216
+  },
+  "复合弓增强握把片": {
+    "hipfire": 24,
+    "value": 19457
+  },
+  "复合弓均衡握把片": {
+    "control": 4,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 14800
+  },
+  "八倍先进热成像狙击镜": {
+    "control": -8,
+    "stability": -2,
+    "value": 207192
+  },
+  "灵眼6/12弹道计算狙击镜": {
+    "control": -8,
+    "stability": 6,
+    "value": 94574
+  },
+  "6/12神射手变倍狙击镜": {
+    "control": -8,
+    "stability": 6,
+    "value": 58170
+  },
+  "光学狙击8倍瞄准镜": {
+    "control": -8,
+    "stability": 6,
+    "value": 47315
+  },
+  "M3狙击镜": {
+    "control": -8,
+    "stability": 6,
+    "value": 52635
+  },
+  "杠杆式步枪守望者狙击镜": {
+    "value": 9902
+  },
+  "杠杆式步枪拓荒者枪管": {
+    "recoil": 8,
+    "control": 3,
+    "stability": -6,
+    "hipfire": 20,
+    "value": 37704
+  },
+  "杠杆式步枪猎鹿人枪管": {
+    "range": 9,
+    "recoil": 10,
+    "control": -6,
+    "stability": 5,
+    "value": 42147
+  },
+  "杠杆式步枪守望者钢制制退器": {
+    "recoil": 9,
+    "value": 40738
+  },
+  "杠杆式步枪骨架枪托": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -2,
+    "hipfire": -8,
+    "value": 24942
+  },
+  "杠杆式步枪战锤战术枪托": {
+    "recoil": 4,
+    "control": -2,
+    "stability": 4,
+    "value": 26880
+  },
+  "杠杆式步枪运动枪托": {
+    "control": 3,
+    "hipfire": 16,
+    "value": 32981
+  },
+  "杠杆式步枪无托后握把": {
+    "control": -2,
+    "stability": -2,
+    "hipfire": 32,
+    "value": 20472
+  },
+  "杠杆式步枪稳固狙击枪托": {
+    "recoil": 2,
+    "control": -2,
+    "stability": 6,
+    "value": 22532
+  },
+  "杠杆式步枪犀牛杠杆": {
+    "damage": 30,
+    "range": -10,
+    "value": 20534
+  },
+  "杠杆式步枪蜂鸟杠杆": {
+    "damage": 5,
+    "value": 21429
+  },
+  "沙漠之鹰镂空竞赛套件": {
+    "range": 3,
+    "control": 3,
+    "hipfire": 4,
+    "value": 4317
+  },
+  "沙鹰竞技枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 8380
+  },
+  "沙鹰膛线长枪管": {
+    "range": 8,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 16264
+  },
+  "沙鹰13发弹匣": {
+    "control": -8,
+    "value": 4704
+  },
+  "沙鹰竞技后握": {
+    "control": 6,
+    "value": 7387
+  },
+  "OLIGHTWARRIOR3S战术手电": {
+    "value": 71555
+  },
+  "DBAL-X2紫色激光镭指": {
+    "control": -4,
+    "value": 28161
+  },
+  "PERST-7蓝色激光镭指": {
+    "control": -4,
+    "value": 27788
+  },
+  "耀斑战术手电": {
+    "control": -1,
+    "value": 30987
+  },
+  "LA-3C绿色激光镭指": {
+    "control": -4,
+    "value": 28963
+  },
+  "PEQ-2红色激光镭指": {
+    "control": -4,
+    "value": 26681
+  },
+  "组合式护木片": {
+    "recoil": 1,
+    "control": -2,
+    "stability": 1,
+    "value": 5542
+  },
+  "狂蜂护木片": {
+    "hipfire": 4,
+    "value": 5535
+  },
+  "DD蟒蛇护木片": {
+    "control": 1,
+    "value": 5503
+  },
+  "KC猎犬护木片": {
+    "stability": 1,
+    "value": 5524
+  },
+  "游侠护木片": {
+    "recoil": 1,
+    "value": 5520
+  },
+  "OLIGHT Odin S战术手电": {
+    "control": -1,
+    "value": 35019
+  },
+  "OLIGHT Baldr Pro R多功能手电": {
+    "control": -5,
+    "hipfire": -8,
+    "value": 36590
+  },
+  "侧置Osight微型瞄准镜": {
+    "control": -2,
+    "value": 22538
+  },
+  "侧置战斗红点瞄准镜": {
+    "control": -2,
+    "value": 20746
+  },
+  "侧置微型红点瞄准镜": {
+    "control": -2,
+    "value": 20534
+  },
+  "侧置XRO快速反应瞄准镜": {
+    "control": -2,
+    "value": 20783
+  },
+  "侧置全景红点瞄准镜": {
+    "control": -2,
+    "value": 22261
+  },
+  "新式腾龙稳固导气箍": {
+    "recoil": 4,
+    "control": -4,
+    "stability": 3,
+    "value": 38464
+  },
+  "新式腾龙高速导气箍": {
+    "control": -3,
+    "value": 74479
+  },
+  "共振三代握把": {
+    "recoil": 4,
+    "control": -2,
+    "stability": 4,
+    "hipfire": 8,
+    "value": 50923
+  },
+  "EC通用前阻手": {
+    "recoil": -4,
+    "control": 6,
+    "stability": 2,
+    "hipfire": 16,
+    "value": 49567
+  },
+  "黎明三角手电握把": {
+    "recoil": 8,
+    "control": -5,
+    "value": 40053
+  },
+  "破晓垂直手电握把": {
+    "recoil": 6,
+    "control": -7,
+    "stability": 2,
+    "value": 23297
+  },
+  "CR棱镜阻手器": {
+    "recoil": 6,
+    "value": 24239
+  },
+  "共振二代前握把": {
+    "recoil": 6,
+    "control": 6,
+    "stability": -4,
+    "value": 56664
+  },
+  "伸缩脚架握把": {
+    "control": 1,
+    "hipfire": -12,
+    "value": 17026
+  },
+  "K1精英斜角握把": {
+    "recoil": 6,
+    "value": 22302
+  },
+  "X25U斜侧战斗握把": {
+    "recoil": 10,
+    "control": -3,
+    "stability": -3,
+    "hipfire": 8,
+    "value": 35587
+  },
+  "共振人体工程握把": {
+    "recoil": 9,
+    "control": -1,
+    "value": 65161
+  },
+  "幻影垂直握把": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -4,
+    "value": 51087
+  },
+  "战术垂直握把": {
+    "control": 6,
+    "value": 23879
+  },
+  "密令斜角握把": {
+    "recoil": 9,
+    "control": -1,
+    "value": 47533
+  },
+  "RK-0前握把": {
+    "recoil": 6,
+    "value": 28503
+  },
+  "战术三角握把": {
+    "recoil": 4,
+    "control": 2,
+    "value": 25935
+  },
+  "斜角阻手器": {
+    "recoil": -2,
+    "control": 8,
+    "value": 24555
+  },
+  "竞赛阻手器": {
+    "recoil": -2,
+    "control": 5,
+    "hipfire": 12,
+    "value": 23376
+  },
+  "相位战斗前握把": {
+    "recoil": 4,
+    "control": 1,
+    "stability": 2,
+    "hipfire": 4,
+    "value": 48431
+  },
+  "折叠握把": {
+    "recoil": -3,
+    "control": 2,
+    "stability": 5,
+    "value": 10495
+  },
+  "VFG骑士前握把": {
+    "control": 4,
+    "value": 10506
+  },
+  "ZFSG战术握把": {
+    "recoil": -1,
+    "hipfire": 12,
+    "value": 3495
+  },
+  "迷你阻手器": {
+    "control": 2,
+    "value": 3486
+  },
+  "实用垂直握把": {
+    "recoil": 2,
+    "value": 3470
+  },
+  "新式蛟龙战术长枪管": {
+    "range": 11,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 56707
+  },
+  "新式雪豹短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 27037
+  },
+  "锚点导轨后托": {
+    "recoil": 4,
+    "control": -2,
+    "stability": 6,
+    "value": 36106
+  },
+  "QR高性能后托": {
+    "recoil": 3,
+    "control": -2,
+    "stability": 3,
+    "hipfire": 16,
+    "value": 49881
+  },
+  "CT增强型后托": {
+    "recoil": 2,
+    "control": 6,
+    "stability": 2,
+    "hipfire": -8,
+    "value": 66107
+  },
+  "影袭托芯枪托": {
+    "recoil": 2,
+    "control": 10,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 48668
+  },
+  "UR特种战术枪托": {
+    "recoil": 8,
+    "control": -4,
+    "stability": 4,
+    "value": 48355
+  },
+  "骨架狙击枪托": {
+    "recoil": -4,
+    "control": 8,
+    "stability": 6,
+    "hipfire": -16,
+    "value": 45970
+  },
+  "416稳固枪托": {
+    "recoil": 4,
+    "control": -6,
+    "stability": 8,
+    "value": 24974
+  },
+  "416轻型枪托": {
+    "recoil": 6,
+    "control": 6,
+    "stability": -6,
+    "value": 24178
+  },
+  "精英轻型枪托": {
+    "recoil": 3,
+    "control": 3,
+    "value": 16429
+  },
+  "侵掠核心枪托": {
+    "recoil": 6,
+    "value": 22530
+  },
+  "枢机稳固枪托": {
+    "recoil": 6,
+    "value": 24067
+  },
+  "M4缓冲托芯": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 5512
+  },
+  "实用轻型枪托": {
+    "control": 2,
+    "value": 3306
+  },
+  "实用战术枪托": {
+    "recoil": 4,
+    "value": 12008
+  },
+  "实用稳定枪托": {
+    "recoil": 2,
+    "value": 3465
+  },
+  "蛛网钛制制退器": {
+    "recoil": 7,
+    "stability": -2,
+    "hipfire": 8,
+    "value": 31037
+  },
+  "FFC双流制退器": {
+    "recoil": 10,
+    "control": -4,
+    "stability": 3,
+    "value": 61025
+  },
+  "薪火螺旋消焰器": {
+    "recoil": 4,
+    "stability": 1,
+    "value": 21575
+  },
+  "先进多口径消音器": {
+    "range": 6,
+    "recoil": 9,
+    "control": -6,
+    "hipfire": -4,
+    "value": 56780
+  },
+  "M7实用消音器": {
+    "recoil": 8,
+    "control": -4,
+    "stability": 2,
+    "value": 31410
+  },
+  "死寂消音器": {
+    "range": 8,
+    "recoil": 8,
+    "control": -13,
+    "stability": -5,
+    "value": 46130
+  },
+  "沙暴垂直补偿器": {
+    "recoil": 9,
+    "value": 46274
+  },
+  "堡垒水平补偿器": {
+    "recoil": 9,
+    "value": 44324
+  },
+  "海神消焰器": {
+    "recoil": 7,
+    "value": 37664
+  },
+  "轻语战术消音器": {
+    "range": 6,
+    "recoil": 6,
+    "control": -5,
+    "stability": 2,
+    "hipfire": -4,
+    "value": 51723
+  },
+  "钛金竞赛制退器": {
+    "recoil": 12,
+    "control": -3,
+    "value": 40657
+  },
+  "炽火抑制器": {
+    "recoil": 6,
+    "control": -1,
+    "value": 22098
+  },
+  "钢制膛口制退器": {
+    "recoil": 6,
+    "stability": -1,
+    "value": 13247
+  },
+  "实用消音器": {
+    "recoil": 2,
+    "stability": 2,
+    "value": 18485
+  },
+  "实用消焰器": {
+    "recoil": 2,
+    "value": 3446
+  },
+  "兵锋新式握把": {
+    "recoil": 6,
+    "control": 2,
+    "value": 39433
+  },
+  "新式侍剑重型握把": {
+    "recoil": 6,
+    "control": -4,
+    "stability": 6,
+    "value": 41268
+  },
+  "新式尖兵轻型握把": {
+    "recoil": 3,
+    "control": 9,
+    "stability": -4,
+    "value": 28887
+  },
+  "5.8新式45发": {
+    "control": -8,
+    "value": 35014
+  },
+  "5.8新式60发弹鼓": {
+    "control": -9,
+    "value": 31803,
+    "recoil": 8
+  },
+  "蜜獾小口径快拔套(沙)": {
+    "control": 1,
+    "value": 5528
+  },
+  "蜜獾小口径快拔套(绿)": {
+    "control": 1,
+    "value": 5453
+  },
+  "蜜獾小口径快拔套(黑）": {
+    "control": 1,
+    "value": 5488
+  },
+  "泽宁特拉机柄帽": {
+    "control": 1,
+    "value": 1735
+  },
+  "野牛碳纤维护木": {
+    "recoil": 4,
+    "control": 4,
+    "value": 14444
+  },
+  "OLIGHTOdinS战术手电": {
+    "control": -1,
+    "value": 35019
+  },
+  "野牛刀锋超长枪管": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 24391
+  },
+  "野牛打击者标准枪管": {
+    "range": 4,
+    "recoil": 5,
+    "value": 19399
+  },
+  "野牛伞兵短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 26199
+  },
+  "俄系冲锋枪精密消音器": {
+    "recoil": 6,
+    "control": -2,
+    "stability": -3,
+    "hipfire": 8,
+    "value": 57373
+  },
+  "MRGS镂空枪托": {
+    "control": 4,
+    "stability": 6,
+    "hipfire": -8,
+    "value": 48982
+  },
+  "PT3死士枪托": {
+    "recoil": 3,
+    "control": 3,
+    "stability": 3,
+    "hipfire": -4,
+    "value": 41236
+  },
+  "PT1特种枪托": {
+    "recoil": 8,
+    "control": 4,
+    "stability": -4,
+    "value": 98921
+  },
+  "影袭导轨枪托": {
+    "recoil": 7,
+    "control": 7,
+    "stability": -6,
+    "value": 49503
+  },
+  "AK19枪托": {
+    "recoil": 6,
+    "control": 4,
+    "stability": -2,
+    "hipfire": -8,
+    "value": 19750
+  },
+  "枢机先进战斗枪托": {
+    "recoil": 4,
+    "control": 1,
+    "stability": 1,
+    "hipfire": 8,
+    "value": 36107
+  },
+  "闪电导轨枪托": {
+    "control": 12,
+    "stability": -6,
+    "value": 34072
+  },
+  "AK枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 1745
+  },
+  "AK骨架枪托": {
+    "recoil": -3,
+    "control": 8,
+    "stability": -3,
+    "value": 3415
+  },
+  "AK聚合物枪托": {
+    "recoil": 1,
+    "stability": 1,
+    "value": 3441
+  },
+  "核心导轨枪托": {
+    "recoil": 2,
+    "control": 2,
+    "value": 13573
+  },
+  "野牛 64发弹筒": {
+    "control": -5,
+    "value": 10257
+  },
+  "AK枪托缓冲垫": {
+    "recoil": 3,
+    "control": -3,
+    "stability": 1,
+    "value": 2233
+  },
+  "天蝎座后握把": {
+    "recoil": 8,
+    "value": 49586
+  },
+  "RK3后握把": {
+    "recoil": 3,
+    "control": 3,
+    "value": 23970
+  },
+  "AK镂空握把": {
+    "recoil": 3,
+    "control": 9,
+    "stability": -4,
+    "value": 53402
+  },
+  "AK重塔握把": {
+    "recoil": 1,
+    "control": 1,
+    "stability": 1,
+    "hipfire": 4,
+    "value": 58547
+  },
+  "稳定AK后握把": {
+    "recoil": 4,
+    "value": 17696
+  },
+  "射手AK后握把": {
+    "stability": 4,
+    "value": 16474
+  },
+  "勇士海狸枪管": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 28573
+  },
+  "勇士战术枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 36949
+  },
+  "AK折叠枪托": {
+    "control": 5,
+    "value": 17604
+  },
+  "实用AK后握把": {
+    "recoil": 2,
+    "control": 2,
+    "value": 15924
+  },
+  "勇士45发扩容弹匣": {
+    "control": -12,
+    "value": 20886
+  },
+  "野蜂冲锋枪快拔套（沙）": {
+    "control": 1,
+    "value": 5552
+  },
+  "野蜂冲锋枪快拔套（绿）": {
+    "control": 1,
+    "value": 5498
+  },
+  "野蜂冲锋枪快拔套(黑）": {
+    "control": 1,
+    "value": 5547
+  },
+  "AK12精英脚架长枪管": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 35867
+  },
+  "AK12前线长枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 35969
+  },
+  "OLIGHTBaldrProR多功能手电": {
+    "control": -5,
+    "hipfire": -8,
+    "value": 36590
+  },
+  "DTK制退器": {
+    "recoil": 6,
+    "hipfire": 12,
+    "value": 32144
+  },
+  "AK勇火消音器": {
+    "range": 7,
+    "recoil": 3,
+    "control": -4,
+    "stability": 3,
+    "hipfire": -8,
+    "value": 29412
+  },
+  "PBS俄式消音器": {
+    "recoil": 10,
+    "control": -4,
+    "value": 41092
+  },
+  "AK实用补偿器": {
+    "recoil": 7,
+    "stability": -2,
+    "value": 10926
+  },
+  "喇叭口消焰器": {
+    "recoil": 3,
+    "value": 5194
+  },
+  "AKS-74U聚合物弹鼓75发": {
+    "control": -9,
+    "value": 35872
+  },
+  "AKS-74U延长弹匣45发": {
+    "control": -5,
+    "value": 24109
+  },
+  "AKS74U3": {
+    "value": 3394
+  },
+  "AK12聚合物30发弹匣": {
+    "control": 2,
+    "value": 3463
+  },
+  "蜜獾小口径快拔套（沙）": {
+    "control": 1,
+    "value": 5528
+  },
+  "蜜獾小口径快拔套(黑)": {
+    "control": 1,
+    "value": 5488
+  },
+  "PSO战斗2.5倍瞄准镜": {
+    "control": -6,
+    "value": 20906
+  },
+  "PSO狙击8倍瞄准镜": {
+    "control": -8,
+    "stability": 2,
+    "value": 11858
+  },
+  "AKM性能枪管组合": {
+    "range": 2,
+    "recoil": 2,
+    "control": 2,
+    "stability": 2,
+    "hipfire": 4,
+    "value": 63155
+  },
+  "AKM海狸长枪管组合": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 14323
+  },
+  "AKM海狸枪管组合": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 35904
+  },
+  "AKM超然长枪管组合": {
+    "range": 7,
+    "recoil": 5,
+    "value": 34298
+  },
+  "AKM实用长枪管组合": {
+    "range": 12,
+    "recoil": 8,
+    "control": -5,
+    "stability": 3,
+    "hipfire": -12,
+    "value": 12400
+  },
+  "AKM实用标准枪管组合": {
+    "recoil": 2,
+    "control": 6,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 16505
+  },
+  "郊狼中间威力快拔套（沙）": {
+    "control": 1,
+    "value": 5536
+  },
+  "郊狼中间威力快拔套(绿）": {
+    "control": 1,
+    "value": 5522
+  },
+  "郊狼中间威力口径快拔套(黑)": {
+    "control": 1,
+    "value": 5487
+  },
+  "AKM大弹鼓70发": {
+    "control": -15,
+    "value": 36318
+  },
+  "AKM延长匣40发": {
+    "control": -8,
+    "value": 24316
+  },
+  "AKM30发聚合物弹匣": {
+    "control": 4,
+    "value": 3478
+  },
+  "AK762弹匣30发（木色）": {
+    "control": 2,
+    "value": 7126
+  },
+  "AKS74U导轨下护木": {
+    "recoil": 2,
+    "control": 2,
+    "stability": 2,
+    "hipfire": 8,
+    "value": 8544
+  },
+  "AKS74U30发弹匣": {
+    "value": 3394
+  },
+  "AK545口径30发弹匣": {
+    "value": 3487
+  },
+  "蜜獾小口径快拔套(沙）": {
+    "control": 1,
+    "value": 5528
+  },
+  "AKS74U导轨上护木": {
+    "recoil": 2,
+    "control": 2,
+    "stability": 2,
+    "hipfire": 8,
+    "value": 27893
+  },
+  "夜莺一体消音组合": {
+    "range": 6,
+    "recoil": 8,
+    "control": -2,
+    "stability": 8,
+    "hipfire": -4,
+    "value": 49813
+  },
+  "AR57激流超长枪管": {
+    "range": 11,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 24806
+  },
+  "OLIGHTBaldr Pro R多功能手电": {
+    "control": -5,
+    "hipfire": -8,
+    "value": 36590
+  },
+  "共振二代一体枪托": {
+    "recoil": 7,
+    "control": 10,
+    "stability": -6,
+    "hipfire": 4,
+    "value": 69681
+  },
+  "禁区一体枪托": {
+    "recoil": 11,
+    "control": -6,
+    "stability": 7,
+    "value": 34506
+  },
+  "鸟笼消焰器": {
+    "recoil": 2,
+    "stability": 1,
+    "value": 5212
+  },
+  "实用两脚架": {
+    "control": -4,
+    "value": 15375
+  },
+  "模块化AR后握把": {
+    "recoil": 2,
+    "control": 2,
+    "value": 43228
+  },
+  "AR重塔握把": {
+    "recoil": 1,
+    "control": 1,
+    "stability": 1,
+    "hipfire": 4,
+    "value": 24677
+  },
+  "侵袭后握把": {
+    "recoil": 3,
+    "control": 3,
+    "value": 31442
+  },
+  "幻影后握把": {
+    "recoil": 3,
+    "control": 9,
+    "stability": -4,
+    "value": 67351
+  },
+  "AR MOE后握把": {
+    "recoil": 3,
+    "stability": 3,
+    "value": 23618
+  },
+  "射手D-2后握把": {
+    "stability": 4,
+    "value": 13149
+  },
+  "飓风D-1后握把": {
+    "control": 4,
+    "value": 13481
+  },
+  "M7稳定后握把": {
+    "recoil": 2,
+    "value": 3486
+  },
+  "416实用后握把": {
+    "control": 2,
+    "value": 3466
+  },
+  "HVK双发套件": {
+    "damage": -14,
+    "recoil": 8,
+    "control": -2,
+    "hipfire": 8
+  },
+  "ASh-12战斧重型枪管": {
+    "damage": 19,
+    "recoil": 12,
+    "control": -4,
+    "stability": 4,
+    "hipfire": -16,
+    "value": 49804
+  },
+  "ASh-12 CQB短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 49183
+  },
+  "ASh-12歼灭高精长枪管": {
+    "range": 17,
+    "recoil": 13,
+    "control": -9,
+    "stability": 4,
+    "hipfire": -20,
+    "value": 24975
+  },
+  "泰坦消音器": {
+    "recoil": 16,
+    "control": -8,
+    "stability": 4,
+    "hipfire": -16,
+    "value": 23520
+  },
+  "余烬消音器": {
+    "recoil": 10,
+    "control": -4,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 49412
+  },
+  "泰坦补偿器": {
+    "recoil": 10,
+    "control": -4,
+    "hipfire": 12,
+    "value": 43453
+  },
+  "ASh-12狙击枪托": {
+    "recoil": 12,
+    "control": 4,
+    "stability": 4,
+    "hipfire": -16,
+    "value": 48037
+  },
+  "ASh-12骨架枪托": {
+    "recoil": 3,
+    "control": 6,
+    "stability": 4,
+    "hipfire": 12,
+    "value": 99410
+  },
+  "ASh-12扩容30发弹匣": {
+    "control": -2,
+    "value": 25079
+  },
+  "ASVal刺客高级枪管": {
+    "damage": 9,
+    "range": 19,
+    "recoil": 12,
+    "control": -4,
+    "stability": 6,
+    "hipfire": -16,
+    "value": 98962
+  },
+  "VSS海啸长枪管组合": {
+    "range": 6,
+    "recoil": 10,
+    "control": -2,
+    "stability": 6,
+    "hipfire": -12,
+    "value": 98993
+  },
+  "VSS精英一体枪托": {
+    "recoil": 20,
+    "control": -6,
+    "stability": 6,
+    "hipfire": -16,
+    "value": 96236
+  },
+  "AS Val枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 6741
+  },
+  "VSS 45发弹匣": {
+    "control": -8,
+    "value": 75211
+  },
+  "VSS30发弹匣": {
+    "control": -4,
+    "value": 19597
+  },
+  "郊狼中间威力快拔套（绿）": {
+    "control": 1,
+    "value": 5522
+  },
+  "AUG晨零一体消音管": {
+    "range": 10,
+    "recoil": 12,
+    "stability": 8,
+    "hipfire": -16,
+    "value": 65140
+  },
+  "AUG精英脚架长枪管": {
+    "range": 17,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 90794
+  },
+  "AUG尖兵标准枪管": {
+    "recoil": 4,
+    "control": 2,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 36068
+  },
+  "AUG实用集成三倍镜枪管": {
+    "range": 3,
+    "recoil": 4,
+    "control": -4,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 38330
+  },
+  "通用托腮板": {
+    "recoil": 1,
+    "stability": 3,
+    "value": 16671
+  },
+  "AUG枪托垫": {
+    "recoil": 4,
+    "control": 4,
+    "value": 65386
+  },
+  "AUG45发扩容弹匣": {
+    "control": -8,
+    "value": 36112
+  },
+  "AUG60发弹鼓": {
+    "control": -8,
+    "value": 35449
+  },
+  "AWM穹顶套件": {
+    "recoil": -3,
+    "control": 3,
+    "stability": 4,
+    "value": 37187
+  },
+  "AWM天际线长枪管": {
+    "range": 60,
+    "recoil": 9,
+    "control": -4,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 55263
+  },
+  "共鸣狙击枪消音器": {
+    "range": 60,
+    "control": -9,
+    "stability": -6,
+    "value": 97789
+  },
+  "漩涡消焰器": {
+    "recoil": 2,
+    "control": -2,
+    "stability": 5,
+    "value": 15339
+  },
+  "灰熊全威力快拔套（沙）": {
+    "control": 1,
+    "value": 5536
+  },
+  "灰熊全威力快拔套（绿）": {
+    "control": 1,
+    "value": 5560
+  },
+  "灰熊全威力口径快拔套（黑）": {
+    "control": 1,
+    "value": 5514
+  },
+  "AR特勤一体消音组合": {
+    "range": 7,
+    "recoil": 16,
+    "control": -6,
+    "stability": -6,
+    "value": 71305
+  },
+  "AR特攻短枪管组合": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 36057
+  },
+  "AR战壕标准枪管组合": {
+    "range": 7,
+    "recoil": 5,
+    "value": 36003
+  },
+  "AR加百列长枪管组合": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 35838
+  },
+  "AR标准枪管组合": {
+    "recoil": 2,
+    "control": 6,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 5527
+  },
+  "AR碳纤维枪管组合": {
+    "recoil": 6,
+    "control": -5,
+    "stability": 3,
+    "hipfire": -12,
+    "value": 16044,
+    "range": 10
+  },
+  "OPS消音器": {
+    "recoil": 10,
+    "control": -8,
+    "stability": -3,
+    "value": 17965
+  },
+  "CAR15绑手电": {
+    "control": -3,
+    "value": 2633
+  },
+  "ARMOE后握把": {
+    "recoil": 3,
+    "stability": 3,
+    "value": 23618
+  },
+  "AR60发扩容弹匣": {
+    "control": -12,
+    "value": 49584,
+    "recoil": 8
+  },
+  "M4弹鼓60发": {
+    "control": -12,
+    "value": 35811
+  },
+  "M4扩容45发弹匣": {
+    "control": -9,
+    "value": 24681,
+    "recoil": 8
+  },
+  "AR聚合物30发": {
+    "stability": 2,
+    "value": 6536
+  },
+  "FS-12扩容弹鼓": {
+    "control": -15,
+    "value": 45608
+  },
+  "FS-12加长弹匣": {
+    "control": -8,
+    "value": 16446
+  },
+  "FS-12短弹匣": {
+    "control": -4,
+    "value": 10391
+  },
+  "FS-12剑冢长枪管": {
+    "range": 4,
+    "recoil": 7,
+    "control": 4,
+    "stability": -8,
+    "value": 23156
+  },
+  "霰弹枪回声消音器": {
+    "recoil": 8,
+    "control": -4,
+    "stability": -3,
+    "value": 23105
+  },
+  "霰弹枪涡流收束器": {
+    "recoil": 7,
+    "control": -5,
+    "hipfire": 8,
+    "value": 53831
+  },
+  "霰弹枪巨炮制退器": {
+    "recoil": 12,
+    "control": -2,
+    "stability": -2,
+    "value": 28854
+  },
+  "霰弹枪囚笼补偿器": {
+    "recoil": 12,
+    "control": -4,
+    "value": 14644
+  },
+  "霰弹枪精密消音器": {
+    "recoil": 5,
+    "control": -4,
+    "stability": -2,
+    "value": 14484
+  },
+  "实用霰弹收束器": {
+    "recoil": 5,
+    "control": -4,
+    "hipfire": 4,
+    "value": 1385
+  },
+  "FS-12人体工学护木": {
+    "recoil": 2,
+    "hipfire": 12,
+    "value": 13678
+  },
+  "G17战术重枪管": {
+    "range": 8,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 8499
+  },
+  "G17轻量化枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 7310
+  },
+  "G系手枪33发弹匣": {
+    "control": -8,
+    "value": 11754
+  },
+  "G系手枪25发弹匣": {
+    "control": -4,
+    "value": 3958
+  },
+  "XK竞技后握": {
+    "recoil": 6,
+    "control": 2,
+    "value": 25042
+  },
+  "XK橡胶套后握": {
+    "recoil": 4,
+    "control": 2,
+    "value": 11262
+  },
+  "XK防滑纹后握": {
+    "recoil": 2,
+    "control": 4,
+    "value": 11765
+  },
+  "G18冲击长枪管": {
+    "range": 3,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 25049
+  },
+  "G3平台神射枪管组合": {
+    "range": 20,
+    "recoil": 12,
+    "control": -10,
+    "stability": 6,
+    "hipfire": -8,
+    "value": 50046
+  },
+  "G3加强长枪管组合": {
+    "range": 17,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 40579
+  },
+  "G3飓风短枪管组合": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 21591
+  },
+  "G3守卫标准枪管组合": {
+    "range": 10,
+    "recoil": 5,
+    "value": 32861
+  },
+  "MP5伸缩枪托": {
+    "control": 2,
+    "hipfire": 8,
+    "value": 14264
+  },
+  "G3稳定枪托": {
+    "recoil": 5,
+    "value": 17824
+  },
+  "MP5K折叠枪托": {
+    "recoil": 3,
+    "stability": 2,
+    "value": 21544
+  },
+  "G3伸缩枪托": {
+    "recoil": 1,
+    "control": 3,
+    "stability": -2,
+    "value": 3469
+  },
+  "MP5尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 3577
+  },
+  "侍卫稳固后握把": {
+    "recoil": 8,
+    "value": 33699
+  },
+  "G3镂空握把": {
+    "recoil": 3,
+    "control": 9,
+    "stability": -4,
+    "value": 25867
+  },
+  "PSG-1后握把": {
+    "recoil": 2,
+    "control": -2,
+    "stability": 6,
+    "value": 19707
+  },
+  "G330发弹匣": {
+    "control": -8,
+    "value": 18811
+  },
+  "G350发弹鼓": {
+    "control": -15,
+    "value": 21220
+  },
+  "灰熊全威力快拔套(绿）": {
+    "control": 1,
+    "value": 5561
+  },
+  "K416A8长枪管组合": {
+    "range": 8,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 25077
+  },
+  "K416A8枪管组合": {
+    "range": 5,
+    "recoil": 5,
+    "value": 28073
+  },
+  "K416特勤短枪管组合": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 20570
+  },
+  "K416精英重枪管组合": {
+    "range": 2,
+    "recoil": 3,
+    "value": 27384
+  },
+  "416-C伸缩枪托": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 21490
+  },
+  "弹匣": {
+    "stability": 2,
+    "value": 6536
+  },
+  "K437特攻一体消音枪管": {
+    "range": 6,
+    "recoil": 12,
+    "control": -5,
+    "stability": 6,
+    "hipfire": -16,
+    "value": 43166
+  },
+  "K437长矛手长枪管组合": {
+    "range": 11,
+    "recoil": 9,
+    "control": -2,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 34995
+  },
+  "K437断刃短枪管组合": {
+    "recoil": 6,
+    "control": 2,
+    "stability": 2,
+    "hipfire": -8,
+    "value": 30628
+  },
+  "K43760发弹鼓": {
+    "control": -12,
+    "value": 20503
+  },
+  "45发K437扩容弹匣": {
+    "control": -4,
+    "value": 24670
+  },
+  "KC17影舞者消音": {
+    "range": 10,
+    "recoil": 12,
+    "control": -10,
+    "stability": 6,
+    "hipfire": -16,
+    "value": 31277
+  },
+  "KC17短刃枪管": {
+    "recoil": 6,
+    "control": 2,
+    "stability": 2,
+    "hipfire": -8,
+    "value": 35612
+  },
+  "KC17长剑枪管": {
+    "range": 17,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 59060
+  },
+  "KC17先进战斗枪托": {
+    "recoil": 8,
+    "control": -7,
+    "stability": 6,
+    "hipfire": 4,
+    "value": 38122
+  },
+  "AKS-74U聚合物弹鼓75": {
+    "control": -9,
+    "value": 35872
+  },
+  "霰弹枪快速装填器": {
+    "recoil": -2,
+    "control": 2,
+    "value": 7418
+  },
+  "M1014导轨护木": {
+    "recoil": 3,
+    "control": 3,
+    "value": 6697
+  },
+  "M1014断点枪管": {
+    "recoil": 12,
+    "control": -6,
+    "hipfire": -8,
+    "value": 28662
+  },
+  "1014固定枪托": {
+    "recoil": 8,
+    "control": 4,
+    "value": 20343
+  },
+  "1014伸缩托（折叠）": {
+    "recoil": 5,
+    "control": 8,
+    "hipfire": 12,
+    "value": 35841
+  },
+  "1014伸缩托(展开)": {
+    "recoil": 15,
+    "hipfire": 4,
+    "value": 67489
+  },
+  "M14先进枪身系统": {
+    "recoil": 4,
+    "control": 4,
+    "value": 114339
+  },
+  "M14洞察超长枪管": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 94071
+  },
+  "M14轻语短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 49590
+  },
+  "M14漫游标准枪管": {
+    "range": 7,
+    "recoil": 5,
+    "value": 49850
+  },
+  "M14 30发弹匣": {
+    "control": -8,
+    "value": 42734
+  },
+  "M14 20发弹匣": {
+    "control": -4,
+    "value": 22674
+  },
+  "M1450发弹鼓": {
+    "control": -12,
+    "value": 129772
+  },
+  "M14导轨一体枪托": {
+    "recoil": 2,
+    "control": 4,
+    "value": 37502
+  },
+  "M14聚合物一体枪托": {
+    "control": 4,
+    "value": 28413
+  },
+  "AR聚合物30发 弹匣": {
+    "stability": 2,
+    "value": 6536
+  },
+  "蜜獾小口径快拔套〔绿)": {
+    "control": 1,
+    "value": 5453
+  },
+  "M1911夜鹰战术枪管": {
+    "range": 3,
+    "recoil": 5,
+    "value": 8380
+  },
+  "M1911夜鹰战术扳机": {
+    "recoil": -4,
+    "value": 10518
+  },
+  "M1911夜鹰战术击锤": {
+    "stability": -4,
+    "value": 10498
+  },
+  "M191111发扩容弹匣": {
+    "control": -4,
+    "value": 4130
+  },
+  "M1911夜鹰战术后握把": {
+    "recoil": 2,
+    "control": 4,
+    "value": 5586
+  },
+  "HVK链锯套件": {
+    "recoil": 5,
+    "control": 5,
+    "stability": 8,
+    "hipfire": 8
+  },
+  "M249海湾短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 36390
+  },
+  "M249犀牛长枪管": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 47034
+  },
+  "M249脚架护木": {
+    "control": -4,
+    "value": 16223
+  },
+  "M249军规导轨护木": {
+    "recoil": 4,
+    "stability": 4,
+    "value": 31376
+  },
+  "M249导轨护木": {
+    "recoil": 4,
+    "control": 4,
+    "value": 24121
+  },
+  "M249精英骨架枪托": {
+    "recoil": 4,
+    "control": 9,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 15627
+  },
+  "M249尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 5625
+  },
+  "M249蝎尾握把": {
+    "control": -4,
+    "stability": 6,
+    "value": 20595
+  },
+  "AR聚合物30发弹匣": {
+    "recoil": 8,
+    "control": 12,
+    "stability": 2,
+    "value": 6478
+  },
+  "OLIGHT Baldr Pro R多功育": {
+    "control": -5,
+    "hipfire": -8,
+    "value": 36590
+  },
+  "M250钛金长枪管": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 85600
+  },
+  "M250侍卫短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 48935
+  },
+  "M25075发弹链": {
+    "control": 8,
+    "value": 49707
+  },
+  "M16A4稳定枪托": {
+    "recoil": 5,
+    "value": 19910
+  },
+  "M700一体消音管": {
+    "control": 7,
+    "stability": -3,
+    "value": 70927
+  },
+  "M700猎食军规枪管": {
+    "range": 27,
+    "recoil": 2,
+    "stability": 3,
+    "value": 38682
+  },
+  "M700平流层长枪管": {
+    "range": 45,
+    "recoil": 9,
+    "control": -4,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 47328
+  },
+  "M700 10发弹匣": {
+    "control": -4,
+    "value": 16839
+  },
+  "M700军规护木": {
+    "recoil": -6,
+    "control": 4,
+    "value": 23765
+  },
+  "M700先进枪身系统": {
+    "recoil": -2,
+    "control": 5,
+    "stability": 5,
+    "value": 34524
+  },
+  "M700稳定一体枪托": {
+    "control": -3,
+    "stability": 7,
+    "value": 24453
+  },
+  "M700黑色一体枪托": {
+    "control": 7,
+    "stability": -3,
+    "value": 22594
+  },
+  "M7灵蜥短枪管": {
+    "range": -15,
+    "recoil": 5,
+    "control": 5,
+    "hipfire": 16,
+    "value": 27404
+  },
+  "M7堤风超长枪管组合": {
+    "damage": 2,
+    "range": 15,
+    "control": -5,
+    "stability": 3,
+    "hipfire": -4,
+    "value": 132807
+  },
+  "M7实用长枪管组合": {
+    "range": 9,
+    "recoil": 9,
+    "control": -5,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 63892
+  },
+  "M745发6.8弹鼓": {
+    "control": -6,
+    "value": 49432
+  },
+  "M730发6.8弹匣": {
+    "control": -4,
+    "value": 27047
+  },
+  "灰熊全威力快拔套(绿)": {
+    "control": 1,
+    "value": 5561
+  },
+  "短吻鳄枪管组合": {
+    "recoil": -4,
+    "control": 8,
+    "hipfire": 8,
+    "value": 33114
+  },
+  "AMR-HT镂空枪托": {
+    "recoil": -2,
+    "control": 4,
+    "stability": 4,
+    "hipfire": 8,
+    "value": 23492
+  },
+  "巨像稳定器": {
+    "recoil": 2,
+    "control": -4,
+    "stability": 2,
+    "value": 22731
+  },
+  "M82扩容弹鼓": {
+    "control": -4,
+    "value": 22847
+  },
+  "M870导轨护木": {
+    "recoil": 2,
+    "control": 2,
+    "value": 1490
+  },
+  "M870扩容枪管": {
+    "range": 4,
+    "control": -8,
+    "hipfire": 8,
+    "value": 4192
+  },
+  "MCX LT焰魂枪管": {
+    "damage": 2,
+    "recoil": 11,
+    "control": 2,
+    "hipfire": -20,
+    "value": 35983
+  },
+  "MCX LT猎手枪管": {
+    "range": 9,
+    "recoil": 12,
+    "control": -7,
+    "stability": 5,
+    "hipfire": -36,
+    "value": 22750
+  },
+  "Mini-14 30发弹匣": {
+    "control": -8,
+    "value": 43411
+  },
+  "Mini-14 20发弹匣": {
+    "control": -4,
+    "value": 6452
+  },
+  "Mini-14增强枪管": {
+    "range": 27,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 32292
+  },
+  "Mini-14先进枪身系统": {
+    "recoil": 4,
+    "control": 4,
+    "value": 36974
+  },
+  "Mini-14聚合物一体枪托": {
+    "recoil": 4,
+    "value": 18269
+  },
+  "Mini-14聚合物枪托": {
+    "control": 4,
+    "value": 18329
+  },
+  "MK47鏖战枪管": {
+    "damage": 4,
+    "range": -5,
+    "recoil": 8,
+    "control": 6,
+    "stability": 4,
+    "hipfire": 4,
+    "value": 131864
+  },
+  "MK47余烬枪管": {
+    "damage": 3,
+    "range": 5,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 193548
+  },
+  "MK47主宰者后托": {
+    "recoil": 12,
+    "control": 2,
+    "stability": -4,
+    "hipfire": -8,
+    "value": 29776
+  },
+  "MK4730发弹匣": {
+    "control": -6,
+    "value": 48458
+  },
+  "郊狼中间威力快拔套(沙）": {
+    "control": 1,
+    "value": 5536
+  },
+  "MK4深空镀铬枪管": {
+    "damage": -2,
+    "range": 5,
+    "recoil": 6,
+    "control": -7,
+    "stability": 3,
+    "hipfire": 4,
+    "value": 62134
+  },
+  "MK4击剑手枪管": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 16632
+  },
+  "MK4 48发弹匣": {
+    "control": -8,
+    "value": 29567
+  },
+  "野蜂冲锋枪快拔套(绿)": {
+    "control": 1,
+    "value": 5480
+  },
+  "MP5SD特勤一体消音枪管": {
+    "range": 6,
+    "recoil": 6,
+    "control": 3,
+    "stability": -4,
+    "hipfire": -12,
+    "value": 38920
+  },
+  "MP5斥候长枪管组合": {
+    "range": 4,
+    "recoil": 5,
+    "value": 34815
+  },
+  "MP5隐蔽短枪管组合": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 48904
+  },
+  "MP5战术枪管组合": {
+    "range": 1,
+    "recoil": 2,
+    "control": 2,
+    "stability": 2,
+    "hipfire": 4,
+    "value": 35783
+  },
+  "MP5性能枪管组合": {
+    "range": 1,
+    "recoil": 2,
+    "control": 2,
+    "stability": 2,
+    "hipfire": 4,
+    "value": 25514
+  },
+  "MP5 50发弹鼓": {
+    "control": -9,
+    "value": 49750
+  },
+  "HVK格斗套件": {
+    "damage": 5,
+    "range": -8,
+    "recoil": -4,
+    "control": 8,
+    "stability": 9,
+    "hipfire": 8
+  },
+  "MP7月影镀铬枪管": {
+    "range": 6,
+    "recoil": 4,
+    "control": 4,
+    "stability": 4,
+    "value": 48921
+  },
+  "MP7狼牙轻枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 39351
+  },
+  "MP7蜂刺长枪管组合": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 28485
+  },
+  "MP7增强枪管组合": {
+    "range": 1,
+    "recoil": 3,
+    "value": 36310
+  },
+  "MP7枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 7689
+  },
+  "MP7稳固后握把": {
+    "recoil": 6,
+    "control": -4,
+    "stability": 6,
+    "value": 29427
+  },
+  "MP7平衡后握把": {
+    "recoil": 2,
+    "control": 2,
+    "stability": 2,
+    "hipfire": 8,
+    "value": 49181
+  },
+  "MP7 60发弹鼓": {
+    "control": -15,
+    "value": 49262
+  },
+  "MP7 40发弹匣": {
+    "control": -4,
+    "value": 34311
+  },
+  "MP7 30发弹匣": {
+    "value": 15310
+  },
+  "OLIGHT Baldr Pro R功能": {
+    "control": -5,
+    "hipfire": -8,
+    "value": 36590
+  },
+  "P90长弓精钢枪管": {
+    "range": 15,
+    "recoil": 6,
+    "control": 4,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 38869
+  },
+  "P90猎豹重枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 56520
+  },
+  "P90重攻长枪管": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 56651
+  },
+  "P90枪托垫": {
+    "recoil": 8,
+    "control": 4,
+    "value": 47768
+  },
+  "PKM地平线重枪管": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 52798
+  },
+  "PKM壕战短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 45458
+  },
+  "PKM泽宁特枪托": {
+    "recoil": 5,
+    "control": 2,
+    "stability": 3,
+    "hipfire": -8,
+    "value": 45536
+  },
+  "PKM枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 5583
+  },
+  "PKM两脚架": {
+    "control": -4,
+    "value": 9678
+  },
+  "PKM扩容弹箱": {
+    "control": -15,
+    "value": 33570
+  },
+  "PSG20发扩容弹匣": {
+    "control": -8,
+    "value": 22018
+  },
+  "G3枪托": {
+    "control": 2,
+    "stability": 2,
+    "value": 20403
+  },
+  "PSG-1精确扳机": {
+    "stability": -8,
+    "value": 104888
+  },
+  "G3后握把": {
+    "recoil": 2,
+    "control": 2,
+    "stability": 2,
+    "value": 21767
+  },
+  "AK762弹匣30发(木色)": {
+    "control": 2,
+    "value": 7126
+  },
+  "郊狼中间威力快拔套(绿)": {
+    "control": 1,
+    "value": 5522
+  },
+  "95长弓平台套件": {
+    "recoil": 6,
+    "control": 2,
+    "stability": 2,
+    "hipfire": -8,
+    "value": 27832
+  },
+  "QBZ95-1长弓枪管组合": {
+    "range": 17,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 20664
+  },
+  "QBZ95战术枪管": {
+    "range": 3,
+    "recoil": 3,
+    "value": 14433
+  },
+  "QBZ95-1实用短枪管": {
+    "recoil": 2,
+    "control": 6,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 14280
+  },
+  "QBZ托腮板": {
+    "recoil": 3,
+    "control": 3,
+    "stability": 3,
+    "value": 25047
+  },
+  "扩容弹匣": {
+    "control": -8,
+    "value": 35014
+  },
+  "5.8新式30发弹匣": {
+    "control": 2,
+    "value": 7161,
+    "recoil": 8
+  },
+  "QCQ171新式稳固枪机": {
+    "range": 7,
+    "recoil": 10,
+    "stability": 4,
+    "value": 48454
+  },
+  "QCQ171新式高射速化枪机": {
+    "recoil": -8,
+    "control": 4,
+    "value": 62847
+  },
+  "QCQ171新式渗透一体消音枪管": {
+    "range": 6,
+    "recoil": 14,
+    "control": -6,
+    "stability": -6,
+    "value": 102048
+  },
+  "QCQ171新式红缨战术长枪管": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 106281
+  },
+  "QCQ171新式狡兔短枪管组合": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 54243
+  },
+  "新式75发扩容弹鼓": {
+    "control": -15,
+    "value": 69880
+  },
+  "新式45发扩容弹匣": {
+    "control": -4,
+    "value": 41207
+  },
+  "野蜂冲锋枪快拔套(沙)": {
+    "control": 1,
+    "value": 5551
+  },
+  "QJB201新式重锤战术枪管": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 35920
+  },
+  "QJB201新式獠牙短枪管": {
+    "recoil": 4,
+    "control": 4,
+    "stability": -2,
+    "hipfire": 8,
+    "value": 31047
+  },
+  "QJB201脚架": {
+    "control": -4,
+    "value": 16713
+  },
+  "5.8新式45发扩容弹匣": {
+    "recoil": 8,
+    "control": 4,
+    "value": 34058
+  },
+  "QJB201新式稳固导气箍": {
+    "range": 14,
+    "recoil": 4,
+    "value": 20702
+  },
+  "QJB201新式高速导气箍": {
+    "hipfire": 8,
+    "value": 26670
+  },
+  "QSZ92G响尾蛇战术枪管": {
+    "range": 5,
+    "recoil": 5,
+    "value": 8117
+  },
+  "R93裂变长枪管": {
+    "range": 45,
+    "recoil": 9,
+    "control": -4,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 40013
+  },
+  "R93轻盈短枪管": {
+    "control": 8,
+    "stability": -3,
+    "hipfire": 8,
+    "value": 33347
+  },
+  "R93枪管隔热网": {
+    "control": 1,
+    "value": 5273
+  },
+  "R93 15发弹匣": {
+    "control": -8,
+    "value": 17972
+  },
+  "RM277鲸鲨枪管组合": {
+    "range": 17,
+    "recoil": 8,
+    "control": -9,
+    "stability": 5,
+    "hipfire": -12,
+    "value": 34435
+  },
+  "RM277重型一体枪管": {
+    "range": 10,
+    "recoil": 7,
+    "control": -2,
+    "stability": 5,
+    "hipfire": 12,
+    "value": 33745
+  },
+  "RM277托腮板": {
+    "recoil": 2,
+    "control": -2,
+    "stability": 4,
+    "value": 35952
+  },
+  "RM277托垫": {
+    "recoil": 4,
+    "control": 2,
+    "hipfire": -8,
+    "value": 25740
+  },
+  "RM277断流消音器": {
+    "range": 10,
+    "recoil": 5,
+    "hipfire": -8,
+    "value": 29072
+  },
+  "M7 45发6.8弹鼓": {
+    "control": -6,
+    "value": 49432
+  },
+  "灰熊全威力快拔套（沙)": {
+    "control": 1,
+    "value": 5536
+  },
+  "S12K破阵长枪管组合": {
+    "recoil": 7,
+    "control": -2,
+    "stability": 5,
+    "hipfire": -8,
+    "value": 22930
+  },
+  "S12K防御者短枪管组合": {
+    "recoil": 7,
+    "control": 5,
+    "hipfire": -16,
+    "value": 33425
+  },
+  "S12K实用长枪管组合": {
+    "recoil": 10,
+    "control": -4,
+    "hipfire": 8,
+    "value": 22485
+  },
+  "S12K实用短枪管组合": {
+    "recoil": 10,
+    "control": 2,
+    "hipfire": 8,
+    "value": 22247
+  },
+  "S12K撞火枪托": {
+    "recoil": 4,
+    "control": 4,
+    "hipfire": 16,
+    "value": 48017
+  },
+  "S12K扩容24发弹鼓": {
+    "control": -10,
+    "value": 47869
+  },
+  "S12K扩容10发弹匣": {
+    "control": -5,
+    "value": 6012
+  },
+  "SCARH零式短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 29687
+  },
+  "SCARH实用标准枪管": {
+    "range": 2,
+    "recoil": 3,
+    "value": 17046
+  },
+  "SCARH海狸长枪管": {
+    "range": 12,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 24374
+  },
+  "SCAR-H枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 5581
+  },
+  "SCARH30发弹匣": {
+    "control": -4,
+    "value": 46874
+  },
+  "SCARH 50发弹鼓": {
+    "control": -15,
+    "value": 35858
+  },
+  "VARRIOR3S战术手电": {
+    "value": 71555
+  },
+  "SG552猎犬轻型枪管": {
+    "recoil": 6,
+    "control": -2,
+    "stability": 6,
+    "hipfire": -8,
+    "value": 24036
+  },
+  "SG552骑士重枪管": {
+    "range": 6,
+    "recoil": 5,
+    "value": 31384
+  },
+  "SG552枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 3603
+  },
+  "SG55245发扩容弹匣": {
+    "control": -8,
+    "value": 42834
+  },
+  "SG552": {
+    "value": 3559
+  },
+  "SKS先进护木": {
+    "recoil": 6,
+    "control": 2,
+    "value": 73996
+  },
+  "SKS瞬息超长枪管": {
+    "range": 17,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 56487
+  },
+  "SKS截断标准枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 41569
+  },
+  "SMG45裂变长枪管": {
+    "range": 5,
+    "recoil": 5,
+    "control": 1,
+    "stability": 1,
+    "value": 62136
+  },
+  "SMG45竹鼠短枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 82471
+  },
+  "SMG长弩超长枪管": {
+    "range": 8,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 46370
+  },
+  "SMG45实用重枪管": {
+    "range": 2,
+    "recoil": 3,
+    "value": 21116
+  },
+  "SMG45枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 3584
+  },
+  "SMG4540发扩容弹匣": {
+    "control": -8,
+    "value": 38779
+  },
+  "野蜂冲锋枪快拔套〔沙）": {
+    "control": 1,
+    "value": 5551
+  },
+  "SR-25主宰者护木": {
+    "control": 2,
+    "hipfire": -8,
+    "value": 49566
+  },
+  "SR25精英护木": {
+    "control": 2,
+    "stability": 2,
+    "value": 44109
+  },
+  "SR2530发扩容弹匣": {
+    "control": -12,
+    "value": 49025
+  },
+  "SR2520发弹匣": {
+    "control": -9,
+    "value": 36276
+  },
+  "SR25瞬息短枪管": {
+    "damage": 5,
+    "range": -10,
+    "value": 25886
+  },
+  "SR25追风长枪管": {
+    "range": 46,
+    "value": 50053
+  },
+  "SR25新星超长枪管": {
+    "range": 57,
+    "recoil": 4,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 136310
+  },
+  "SR-3M隐击消音器": {
+    "range": 3,
+    "recoil": 5,
+    "control": -5,
+    "stability": 2,
+    "value": 35426
+  },
+  "SR-3M铸钢战术枪管": {
+    "range": 3,
+    "recoil": 5,
+    "hipfire": -12,
+    "value": 35888
+  },
+  "SR-3M枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 5565
+  },
+  "郊狼中间威力快拔套〔绿)": {
+    "control": 1,
+    "value": 5522
+  },
+  "PSG 20发扩容弹匣": {
+    "control": -8,
+    "value": 22018
+  },
+  "SV98灵巧短枪管": {
+    "control": 8,
+    "stability": -3,
+    "hipfire": 8,
+    "value": 71169
+  },
+  "SV98龙萤轻枪管": {
+    "range": 27,
+    "recoil": 2,
+    "stability": 3,
+    "value": 66625
+  },
+  "SV98升华超长枪管": {
+    "range": 45,
+    "recoil": 9,
+    "control": -4,
+    "stability": 4,
+    "hipfire": -8,
+    "value": 84595
+  },
+  "SV98两脚架": {
+    "control": -4,
+    "value": 5837
+  },
+  "SVCH突袭短护木": {
+    "recoil": 4,
+    "control": 6,
+    "hipfire": -8,
+    "value": 28420
+  },
+  "SVCH一体式护木": {
+    "recoil": 4,
+    "control": -3,
+    "stability": 7,
+    "hipfire": -8,
+    "value": 51589
+  },
+  "SVCH碳纤长枪管": {
+    "range": 20,
+    "recoil": 4,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 25018
+  },
+  "SVCH精工短枪管": {
+    "recoil": 4,
+    "control": 5,
+    "stability": -3,
+    "value": 22798
+  },
+  "SVCH支点后托": {
+    "recoil": 5,
+    "control": 6,
+    "stability": -3,
+    "value": 23691
+  },
+  "SVCH星象稳固握把": {
+    "recoil": 6,
+    "control": -5,
+    "stability": 7,
+    "value": 49383
+  },
+  "SVCH风影轻质握把": {
+    "recoil": 4,
+    "control": 6,
+    "stability": -2,
+    "value": 23364
+  },
+  "SVCH凌风并联弹匣": {
+    "control": -4
+  },
+  "SVCH扩容弹匣": {
+    "control": -6,
+    "value": 28450
+  },
+  "ARU快速反应瞄准镜": {
+    "control": -2
+  },
+  "SVD导轨护木": {
+    "control": 2,
+    "stability": 6,
+    "value": 32378
+  },
+  "svd聚合物护木": {
+    "stability": 4,
+    "value": 23610
+  },
+  "SVD黑刺超长枪管": {
+    "range": 21,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 32467
+  },
+  "svd实用长枪管": {
+    "range": 13,
+    "recoil": 6,
+    "control": -5,
+    "stability": 3,
+    "hipfire": -12,
+    "value": 18186
+  },
+  "svd聚合物一体枪托": {
+    "recoil": 4,
+    "control": -4,
+    "stability": 8,
+    "value": 34667
+  },
+  "SVD握把转接": {
+    "control": 1,
+    "value": 7117
+  },
+  "SVD 20发弹匣": {
+    "control": -8,
+    "value": 21954
+  },
+  "UZI性能护木": {
+    "recoil": 8,
+    "control": 3,
+    "stability": 3,
+    "hipfire": 8,
+    "value": 23755
+  },
+  "UZI导轨护木": {
+    "recoil": 4,
+    "control": 4,
+    "value": 26321
+  },
+  "UZI军需长枪管": {
+    "range": 4,
+    "recoil": 5,
+    "value": 24815
+  },
+  "UZI突击标准枪管": {
+    "recoil": 4,
+    "control": 8,
+    "stability": -6,
+    "hipfire": 8,
+    "value": 27903
+  },
+  "UZI竞赛性能长枪管": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 25842
+  },
+  "UZI枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 1753
+  },
+  "UZI枪托": {
+    "recoil": 2,
+    "control": 4,
+    "stability": -2,
+    "value": 4960
+  },
+  "UZI 45发弹匣": {
+    "control": -9,
+    "value": 13035
+  },
+  "UZI35发弹匣": {
+    "control": -4,
+    "value": 5838
+  },
+  "Vector长剑超长枪管组合": {
+    "range": 6,
+    "recoil": 9,
+    "control": -7,
+    "stability": 4,
+    "hipfire": -12,
+    "value": 46920
+  },
+  "Vector堡垒重枪管组合": {
+    "recoil": 8,
+    "control": 6,
+    "hipfire": 8,
+    "value": 43590
+  },
+  "Vector导轨枪管组合": {
+    "range": 1,
+    "recoil": 3,
+    "value": 35989
+  },
+  "Vector共振一体式枪托": {
+    "recoil": 12,
+    "control": 6,
+    "stability": -5,
+    "hipfire": 12,
+    "value": 83957
+  },
+  "Vector枪托尾盖": {
+    "recoil": -10,
+    "control": 12,
+    "stability": -4,
+    "hipfire": 12,
+    "value": 7710
+  },
+  "Vector扩容40发弹匣": {
+    "control": -4,
+    "value": 32650
+  },
+  "Vector扩容CMAG70发": {
+    "control": -15,
+    "value": 50466
+  },
+  "Vector扩容30发弹匣": {
+    "control": -4,
+    "value": 15421
+  }
+}

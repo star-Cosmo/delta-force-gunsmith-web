@@ -1,10 +1,10 @@
 const STAT_CONFIG = [
-    { key: 'recoil',   name: '后坐力控制', icon: 'fa-arrows-alt-v',   color: '#ef4444', max: 100 },
-    { key: 'stability',name: '据枪稳定性', icon: 'fa-bullseye',       color: '#3b82f6', max: 100 },
-    { key: 'control',  name: '操控速度',   icon: 'fa-running',        color: '#22c55e', max: 100 },
+    { key: 'recoil',   name: '后坐力控制', icon: 'fa-arrows-alt-v',   color: '#ef4444', max: 200 },
+    { key: 'stability',name: '据枪稳定性', icon: 'fa-bullseye',       color: '#3b82f6', max: 200 },
+    { key: 'control',  name: '操控速度',   icon: 'fa-running',        color: '#22c55e', max: 200 },
     { key: 'range',    name: '有效射程',   icon: 'fa-ruler-horizontal',color: '#f59e0b', max: 200 },
-    { key: 'hipfire',  name: '腰射精度',   icon: 'fa-crosshairs',     color: '#a855f7', max: 100 },
-    { key: 'armor',    name: '护甲伤害',   icon: 'fa-shield-alt',     color: '#e67e22', max: 100 }
+    { key: 'hipfire',  name: '腰射精度',   icon: 'fa-crosshairs',     color: '#a855f7', max: 200 },
+    { key: 'armor',    name: '护甲伤害',   icon: 'fa-shield-alt',     color: '#e67e22', max: 200 }
 ];
 
 // 数据来源: hpromax.top 爬取数据 + deltaforcetools.gg (官方Wiki)
@@ -436,9 +436,12 @@ const SLOT_NAMES = {
     tactical_device: '战术设备', riser_optic: '增高座瞄具', lens_shade: '遮光罩',
     bolt: '拉机柄', stock_pad: '枪托垫', mag_seat: '弹匣座',
     grip_seat: '握把座', rear_grip_patch: '后握贴片', under_rail: '下导轨',
+    lower_rail: '下导轨',
     stock_kit: '枪托套件', gas_block: '导气', trigger: '扳机',
     hammer: '击锤', bolt_carrier: '枪机', heat_shield: '隔热网',
     upper_handguard: '上护木', lever: '杠杆', bow_sight: '弓瞄具',
-    bow_limb: '弓臂', bow_string: '弓弦', stabilizer: '稳定杆',
-    arrow_rest: '箭台', grip_plate: '握把片', rear_grip_2: '后握把2'
+    bow_optic: '弓瞄具', bow_limb: '弓臂', bow_arm: '弓臂',
+    bow_string: '弓弦', stabilizer: '稳定杆',
+    arrow_rest: '箭台', grip_plate: '握把片', rear_grip_2: '后握把2',
+    unique: '独特'
 };

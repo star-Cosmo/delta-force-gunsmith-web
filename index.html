@@ -92,6 +92,21 @@
 
     <div class="toast" id="toast"></div>
 
+    <!-- 槽位配件选择弹窗 -->
+    <div class="slot-picker-overlay" id="slotPickerOverlay" style="display:none;">
+        <div class="slot-picker">
+            <div class="slot-picker-header">
+                <h3 id="slotPickerTitle">选择配件</h3>
+                <button class="slot-picker-close" id="slotPickerClose">&times;</button>
+            </div>
+            <div class="slot-picker-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="slotPickerSearch" placeholder="搜索配件名称..." autocomplete="off">
+            </div>
+            <div class="slot-picker-list" id="slotPickerList"></div>
+        </div>
+    </div>
+
     <script src="data/weapons.js"></script>
     <script src="data/attachments.js"></script>
     <script src="data/compatibility.js"></script>

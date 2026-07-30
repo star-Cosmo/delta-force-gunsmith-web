@@ -7,28 +7,29 @@ const ATTACHMENTS = {
     // ===== 枪口 (23个) =====
     muzzle: [
         { id:'mu_flare_bell',    name:'喇叭口消焰器',        emoji:'🔥', stats:{recoil:+3}, tuning:[] },
-        { id:'mu_resonance',     name:'共鳴狙擊槍消音器',    emoji:'🤫', stats:{range:'+30%', control:-9, stability:-6}, tuning:[] },
+        { id:'mu_resonance',     name:'共鳴狙擊槍消音器',    emoji:'🤫', stats:{control:-9, range:60, stability:-6}, tuning:[] },
         { id:'mu_shotgun_choke', name:'實用霰彈喉縮',        emoji:'🔧', stats:{recoil:+5, hipfire:+4, control:-4}, tuning:[] },
-        { id:'mu_pbs',           name:'PBS俄式消音器',       emoji:'🤫', stats:{recoil:+10, control:-13}, tuning:[] },
-        { id:'mu_advanced',      name:'先進多口徑消音器',    emoji:'🤫', stats:{recoil:+9, control:-6, hipfire:-4, range:'+18%'}, tuning:[] },
+        { id:'mu_pbs',           name:'PBS俄式消音器',       emoji:'🤫', stats:{control:-4, recoil:10}, tuning:[] },
+        { id:'mu_advanced',      name:'先進多口徑消音器',    emoji:'🤫', stats:{control:-6, hipfire:-4, range:6, recoil:9}, tuning:[] },
         { id:'mu_bird',          name:'鳥籠消焰器',          emoji:'🔥', stats:{recoil:+2, stability:+1}, tuning:[] },
         { id:'mu_titanium',      name:'鈦金競賽制退器',      emoji:'🔧', stats:{recoil:+12, control:-3}, tuning:[] },
         { id:'mu_fortress',      name:'堡壘水平補償器',      emoji:'🧱', stats:{recoil:+9}, tuning:[] },
         { id:'mu_swirl',         name:'漩渦消焰器',          emoji:'🔥', stats:{recoil:+2, stability:+5, control:-2}, tuning:[] },
         { id:'mu_practical',     name:'實用消音器',          emoji:'🤫', stats:{recoil:+2, stability:+2}, tuning:[] },
-        { id:'mu_dtk',           name:'DTK制退器',           emoji:'🔧', stats:{hipfire:+12}, tuning:[] },
-        { id:'mu_dead',          name:'死寂消音器',          emoji:'🤫', stats:{recoil:+8, range:'+24%', control:-13, stability:-5}, tuning:[] },
+        { id:'mu_dtk',           name:'DTK制退器',           emoji:'🔧', stats:{hipfire:12, recoil:6}, tuning:[] },
+        { id:'mu_dead',          name:'死寂消音器',          emoji:'🤫', stats:{control:-13, range:8, recoil:8, stability:-5}, tuning:[] },
         { id:'mu_flame',         name:'實用消焰器',          emoji:'🔥', stats:{recoil:+2}, tuning:[] },
-        { id:'mu_elite_pistol',  name:'精英手槍制退器',      emoji:'🔫', stats:{control:-3}, tuning:[] },
-        { id:'mu_shotgun_cannon',name:'霰彈槍巨炮制退器',    emoji:'💥', stats:{recoil:+20, control:-2, stability:-2}, tuning:[] },
+        { id:'mu_elite_pistol',  name:'精英手槍制退器',      emoji:'🔫', stats:{control:-3, recoil:9}, tuning:[] },
+        { id:'mu_shotgun_cannon',name:'霰彈槍巨炮制退器',    emoji:'💥', stats:{control:-2, recoil:12, stability:-2}, tuning:[] },
         { id:'mu_inferno',       name:'熾火抑制器',          emoji:'⚡', stats:{recoil:+6, control:-1}, tuning:[] },
+        { id:'mu_web_titanium', name:'蛛网钛制制退器',        emoji:'🕸️', stats:{recoil:+7, stability:-2, hipfire:+8}, tuning:[] },
         { id:'mu_ffc_dual',     name:'FFC雙流制退器',       emoji:'🌊', stats:{recoil:+10, control:-4, stability:+3}, tuning:[] },
         { id:'mu_steel_brake',  name:'鋼製膛口制退器',        emoji:'🔩', stats:{recoil:+6, stability:-1}, tuning:[] },
         { id:'mu_sandstorm',    name:'沙暴垂直補償器',        emoji:'🏜️', stats:{recoil:+9}, tuning:[] },
         { id:'mu_poseidon',     name:'海神消焰器',            emoji:'🔱', stats:{recoil:+7}, tuning:[] },
         { id:'mu_xinhuo',       name:'薪火螺旋消焰器',        emoji:'🔥', stats:{recoil:+4, stability:+1}, tuning:[] },
         { id:'mu_m7_silencer',  name:'M7實用消音器',          emoji:'🤫', stats:{recoil:+8, control:-4, stability:+2}, tuning:[] },
-        { id:'mu_whisper',      name:'輕語戰術消音器',        emoji:'🤫', stats:{recoil:+6, control:-5, stability:+2, hipfire:-4, range:'+18%'}, tuning:[] },
+        { id:'mu_whisper',      name:'輕語戰術消音器',        emoji:'🤫', stats:{control:-5, hipfire:-4, range:6, recoil:6, stability:2}, tuning:[] },
         { id:'mu_none',          name:'無',                  emoji:'❌', stats:{}, tuning:[] }
     ],
 
@@ -36,26 +37,26 @@ const ATTACHMENTS = {
     // 涵盖所有武器专属枪管，按武器分组注释
     barrel: [
         // -- M4A1 / AR平台 --
-        { id:'br_ar_trench',    name:'AR戰壕標準槍管組合',   emoji:'📏', stats:{recoil:+5, range:'+18%'}, tuning:[], weaponHint:'M4A1 / AR' },
+        { id:'br_ar_trench',    name:'AR戰壕標準槍管組合',   emoji:'📏', stats:{range:7, recoil:5}, tuning:[], weaponHint:'M4A1 / AR' },
         { id:'br_ar_assault',   name:'AR特攻短槍管組合',     emoji:'📐', stats:{recoil:+4, control:+8, hipfire:+8, stability:-6}, tuning:[], weaponHint:'M4A1 / AR' },
-        { id:'br_ar_gabriel',   name:'AR加百列長槍管組合',   emoji:'🛡️', stats:{recoil:+9, stability:+4, control:-7, hipfire:-12, range:'+30%'}, tuning:[], weaponHint:'M4A1 / AR' },
-        { id:'br_ar_integrated',name:'AR特勤一體消音組合',   emoji:'🤫', stats:{recoil:+4, control:-3, stability:-6, range:'+18%'}, tuning:[], weaponHint:'M4A1 / AR' },
-        { id:'br_ar_carbon',    name:'AR碳纖維槍管組合',     emoji:'🪶', stats:{recoil:+6, stability:+3, control:-5, hipfire:-12, range:'+18%'}, tuning:[], weaponHint:'M4A1 / AR' },
+        { id:'br_ar_gabriel',   name:'AR加百列長槍管組合',   emoji:'🛡️', stats:{control:-7, hipfire:-12, range:12, recoil:9, stability:4}, tuning:[], weaponHint:'M4A1 / AR' },
+        { id:'br_ar_integrated',name:'AR特勤一體消音組合',   emoji:'🤫', stats:{control:-6, range:7, recoil:16, stability:-6}, tuning:[], weaponHint:'M4A1 / AR' },
+        { id:'br_ar_carbon',    name:'AR碳纖維槍管組合',     emoji:'🪶', stats:{control:-5, hipfire:-12, range:10, recoil:6, stability:3}, tuning:[], weaponHint:'M4A1 / AR' },
         { id:'br_ar_standard',  name:'AR標準槍管組合',       emoji:'📍', stats:{recoil:+2, control:+6, hipfire:+8, stability:-6}, tuning:[], weaponHint:'M4A1 / AR' },
 
         // -- AKM --
-        { id:'br_akm_perf',     name:'AKM性能槍管組合',      emoji:'🔧', stats:{recoil:+2, stability:+2, control:+2, hipfire:+4, range:'+6%'}, tuning:[], weaponHint:'AKM' },
-        { id:'br_akm_beaver_l', name:'AKM海狸長槍管組合',    emoji:'📏', stats:{recoil:+9, stability:+4, control:-7, hipfire:-12, range:'+30%'}, tuning:[], weaponHint:'AKM' },
+        { id:'br_akm_perf',     name:'AKM性能槍管組合',      emoji:'🔧', stats:{control:2, hipfire:4, range:2, recoil:2, stability:2}, tuning:[], weaponHint:'AKM' },
+        { id:'br_akm_beaver_l', name:'AKM海狸長槍管組合',    emoji:'📏', stats:{control:-7, hipfire:-12, range:12, recoil:9, stability:4}, tuning:[], weaponHint:'AKM' },
         { id:'br_akm_beaver_s', name:'AKM海狸短槍管組合',    emoji:'📐', stats:{recoil:+4, control:+8, hipfire:+8, stability:-6}, tuning:[], weaponHint:'AKM' },
-        { id:'br_akm_prac_l',   name:'AKM實用長槍管組合',    emoji:'🛡️', stats:{recoil:+6, stability:+3, control:-5, hipfire:-12, range:'+18%'}, tuning:[], weaponHint:'AKM' },
+        { id:'br_akm_prac_l',   name:'AKM實用長槍管組合',    emoji:'🛡️', stats:{control:-5, hipfire:-12, range:12, recoil:8, stability:3}, tuning:[], weaponHint:'AKM' },
         { id:'br_akm_prac_std', name:'AKM實用標準槍管組合',  emoji:'📍', stats:{recoil:+2, control:+6, hipfire:+8, stability:-6}, tuning:[], weaponHint:'AKM' },
-        { id:'br_akm_trans',    name:'AKM超然長槍管組合',    emoji:'⭐', stats:{recoil:+5, range:'+18%'}, tuning:[], weaponHint:'AKM' },
+        { id:'br_akm_trans',    name:'AKM超然長槍管組合',    emoji:'⭐', stats:{range:7, recoil:5}, tuning:[], weaponHint:'AKM' },
 
         // -- K416 --
         { id:'br_k416_short',   name:'K416特勤短槍管組合',   emoji:'🔧', stats:{recoil:+4, control:+8, hipfire:+8, stability:-6}, tuning:[], weaponHint:'K416' },
-        { id:'br_k416_elite',   name:'K416精英重槍管組合',   emoji:'⭐', stats:{recoil:+3, range:'+6%'}, tuning:[], weaponHint:'K416' },
-        { id:'br_k416a8',       name:'K416A8槍管組合',       emoji:'🎯', stats:{recoil:+5, range:'+18%'}, tuning:[], weaponHint:'K416' },
-        { id:'br_k416a8_long',  name:'K416A8長槍管組合',     emoji:'📏', stats:{recoil:+9, stability:+4, control:-7, hipfire:-12, range:'+30%'}, tuning:[], weaponHint:'K416' },
+        { id:'br_k416_elite',   name:'K416精英重槍管組合',   emoji:'⭐', stats:{range:2, recoil:3}, tuning:[], weaponHint:'K416' },
+        { id:'br_k416a8',       name:'K416A8槍管組合',       emoji:'🎯', stats:{range:5, recoil:5}, tuning:[], weaponHint:'K416' },
+        { id:'br_k416a8_long',  name:'K416A8長槍管組合',     emoji:'📏', stats:{control:-7, hipfire:-12, range:8, recoil:9, stability:4}, tuning:[], weaponHint:'K416' },
 
         // -- SCAR-H --
         { id:'br_scar_beaver',  name:'SCAR-H海狸長槍管',     emoji:'📏', stats:{recoil:+9, stability:+4, control:-7, hipfire:-12, range:'+30%'}, tuning:[], weaponHint:'SCAR-H' },
@@ -63,23 +64,27 @@ const ATTACHMENTS = {
         { id:'br_scar_std',     name:'SCAR-H實用標準槍管',   emoji:'📍', stats:{recoil:+3, range:'+6%'}, tuning:[], weaponHint:'SCAR-H' },
 
         // -- M14 --
-        { id:'br_m14_wander',   name:'M14漫遊標準槍管',      emoji:'🎯', stats:{recoil:+5, range:'+18%'}, tuning:[], weaponHint:'M14' },
-        { id:'br_m14_insight',  name:'M14洞察超長槍管',      emoji:'🔭', stats:{recoil:+9, stability:+4, control:-7, hipfire:-12, range:'+30%'}, tuning:[], weaponHint:'M14' },
+        { id:'br_m14_wander',   name:'M14漫遊標準槍管',      emoji:'🎯', stats:{range:7, recoil:5}, tuning:[], weaponHint:'M14' },
+        { id:'br_m14_insight',  name:'M14洞察超長槍管',      emoji:'🔭', stats:{control:-7, hipfire:-12, range:12, recoil:9, stability:4}, tuning:[], weaponHint:'M14' },
         { id:'br_m14_light',    name:'M14輕語短槍管',        emoji:'💨', stats:{recoil:+4, control:+8, hipfire:+8, stability:-6}, tuning:[], weaponHint:'M14' },
 
         // -- MP5 --
-        { id:'br_mp5_perf',     name:'MP5性能槍管組合',      emoji:'🔧', stats:{recoil:+2, stability:+2, control:+2, hipfire:+4, range:'+6%'}, tuning:[], weaponHint:'MP5' },
-        { id:'br_mp5_tactical', name:'MP5戰術槍管組合',      emoji:'🎖️', stats:{recoil:+2, control:+2, stability:+2, hipfire:+4, range:'+6%'}, tuning:[], weaponHint:'MP5' },
-        { id:'br_mp5_scout',    name:'MP5斥候長槍管組合',    emoji:'🔭', stats:{recoil:+5, range:'+18%'}, tuning:[], weaponHint:'MP5' },
+        { id:'br_mp5_perf',     name:'MP5性能槍管組合',      emoji:'🔧', stats:{control:2, hipfire:4, range:1, recoil:2, stability:2}, tuning:[], weaponHint:'MP5' },
+        { id:'br_mp5_tactical', name:'MP5戰術槍管組合',      emoji:'🎖️', stats:{control:2, hipfire:4, range:1, recoil:2, stability:2}, tuning:[], weaponHint:'MP5' },
+        { id:'br_mp5_scout',    name:'MP5斥候長槍管組合',    emoji:'🔭', stats:{range:4, recoil:5}, tuning:[], weaponHint:'MP5' },
         { id:'br_mp5_covert',   name:'MP5隱蔽短槍管組合',    emoji:'🤫', stats:{recoil:+4, control:+8, hipfire:+8, stability:-6}, tuning:[], weaponHint:'MP5' },
 
         // -- AWM --
-        { id:'br_awm_skyline',  name:'AWM天際線長槍管',      emoji:'🌌', stats:{recoil:+9, stability:+4, control:-4, hipfire:-8, range:'+30%'}, tuning:[], weaponHint:'AWM' },
+        { id:'br_awm_skyline',  name:'AWM天際線長槍管',      emoji:'🌌', stats:{control:-4, hipfire:-8, range:60, recoil:9, stability:4}, tuning:[], weaponHint:'AWM' },
 
         // -- Vector --
         { id:'br_vec_fortress', name:'Vector堡壘重槍管組合', emoji:'🧱', stats:{recoil:+8, control:+6, hipfire:+8}, tuning:[], weaponHint:'Vector' },
-        { id:'br_vec_rail',     name:'Vector導軌槍管組合',   emoji:'〰️', stats:{recoil:+3, range:'+6%'}, tuning:[], weaponHint:'Vector' },
-        { id:'br_vec_longsword',name:'Vector長劍超長槍管組合',emoji:'🗡️', stats:{recoil:+9, stability:+4, control:-7, hipfire:-12, range:'+30%'}, tuning:[], weaponHint:'Vector' },
+        { id:'br_vec_rail',     name:'Vector導軌槍管組合',   emoji:'〰️', stats:{range:1, recoil:3}, tuning:[], weaponHint:'Vector' },
+        { id:'br_vec_longsword',name:'Vector長劍超長槍管組合',emoji:'🗡️', stats:{control:-7, hipfire:-12, range:6, recoil:9, stability:4}, tuning:[], weaponHint:'Vector' },
+
+        // -- MK4 --
+        { id:'br_mk4_deepspace', name:'MK4深空鍍鉻槍管',     emoji:'✨', stats:{damage:-2, range:5, recoil:6, control:-7, stability:3, hipfire:4}, tuning:[], weaponHint:'MK4' },
+        { id:'br_mk4_exclusive', name:'MK4擊劍手槍管',       emoji:'⚔️', stats:{range:6, recoil:9, control:-7, stability:4, hipfire:-12}, tuning:[], weaponHint:'MK4' },
 
         // -- 通用枪管 --
         { id:'br_beaver',       name:'海狸長槍管(通用)',     emoji:'📏', stats:{recoil:+9, stability:+4, control:-7, hipfire:-12, range:'+30%'}, tuning:[], weaponHint:'通用' },
@@ -97,8 +102,8 @@ const ATTACHMENTS = {
         { id:'op_holo',        name:'全息瞄準鏡',             emoji:'🔵', stats:{control:-2}, tuning:[] },
         { id:'op_holo_ii',     name:'全息二型瞄準鏡',         emoji:'🔵', stats:{control:-2}, tuning:[] },
         // 高倍镜
-        { id:'op_sniper',      name:'3/7可調倍率狙擊鏡',     emoji:'🎯', stats:{}, tuning:[] },
-        { id:'op_scout',       name:'偵察1.5/5可調瞄準鏡',   emoji:'🔍', stats:{}, tuning:[] },
+        { id:'op_sniper',      name:'3/7可調倍率狙擊鏡',     emoji:'🎯', stats:{control:-8, stability:6}, tuning:[] },
+        { id:'op_scout',       name:'偵察1.5/5可調瞄準鏡',   emoji:'🔍', stats:{control:-8, stability:6}, tuning:[] },
         { id:'op_pso_25',      name:'PSO戰鬥2.5倍瞄準鏡',    emoji:'🔍', stats:{control:-6}, tuning:[] },
         { id:'op_xcog',        name:'XCOG突擊3.5倍瞄準鏡',   emoji:'🔍', stats:{control:-4}, tuning:[] },
         { id:'op_pso_8x',      name:'PSO狙擊8倍瞄準鏡',      emoji:'🎯', stats:{stability:+2, control:-8}, tuning:[] },
@@ -108,13 +113,13 @@ const ATTACHMENTS = {
         { id:'op_lpvo',        name:'LPVO高倍率戰鬥瞄準器',   emoji:'🔍', stats:{control:-6}, tuning:[] },
         { id:'op_spirit_37',   name:'靈眼3/7測距狙擊瞄準鏡', emoji:'👁️', stats:{}, tuning:[] },
         { id:'op_spirit_612',  name:'靈眼6/12測距狙擊瞄準鏡',emoji:'👁️', stats:{}, tuning:[] },
-        { id:'op_marksman_612',name:'6/12神射手變倍狙擊鏡',  emoji:'🎯', stats:{}, tuning:[] },
+        { id:'op_marksman_612',name:'6/12神射手變倍狙擊鏡',  emoji:'🎯', stats:{control:-8, stability:6}, tuning:[] },
         { id:'op_m3_sniper',   name:'M3狙擊鏡',              emoji:'🎯', stats:{stability:+6, control:-8}, tuning:[] },
         { id:'op_optical_8x',  name:'光學狙擊8倍瞄準鏡',     emoji:'🎯', stats:{stability:+6, control:-8}, tuning:[] },
         // 侧置/特殊
         { id:'op_iron',        name:'機械瞄具',               emoji:'👁️', stats:{}, tuning:[] },
         { id:'op_riser',       name:'微型瞄準器增高架',       emoji:'📐', stats:{control:+2}, tuning:[] },
-        { id:'op_riser2',      name:'多用途戰術增高架',       emoji:'📐', stats:{control:+2}, tuning:[] },
+        { id:'op_riser2',      name:'多用途戰術增高架',       emoji:'📐', stats:{control:2, recoil:-1}, tuning:[] },
         { id:'op_side',        name:'側置微型紅點瞄準鏡',     emoji:'👁️', stats:{control:-2}, tuning:[] },
         { id:'op_osight',      name:'Osight微型瞄準鏡',       emoji:'🔴', stats:{control:-2}, tuning:[] },
         { id:'op_ru_2x',       name:'俄式準直儀二倍瞄準鏡',   emoji:'🇷🇺', stats:{control:-2}, tuning:[] },
@@ -152,6 +157,17 @@ const ATTACHMENTS = {
         { id:'fg_resonance_g2', name:'共振二代前握把',         emoji:'🔽', stats:{recoil:+6, control:+6, stability:-4}, tuning:[] },
         { id:'fg_resonance_g3', name:'共振三代握把',           emoji:'🔽', stats:{recoil:+4, control:-2, stability:+4, hipfire:+8}, tuning:[] },
         { id:'fg_ec_stop',      name:'EC通用前阻手',           emoji:'🛑', stats:{recoil:-4, control:+6, stability:+2, hipfire:+16}, tuning:[] },
+        { id:'fg_race_stop',    name:'竞赛阻手器',             emoji:'🏁', stats:{recoil:-2, control:+5, hipfire:+12}, tuning:[] },
+        { id:'fg_shadow_vert',  name:'幻影垂直握把',           emoji:'👻', stats:{recoil:+4, control:+8, stability:-4}, tuning:[] },
+        { id:'fg_secret_angle', name:'密令斜角握把',           emoji:'📐', stats:{recoil:+9, control:-1}, tuning:[] },
+        { id:'fg_tactical_tri', name:'战术三角握把',           emoji:'🔺', stats:{recoil:+4, control:+2}, tuning:[] },
+        { id:'fg_angle_stop',   name:'斜角阻手器',             emoji:'📏', stats:{recoil:-2, control:+8}, tuning:[] },
+        { id:'fg_phase_battle', name:'相位战斗前握把',         emoji:'🌀', stats:{recoil:+4, control:+1, stability:+2, hipfire:+4}, tuning:[] },
+        { id:'fg_util_vert',    name:'实用垂直握把',           emoji:'🔩', stats:{recoil:+2}, tuning:[] },
+        { id:'fg_resonance3',   name:'共振三代握把',           emoji:'🔽', stats:{recoil:+4, control:-2, stability:+4, hipfire:+8}, tuning:[] },
+        { id:'fg_vfg_knight',   name:'VFG骑士前握把',          emoji:'🛡️', stats:{control:+4}, tuning:[] },
+        { id:'fg_resonance2',   name:'共振二代前握把',         emoji:'🔽', stats:{recoil:+6, control:+6, stability:-4}, tuning:[] },
+        { id:'fg_telescope_bipod',name:'伸缩脚架握把',         emoji:'🦵', stats:{control:+1, hipfire:-12}, tuning:[] },
         { id:'fg_phantom_vert', name:'幻影垂直握把',           emoji:'👻', stats:{recoil:+4, control:+8, stability:-4}, tuning:[] },
         { id:'fg_tactical_vert',name:'戰術垂直握把',           emoji:'🎖️', stats:{control:+6}, tuning:[] },
         { id:'fg_rk0',          name:'RK-0前握把',             emoji:'🔧', stats:{recoil:+6}, tuning:[] },
@@ -166,7 +182,7 @@ const ATTACHMENTS = {
         { id:'rg_stable',      name:'穩固握把底座',           emoji:'🧱', stats:{recoil:+2, stability:+7, control:-5}, tuning:[] },
         { id:'rg_xk',          name:'XK競技後握',             emoji:'🏆', stats:{recoil:+6, control:+2}, tuning:[] },
         { id:'rg_shooter',     name:'射手D-2後握把',          emoji:'🎯', stats:{stability:+4}, tuning:[] },
-        { id:'rg_deagle',      name:'沙鷹競技後握',           emoji:'🦅', stats:{recoil:+6}, tuning:[] },
+        { id:'rg_deagle',      name:'沙鷹競技後握',           emoji:'🦅', stats:{control:6}, tuning:[] },
         { id:'rg_ak_tower',    name:'AK重塔握把',             emoji:'🗼', stats:{recoil:+1, control:+1, stability:+1, hipfire:+4}, tuning:[] },
         { id:'rg_ar_tower',    name:'AR重塔握把',             emoji:'🗼', stats:{recoil:+1, control:+1, stability:+1, hipfire:+4}, tuning:[] },
         { id:'rg_m9_flesh',    name:'M9肉色操控後握',         emoji:'🤚', stats:{recoil:+2, control:+4}, tuning:[] },
@@ -176,7 +192,7 @@ const ATTACHMENTS = {
         { id:'rg_ak_stable',   name:'穩定AK後握把',           emoji:'🔫', stats:{recoil:+4}, tuning:[] },
         { id:'rg_xk_grip',     name:'XK防滑紋後握',           emoji:'✋', stats:{recoil:+2, control:+4}, tuning:[] },
         { id:'rg_mp7_stable',  name:'MP7穩固後握把',          emoji:'🔧', stats:{recoil:+6, stability:+6, control:-4}, tuning:[] },
-        { id:'rg_resonance_g2',name:'共振二代一體槍托',       emoji:'🔧', stats:{recoil:+7, hipfire:+4, stability:-6}, tuning:[] },
+        { id:'rg_resonance_g2',name:'共振二代一體槍托',       emoji:'🔧', stats:{control:10, hipfire:4, recoil:7, stability:-6}, tuning:[] },
         { id:'rg_none',        name:'無',                     emoji:'❌', stats:{}, tuning:[] }
     ],
 
@@ -234,7 +250,7 @@ const ATTACHMENTS = {
         { id:'st_ak',          name:'AK骨架槍托',              emoji:'🔫', stats:{control:+8, recoil:-3, stability:-3}, tuning:[] },
         { id:'st_ak_polymer',  name:'AK聚合物槍托',            emoji:'🔫', stats:{recoil:+1, stability:+1}, tuning:[] },
         { id:'st_ak_folding',  name:'AK摺疊槍托',              emoji:'📂', stats:{control:+5}, tuning:[] },
-        { id:'st_ak_bumper',   name:'AK槍托緩衝墊',            emoji:'🛡️', stats:{}, tuning:[] },
+        { id:'st_ak_bumper',   name:'AK槍托緩衝墊',            emoji:'🛡️', stats:{control:-3, recoil:3, stability:1}, tuning:[] },
         { id:'st_ak_endcap',   name:'AK槍托尾蓋',              emoji:'🔧', stats:{recoil:-10, stability:-4, control:+12, hipfire:+12}, tuning:[] },
 
         // MP5系列枪托
@@ -254,7 +270,7 @@ const ATTACHMENTS = {
         { id:'st_m14_ebr',     name:'M14 EBR槍托',             emoji:'🎯', stats:{recoil:+5, stability:+3, control:+2, hipfire:-8}, tuning:[] },
 
         // 其他专属枪托
-        { id:'st_sr3m',        name:'SR-3M槍托尾蓋',           emoji:'🔧', stats:{control:+12, hipfire:+3, recoil:-10, stability:-4}, tuning:[] },
+        { id:'st_sr3m',        name:'SR-3M槍托尾蓋',           emoji:'🔧', stats:{control:12, hipfire:12, recoil:-10, stability:-4}, tuning:[] },
         { id:'st_1014',        name:'1014伸縮托(摺疊)',         emoji:'📂', stats:{recoil:+5, control:+8, hipfire:+12}, tuning:[] },
         { id:'st_1014_fixed',  name:'1014固定槍托',            emoji:'🔒', stats:{recoil:+8, control:+4}, tuning:[] },
         { id:'st_1014_extend', name:'1014伸縮托(展開)',         emoji:'📏', stats:{recoil:+15, hipfire:+4}, tuning:[] },
@@ -263,14 +279,22 @@ const ATTACHMENTS = {
         { id:'st_mrgs_hollow', name:'MRGS鏤空槍托',            emoji:'🕳️', stats:{stability:+6, control:+4, hipfire:-8}, tuning:[] },
         { id:'st_vector_res',  name:'Vector共振一體式槍托',    emoji:'🔧', stats:{recoil:+12, stability:-5, control:+6, hipfire:+12}, tuning:[] },
         { id:'st_vector_end',  name:'Vector槍托尾蓋',          emoji:'🔧', stats:{recoil:-10, stability:-4, control:+12, hipfire:+12}, tuning:[] },
-        { id:'st_scar_end',    name:'SCAR-H槍托尾蓋',          emoji:'🔧', stats:{recoil:-10, stability:-4, control:+12, hipfire:+3}, tuning:[] },
-        { id:'st_asval_end',   name:'AS Val槍托尾蓋',          emoji:'🔧', stats:{recoil:-10, stability:-4, control:+12, hipfire:+3}, tuning:[] },
-        { id:'st_mp7_end',     name:'MP7槍托尾蓋',             emoji:'🔧', stats:{recoil:-10, stability:-4, control:+12, hipfire:+3}, tuning:[] },
+        { id:'st_scar_end',    name:'SCAR-H槍托尾蓋',          emoji:'🔧', stats:{control:12, hipfire:12, recoil:-10, stability:-4}, tuning:[] },
+        { id:'st_asval_end',   name:'AS Val槍托尾蓋',          emoji:'🔧', stats:{control:12, hipfire:12, recoil:-10, stability:-4}, tuning:[] },
+        { id:'st_mp7_end',     name:'MP7槍托尾蓋',             emoji:'🔧', stats:{control:12, hipfire:12, recoil:-10, stability:-4}, tuning:[] },
         { id:'st_qbz_pad',     name:'QBZ托腮板',               emoji:'🛡️', stats:{recoil:+3, stability:+3, control:+3}, tuning:[] },
         { id:'st_m700_pad',    name:'M700托腮板',              emoji:'🛡️', stats:{stability:+3, control:+1}, tuning:[] },
         { id:'st_anchor_rail', name:'錨點導軌後托',           emoji:'⚓', stats:{recoil:+4, control:-2, stability:+6}, tuning:[] },
         { id:'st_qr_perf',     name:'QR高性能後托',           emoji:'⚡', stats:{recoil:+3, control:-2, stability:+3, hipfire:+16}, tuning:[] },
         { id:'st_ct_enhanced', name:'CT增強型後托',           emoji:'🛡️', stats:{recoil:+2, control:+6, stability:+2, hipfire:-8}, tuning:[] },
+        { id:'st_ur_tactical2', name:'UR特种战术枪托',         emoji:'🎯', stats:{recoil:+8, control:-4, stability:+4}, tuning:[] },
+        { id:'st_shadow_core',   name:'影袭托芯枪托',         emoji:'🌑', stats:{recoil:+2, control:+10, stability:-6, hipfire:+8}, tuning:[] },
+        { id:'st_skeleton_sniper', name:'骨架狙击枪托',       emoji:'🦴', stats:{recoil:-4, control:+8, stability:+6, hipfire:-16}, tuning:[] },
+        { id:'st_416_stable',   name:'416稳固枪托',           emoji:'🛡️', stats:{recoil:+4, control:-6, stability:+8}, tuning:[] },
+        { id:'st_raid_core',    name:'侵掠核心枪托',          emoji:'⚔️', stats:{recoil:+6}, tuning:[] },
+        { id:'st_pivot_stable', name:'枢机稳固枪托',          emoji:'🔒', stats:{recoil:+6}, tuning:[] },
+        { id:'st_lightning_rail',name:'闪电导轨枪托',         emoji:'⚡', stats:{control:+12, stability:-6}, tuning:[] },
+        { id:'st_utility_light', name:'实用轻型枪托',         emoji:'🔧', stats:{control:+2}, tuning:[] },
 
         { id:'st_none',        name:'無槍托',                  emoji:'❌', stats:{control:+15, recoil:-5, stability:-5, hipfire:+10, range:-5}, tuning:[] }
     ],
@@ -280,14 +304,14 @@ const ATTACHMENTS = {
         // 护木片
         { id:'fn_combined',    name:'組合式護木片',           emoji:'🛡️', stats:{recoil:+1, stability:+1, control:-2}, tuning:[] },
         { id:'fn_ranger',      name:'遊俠護木片',             emoji:'🛡️', stats:{recoil:+1}, tuning:[] },
-        { id:'fn_kc_hound',    name:'KC獵犬護木片',           emoji:'🛡️', stats:{}, tuning:[] },
+        { id:'fn_kc_hound',    name:'KC獵犬護木片',           emoji:'🛡️', stats:{stability:1}, tuning:[] },
         { id:'fn_kuangfeng',   name:'狂蜂護木片',             emoji:'🐝', stats:{hipfire:+4}, tuning:[] },
 
         // 激光镭指
-        { id:'fn_laser',       name:'PERST-7藍色激光鐳指',    emoji:'🔦', stats:{}, tuning:[] },
-        { id:'fn_peq2',        name:'PEQ-2紅色激光鐳指',      emoji:'🔦', stats:{}, tuning:[] },
-        { id:'fn_la3c',        name:'LA-3C綠色激光鐳指',      emoji:'🔦', stats:{}, tuning:[] },
-        { id:'fn_dbal_x2',     name:'DBAL-X2紫色激光鐳指',    emoji:'🔦', stats:{}, tuning:[] },
+        { id:'fn_laser',       name:'PERST-7藍色激光鐳指',    emoji:'🔦', stats:{control:-4}, tuning:[] },
+        { id:'fn_peq2',        name:'PEQ-2紅色激光鐳指',      emoji:'🔦', stats:{control:-4}, tuning:[] },
+        { id:'fn_la3c',        name:'LA-3C綠色激光鐳指',      emoji:'🔦', stats:{control:-4}, tuning:[] },
+        { id:'fn_dbal_x2',     name:'DBAL-X2紫色激光鐳指',    emoji:'🔦', stats:{control:-4}, tuning:[] },
 
         // 手电筒
         { id:'fn_olight_baldr',name:'OLIGHT Baldr Pro R多功能手電筒', emoji:'🔦', stats:{}, tuning:[] },
@@ -314,19 +338,86 @@ const ATTACHMENTS = {
         // 脚架
         { id:'fn_awm_bipod',   name:'AWM兩腳架',              emoji:'🦵', stats:{}, tuning:[] },
         { id:'fn_aug_bipod',   name:'AUG腳架',                emoji:'🦵', stats:{}, tuning:[] },
-        { id:'fn_pkm_bipod',   name:'PKM兩腳架',              emoji:'🦵', stats:{}, tuning:[] },
-        { id:'fn_sv98_bipod',  name:'SV98兩腳架',             emoji:'🦵', stats:{}, tuning:[] },
-        { id:'fn_gen_bipod',   name:'實用兩腳架',             emoji:'🦵', stats:{}, tuning:[] },
+        { id:'fn_pkm_bipod',   name:'PKM兩腳架',              emoji:'🦵', stats:{control:-4}, tuning:[] },
+        { id:'fn_sv98_bipod',  name:'SV98兩腳架',             emoji:'🦵', stats:{control:-4}, tuning:[] },
+        { id:'fn_gen_bipod',   name:'實用兩腳架',             emoji:'🦵', stats:{control:-4}, tuning:[] },
         { id:'fn_ak12_bipod',  name:'AK12腳架',               emoji:'🦵', stats:{}, tuning:[] },
 
         // 其他功能配件
-        { id:'fn_psg_trigger', name:'PSG-1精確扳機',          emoji:'🎯', stats:{}, tuning:[] },
-        { id:'fn_m1911_hammer',name:'M1911夜鷹戰術擊錘',     emoji:'🔨', stats:{recoil:-4}, tuning:[] },
+        { id:'fn_psg_trigger', name:'PSG-1精確扳機',          emoji:'🎯', stats:{stability:-8}, tuning:[] },
+        { id:'fn_m1911_hammer',name:'M1911夜鷹戰術擊錘',     emoji:'🔨', stats:{stability:-4}, tuning:[] },
         { id:'fn_m1911_trigger',name:'M1911夜鷹戰術扳機',    emoji:'🎯', stats:{recoil:-4}, tuning:[] },
         { id:'fn_r93_net',     name:'R93槍管隔熱網',          emoji:'🕸️', stats:{control:+1}, tuning:[] },
         { id:'fn_honeycomb',   name:'蜂網遮光罩',             emoji:'🍯', stats:{control:-3, stability:-3}, tuning:[] },
 
         { id:'fn_none',        name:'無',                     emoji:'❌', stats:{}, tuning:[] }
+    ],
+
+    // ===== 导轨贴片 / 脚架 =====
+    // ===== 上导轨护木片 (5种) =====
+    upper_rail: [
+        { id:'ur_combo',    name:'组合式护木片(上导轨)', emoji:'🧩', stats:{recoil:+1, control:-2, stability:+1}, tuning:[] },
+        { id:'ur_bee',      name:'狂蜂护木片(上导轨)',   emoji:'🐝', stats:{hipfire:+4}, tuning:[] },
+        { id:'ur_dd',       name:'DD蟒蛇护木片(上导轨)', emoji:'🐍', stats:{control:+1}, tuning:[] },
+        { id:'ur_kc',       name:'KC猎犬护木片(上导轨)', emoji:'🐕', stats:{stability:+1}, tuning:[] },
+        { id:'ur_ranger',   name:'游侠护木片(上导轨)',   emoji:'🏹', stats:{recoil:+1}, tuning:[] },
+        { id:'ur_none',     name:'无',                   emoji:'❌', stats:{}, tuning:[] }
+    ],
+
+    // ===== 左导轨护木片 (5种) =====
+    left_rail: [
+        { id:'lr_combo',    name:'组合式护木片(左导轨)', emoji:'🧩', stats:{recoil:+1, control:-2, stability:+1}, tuning:[] },
+        { id:'lr_bee',      name:'狂蜂护木片(左导轨)',   emoji:'🐝', stats:{hipfire:+4}, tuning:[] },
+        { id:'lr_dd',       name:'DD蟒蛇护木片(左导轨)', emoji:'🐍', stats:{control:+1}, tuning:[] },
+        { id:'lr_kc',       name:'KC猎犬护木片(左导轨)', emoji:'🐕', stats:{stability:+1}, tuning:[] },
+        { id:'lr_ranger',   name:'游侠护木片(左导轨)',   emoji:'🏹', stats:{recoil:+1}, tuning:[] },
+        { id:'lr_none',     name:'无',                   emoji:'❌', stats:{}, tuning:[] }
+    ],
+
+    // ===== 右导轨护木片 (5种) =====
+    right_rail: [
+        { id:'rr_combo',    name:'组合式护木片(右导轨)', emoji:'🧩', stats:{recoil:+1, control:-2, stability:+1}, tuning:[] },
+        { id:'rr_bee',      name:'狂蜂护木片(右导轨)',   emoji:'🐝', stats:{hipfire:+4}, tuning:[] },
+        { id:'rr_dd',       name:'DD蟒蛇护木片(右导轨)', emoji:'🐍', stats:{control:+1}, tuning:[] },
+        { id:'rr_kc',       name:'KC猎犬护木片(右导轨)', emoji:'🐕', stats:{stability:+1}, tuning:[] },
+        { id:'rr_ranger',   name:'游侠护木片(右导轨)',   emoji:'🏹', stats:{recoil:+1}, tuning:[] },
+        { id:'rr_none',     name:'无',                   emoji:'❌', stats:{}, tuning:[] }
+    ],
+
+    // ===== 上贴片 (5种) =====
+    upper_patch: [
+        { id:'up_combo',    name:'组合式护木片(上贴片)', emoji:'🧩', stats:{recoil:+1, control:-2, stability:+1}, tuning:[] },
+        { id:'up_bee',      name:'狂蜂护木片(上贴片)',   emoji:'🐝', stats:{hipfire:+4}, tuning:[] },
+        { id:'up_dd',       name:'DD蟒蛇护木片(上贴片)', emoji:'🐍', stats:{control:+1}, tuning:[] },
+        { id:'up_kc',       name:'KC猎犬护木片(上贴片)', emoji:'🐕', stats:{stability:+1}, tuning:[] },
+        { id:'up_ranger',   name:'游侠护木片(上贴片)',   emoji:'🏹', stats:{recoil:+1}, tuning:[] },
+        { id:'up_none',     name:'无',                   emoji:'❌', stats:{}, tuning:[] }
+    ],
+
+    // ===== 左贴片 (5种) =====
+    left_patch: [
+        { id:'lp_combo',    name:'组合式护木片(左贴片)', emoji:'🧩', stats:{recoil:+1, control:-2, stability:+1}, tuning:[] },
+        { id:'lp_bee',      name:'狂蜂护木片(左贴片)',   emoji:'🐝', stats:{hipfire:+4}, tuning:[] },
+        { id:'lp_dd',       name:'DD蟒蛇护木片(左贴片)', emoji:'🐍', stats:{control:+1}, tuning:[] },
+        { id:'lp_kc',       name:'KC猎犬护木片(左贴片)', emoji:'🐕', stats:{stability:+1}, tuning:[] },
+        { id:'lp_ranger',   name:'游侠护木片(左贴片)',   emoji:'🏹', stats:{recoil:+1}, tuning:[] },
+        { id:'lp_none',     name:'无',                   emoji:'❌', stats:{}, tuning:[] }
+    ],
+
+    // ===== 右贴片 (5种) =====
+    right_patch: [
+        { id:'rp_combo',    name:'组合式护木片(右贴片)', emoji:'🧩', stats:{recoil:+1, control:-2, stability:+1}, tuning:[] },
+        { id:'rp_bee',      name:'狂蜂护木片(右贴片)',   emoji:'🐝', stats:{hipfire:+4}, tuning:[] },
+        { id:'rp_dd',       name:'DD蟒蛇护木片(右贴片)', emoji:'🐍', stats:{control:+1}, tuning:[] },
+        { id:'rp_kc',       name:'KC猎犬护木片(右贴片)', emoji:'🐕', stats:{stability:+1}, tuning:[] },
+        { id:'rp_ranger',   name:'游侠护木片(右贴片)',   emoji:'🏹', stats:{recoil:+1}, tuning:[] },
+        { id:'rp_none',     name:'无',                   emoji:'❌', stats:{}, tuning:[] }
+    ],
+
+    // ===== 导轨脚架 (1个) =====
+    rail_bipod: [
+        { id:'rb_util',     name:'实用两脚架',           emoji:'🎪', stats:{control:-4}, tuning:[] },
+        { id:'rb_none',     name:'无',                   emoji:'❌', stats:{}, tuning:[] }
     ],
 
     // ===== 护木套件 (1个) =====
@@ -350,7 +441,7 @@ const ATTACHMENTS = {
         { id:'hg_uzi_perf',    name:'UZI性能護木',           emoji:'🔧', stats:{recoil:+8, control:+3, stability:+3, hipfire:+8}, tuning:[], weaponHint:'UZI' },
         { id:'hg_uzi_rail',    name:'UZI導軌護木',           emoji:'〰️', stats:{recoil:+4, control:+4}, tuning:[], weaponHint:'UZI' },
         { id:'hg_m249_rail',   name:'M249導軌護木',          emoji:'〰️', stats:{recoil:+4, control:+4}, tuning:[], weaponHint:'M249' },
-        { id:'hg_m249_bipod',  name:'M249腳架護木',          emoji:'🦵', stats:{}, tuning:[], weaponHint:'M249' },
+        { id:'hg_m249_bipod',  name:'M249腳架護木',          emoji:'🦵', stats:{control:-4}, tuning:[], weaponHint:'M249' },
         { id:'hg_m249_mil',    name:'M249軍規導軌護木',      emoji:'🎖️', stats:{recoil:+4, stability:+4}, tuning:[], weaponHint:'M249' },
         { id:'hg_m870_rail',   name:'M870導軌護木',          emoji:'〰️', stats:{recoil:+2, control:+2}, tuning:[], weaponHint:'M870' },
         { id:'hg_m1014_rail',  name:'M1014導軌護木',         emoji:'〰️', stats:{recoil:+3, control:+3}, tuning:[], weaponHint:'M1014' },

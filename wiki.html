@@ -10,7 +10,7 @@
         /* 百科页面专用样式 */
         .wiki-header {
             position: sticky; top:0; z-index:100;
-            background: linear-gradient(180deg, rgba(11,15,23,0.98) 0%, rgba(19,26,38,0.95) 100%);
+            background: linear-gradient(180deg, rgba(18,22,30,0.98) 0%, rgba(26,31,42,0.95) 100%);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             padding: 12px 16px;
@@ -65,7 +65,7 @@
         }
         .category-tab:hover { border-color: var(--border-light); color: var(--text); }
         .category-tab.active {
-            background: rgba(245,158,11,0.12); border-color: var(--accent);
+            background: rgba(124,58,237,0.1); border-color: var(--accent);
             color: var(--accent); box-shadow: 0 0 12px var(--accent-glow);
         }
 
@@ -99,7 +99,7 @@
             background: var(--bg); border: 1px solid var(--border);
             display: flex; align-items: center; gap: 4px;
         }
-        .att-stat-tag.positive { color: var(--success); border-color: rgba(34,197,94,0.2); }
+        .att-stat-tag.positive { color: var(--success); border-color: rgba(16,185,129,0.2); }
         .att-stat-tag.negative { color: var(--danger); border-color: rgba(239,68,68,0.2); }
         .att-stat-tag .stat-icon { font-size: 10px; opacity: 0.7; }
 
@@ -115,7 +115,7 @@
         }
         .tuning-tag {
             font-size: 11px; padding: 4px 10px;
-            background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.15);
+            background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.15);
             border-radius: 8px; color: var(--accent);
         }
 
@@ -150,7 +150,7 @@
         }
         .mode-tab:hover { border-color: var(--border-light); color: var(--text); }
         .mode-tab.active {
-            background: rgba(245,158,11,0.12); border-color: var(--accent);
+            background: rgba(124,58,237,0.1); border-color: var(--accent);
             color: var(--accent); box-shadow: 0 0 12px var(--accent-glow);
             font-weight: 600;
         }
@@ -194,7 +194,7 @@
         }
         .mini-tag {
             font-size: 11px; padding: 2px 10px;
-            background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.15);
+            background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.15);
             border-radius: 10px; color: var(--accent);
             white-space: nowrap;
         }
@@ -258,6 +258,11 @@
     (function() {
         // ========== 当前模式 ==========
         let currentMode = 'attachment'; // 'attachment' | 'weapon'
+        let ACCESSORY_IMAGES = {};
+        fetch('data/accessory_images.json')
+            .then(r => r.json())
+            .then(data => { ACCESSORY_IMAGES = data; })
+            .catch(() => {});
 
         // ========== 配件百科数据 ==========
         const slotNameMap = {
@@ -445,8 +450,9 @@
                         </div>`;
                     }).join('');
 
-                const iconHtml = att.img
-                    ? `<img src="${att.img}" alt="${att.name}" style="width:36px;height:36px;border-radius:6px;object-fit:contain;background:rgba(255,255,255,0.05);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" loading="lazy"><span class="att-card-icon" style="display:none">${att.emoji}</span>`
+                const imgUrl = ACCESSORY_IMAGES[att.name];
+                const iconHtml = imgUrl
+                    ? `<img src="${imgUrl}" alt="${att.name}" style="width:48px;height:48px;border-radius:4px;object-fit:contain;background:rgba(255,255,255,0.05);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" loading="lazy"><span class="att-card-icon" style="display:none">${att.emoji}</span>`
                     : `<span class="att-card-icon">${att.emoji}</span>`;
 
                 const tuningHtml = (att.tuning && att.tuning.length > 0)
